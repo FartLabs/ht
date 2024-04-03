@@ -6,8 +6,8 @@ export function renderElement<T>(
   props: T & { children?: unknown[] },
   isVoidElement = false,
 ): string {
-  const renderedAttrs = renderAttrs(props);
-  const openingTag = `<${tag}${renderedAttrs ? ` ${renderedAttrs}` : ""}>`;
+  const attrs = renderAttrs(props);
+  const openingTag = `<${tag}${attrs ? ` ${attrs}` : ""}>`;
   if (isVoidElement) {
     return openingTag;
   }
