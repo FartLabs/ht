@@ -1,2 +1,3 @@
 # html
-An HTML string rendering library.
+
+An HTML rendering library.
