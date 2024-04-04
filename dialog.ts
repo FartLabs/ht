@@ -9,7 +9,10 @@ export interface DialogProps extends GlobalAttributes {
   open?: string | undefined;
 }
 
-/** dialog renders the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) element. */
+/**
+ * dialog renders the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dialog>
+ */
 export function dialog(props?: DialogProps & ChildrenProps): string {
   return renderElement("dialog", props);
 }

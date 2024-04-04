@@ -19,6 +19,7 @@ export interface ParamProps extends GlobalAttributes {
 
 /**
  * param renders the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param>
  * @deprecated
  */
 export function param(props?: ParamProps & ChildrenProps): string {

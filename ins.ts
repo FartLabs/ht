@@ -10,7 +10,10 @@ export interface InsProps extends GlobalAttributes {
   datetime?: string | undefined;
 }
 
-/** ins renders the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element. */
+/**
+ * ins renders the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ins>
+ */
 export function ins(props?: InsProps & ChildrenProps): string {
   return renderElement("ins", props);
 }

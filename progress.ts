@@ -10,7 +10,10 @@ export interface ProgressProps extends GlobalAttributes {
   value?: string | undefined;
 }
 
-/** progress renders the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element. */
+/**
+ * progress renders the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/progress>
+ */
 export function progress(props?: ProgressProps & ChildrenProps): string {
   return renderElement("progress", props);
 }

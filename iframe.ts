@@ -35,7 +35,10 @@ export interface IframeProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** iframe renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
+/**
+ * iframe renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
+ */
 export function iframe(props?: IframeProps & ChildrenProps): string {
   return renderElement("iframe", props);
 }

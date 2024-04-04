@@ -10,7 +10,10 @@ export interface LegendProps extends GlobalAttributes {
   align?: string | undefined;
 }
 
-/** legend renders the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Element/legend) element. */
+/**
+ * legend renders the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Element/legend) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/legend>
+ */
 export function legend(props?: LegendProps & ChildrenProps): string {
   return renderElement("legend", props);
 }

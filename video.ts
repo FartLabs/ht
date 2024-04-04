@@ -22,7 +22,10 @@ export interface VideoProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** video renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element. */
+/**
+ * video renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video>
+ */
 export function video(props?: VideoProps & ChildrenProps): string {
   return renderElement("video", props);
 }

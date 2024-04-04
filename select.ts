@@ -14,7 +14,10 @@ export interface SelectProps extends GlobalAttributes {
   size?: string | undefined;
 }
 
-/** select renders the [`select`](https://developer.mozilla.org/docs/Web/HTML/Element/select) element. */
+/**
+ * select renders the [`select`](https://developer.mozilla.org/docs/Web/HTML/Element/select) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/select>
+ */
 export function select(props?: SelectProps & ChildrenProps): string {
   return renderElement("select", props);
 }

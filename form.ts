@@ -17,7 +17,10 @@ export interface FormProps extends GlobalAttributes {
   target?: string | undefined;
 }
 
-/** form renders the [`form`](https://developer.mozilla.org/docs/Web/HTML/Element/form) element. */
+/**
+ * form renders the [`form`](https://developer.mozilla.org/docs/Web/HTML/Element/form) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/form>
+ */
 export function form(props?: FormProps & ChildrenProps): string {
   return renderElement("form", props);
 }

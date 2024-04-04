@@ -27,7 +27,10 @@ export interface ThProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** th renders the [`th`](https://developer.mozilla.org/docs/Web/HTML/Element/th) element. */
+/**
+ * th renders the [`th`](https://developer.mozilla.org/docs/Web/HTML/Element/th) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/th>
+ */
 export function th(props?: ThProps & ChildrenProps): string {
   return renderElement("th", props);
 }

@@ -19,7 +19,10 @@ export interface ColProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** col renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element. */
+/**
+ * col renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/col>
+ */
 export function col(props?: ColProps & ChildrenProps): string {
   return renderElement("col", props, true);
 }

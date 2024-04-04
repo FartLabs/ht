@@ -10,7 +10,10 @@ export interface BrProps extends GlobalAttributes {
   clear?: string | undefined;
 }
 
-/** br renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element. */
+/**
+ * br renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/br>
+ */
 export function br(props?: BrProps & ChildrenProps): string {
   return renderElement("br", props, true);
 }

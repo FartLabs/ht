@@ -13,7 +13,10 @@ export interface HtmlProps extends GlobalAttributes {
   xmlns?: string | undefined;
 }
 
-/** html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element. */
+/**
+ * html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
+ */
 export function html(props?: HtmlProps & ChildrenProps): string {
   return renderElement("html", props);
 }

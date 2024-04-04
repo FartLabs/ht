@@ -9,7 +9,10 @@ export interface SlotProps extends GlobalAttributes {
   name?: string | undefined;
 }
 
-/** slot renders the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element. */
+/**
+ * slot renders the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot>
+ */
 export function slot(props?: SlotProps & ChildrenProps): string {
   return renderElement("slot", props);
 }

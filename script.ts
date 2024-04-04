@@ -19,7 +19,10 @@ export interface ScriptProps extends GlobalAttributes {
   type?: string | undefined;
 }
 
-/** script renders the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+/**
+ * script renders the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script>
+ */
 export function script(props?: ScriptProps & ChildrenProps): string {
   return renderElement("script", props);
 }

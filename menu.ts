@@ -10,7 +10,10 @@ export interface MenuProps extends GlobalAttributes {
   label?: string | undefined;
 }
 
-/** menu renders the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element. */
+/**
+ * menu renders the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/menu>
+ */
 export function menu(props?: MenuProps & ChildrenProps): string {
   return renderElement("menu", props);
 }

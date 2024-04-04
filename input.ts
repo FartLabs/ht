@@ -42,7 +42,10 @@ export interface InputProps extends GlobalAttributes {
   "x-moz-errormessage"?: string | undefined;
 }
 
-/** input renders the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+/**
+ * input renders the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
+ */
 export function input(props?: InputProps & ChildrenProps): string {
   return renderElement("input", props, true);
 }

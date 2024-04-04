@@ -15,7 +15,10 @@ export interface SourceProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** source renders the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+/**
+ * source renders the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source>
+ */
 export function source(props?: SourceProps & ChildrenProps): string {
   return renderElement("source", props, true);
 }

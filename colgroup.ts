@@ -19,7 +19,10 @@ export interface ColgroupProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** colgroup renders the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element. */
+/**
+ * colgroup renders the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup>
+ */
 export function colgroup(props?: ColgroupProps & ChildrenProps): string {
   return renderElement("colgroup", props);
 }

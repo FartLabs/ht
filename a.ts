@@ -27,7 +27,10 @@ export interface AProps extends GlobalAttributes {
   type?: string | undefined;
 }
 
-/** a renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element. */
+/**
+ * a renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
+ */
 export function a(props?: AProps & ChildrenProps): string {
   return renderElement("a", props);
 }

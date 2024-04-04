@@ -15,6 +15,7 @@ export interface FramesetProps extends GlobalAttributes {
 
 /**
  * frameset renders the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frameset>
  * @deprecated
  */
 export function frameset(props?: FramesetProps & ChildrenProps): string {

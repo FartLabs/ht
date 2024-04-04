@@ -29,7 +29,10 @@ export interface TdProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** td renders the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element. */
+/**
+ * td renders the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/td>
+ */
 export function td(props?: TdProps & ChildrenProps): string {
   return renderElement("td", props);
 }

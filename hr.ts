@@ -18,7 +18,10 @@ export interface HrProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** hr renders the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element. */
+/**
+ * hr renders the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/hr>
+ */
 export function hr(props?: HrProps & ChildrenProps): string {
   return renderElement("hr", props, true);
 }

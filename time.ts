@@ -9,7 +9,10 @@ export interface TimeProps extends GlobalAttributes {
   datetime?: string | undefined;
 }
 
-/** time renders the [`time`](https://developer.mozilla.org/docs/Web/HTML/Element/time) element. */
+/**
+ * time renders the [`time`](https://developer.mozilla.org/docs/Web/HTML/Element/time) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/time>
+ */
 export function time(props?: TimeProps & ChildrenProps): string {
   return renderElement("time", props);
 }

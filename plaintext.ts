@@ -3,6 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * plaintext renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/plaintext>
  * @deprecated
  */
 export function plaintext(props?: GlobalAttributes & ChildrenProps): string {

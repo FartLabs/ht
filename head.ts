@@ -10,7 +10,10 @@ export interface HeadProps extends GlobalAttributes {
   profile?: string | undefined;
 }
 
-/** head renders the [`head`](https://developer.mozilla.org/docs/Web/HTML/Element/head) element. */
+/**
+ * head renders the [`head`](https://developer.mozilla.org/docs/Web/HTML/Element/head) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/head>
+ */
 export function head(props?: HeadProps & ChildrenProps): string {
   return renderElement("head", props);
 }

@@ -13,7 +13,10 @@ export interface OlProps extends GlobalAttributes {
   type?: string | undefined;
 }
 
-/** ol renders the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element. */
+/**
+ * ol renders the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol>
+ */
 export function ol(props?: OlProps & ChildrenProps): string {
   return renderElement("ol", props);
 }

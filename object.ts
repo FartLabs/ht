@@ -32,7 +32,10 @@ export interface ObjectProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** object renders the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+/**
+ * object renders the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object>
+ */
 export function object(props?: ObjectProps & ChildrenProps): string {
   return renderElement("object", props);
 }

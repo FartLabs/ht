@@ -21,7 +21,10 @@ export interface AreaProps extends GlobalAttributes {
   target?: string | undefined;
 }
 
-/** area renders the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
+/**
+ * area renders the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area>
+ */
 export function area(props?: AreaProps & ChildrenProps): string {
   return renderElement("area", props, true);
 }

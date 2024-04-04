@@ -20,7 +20,10 @@ export interface ButtonProps extends GlobalAttributes {
   value?: string | undefined;
 }
 
-/** button renders the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element. */
+/**
+ * button renders the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/button>
+ */
 export function button(props?: ButtonProps & ChildrenProps): string {
   return renderElement("button", props);
 }

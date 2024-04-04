@@ -16,7 +16,10 @@ export interface EmbedProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** embed renders the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
+/**
+ * embed renders the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed>
+ */
 export function embed(props?: EmbedProps & ChildrenProps): string {
   return renderElement("embed", props, true);
 }

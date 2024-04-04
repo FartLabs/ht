@@ -10,7 +10,10 @@ export interface CaptionProps extends GlobalAttributes {
   align?: string | undefined;
 }
 
-/** caption renders the [`caption`](https://developer.mozilla.org/docs/Web/HTML/Element/caption) element. */
+/**
+ * caption renders the [`caption`](https://developer.mozilla.org/docs/Web/HTML/Element/caption) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/caption>
+ */
 export function caption(props?: CaptionProps & ChildrenProps): string {
   return renderElement("caption", props);
 }

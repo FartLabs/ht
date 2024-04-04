@@ -166,7 +166,7 @@ if (import.meta.main) {
       propsInterface.remove();
     }
 
-    // Add the element function.
+    // Add the element render function.
     const fnName = toFunctionName(tag);
     sourceFile.addFunction({
       name: fnName,
@@ -186,6 +186,7 @@ if (import.meta.main) {
         description: `${fnName} renders the [\`${tag}\`](${url}) element.`,
         isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
         isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
+        see: url,
       }),
     });
   }

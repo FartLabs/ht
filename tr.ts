@@ -18,7 +18,10 @@ export interface TrProps extends GlobalAttributes {
   valign?: string | undefined;
 }
 
-/** tr renders the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element. */
+/**
+ * tr renders the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr>
+ */
 export function tr(props?: TrProps & ChildrenProps): string {
   return renderElement("tr", props);
 }

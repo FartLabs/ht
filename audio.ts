@@ -17,7 +17,10 @@ export interface AudioProps extends GlobalAttributes {
   src?: string | undefined;
 }
 
-/** audio renders the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+/**
+ * audio renders the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio>
+ */
 export function audio(props?: AudioProps & ChildrenProps): string {
   return renderElement("audio", props);
 }

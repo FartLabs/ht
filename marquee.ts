@@ -33,6 +33,7 @@ export interface MarqueeProps extends GlobalAttributes {
 
 /**
  * marquee renders the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
  * @deprecated
  */
 export function marquee(props?: MarqueeProps & ChildrenProps): string {

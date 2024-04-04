@@ -11,7 +11,10 @@ export interface OutputProps extends GlobalAttributes {
   name?: string | undefined;
 }
 
-/** output renders the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element. */
+/**
+ * output renders the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/output>
+ */
 export function output(props?: OutputProps & ChildrenProps): string {
   return renderElement("output", props);
 }

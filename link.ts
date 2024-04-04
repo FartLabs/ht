@@ -31,7 +31,10 @@ export interface LinkProps extends GlobalAttributes {
   type?: string | undefined;
 }
 
-/** link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
+/**
+ * link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
+ */
 export function link(props?: LinkProps & ChildrenProps): string {
   return renderElement("link", props, true);
 }

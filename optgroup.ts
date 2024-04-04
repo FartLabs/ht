@@ -10,7 +10,10 @@ export interface OptgroupProps extends GlobalAttributes {
   label?: string | undefined;
 }
 
-/** optgroup renders the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element. */
+/**
+ * optgroup renders the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup>
+ */
 export function optgroup(props?: OptgroupProps & ChildrenProps): string {
   return renderElement("optgroup", props);
 }

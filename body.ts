@@ -28,7 +28,10 @@ export interface BodyProps extends GlobalAttributes {
   vlink?: string | undefined;
 }
 
-/** body renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element. */
+/**
+ * body renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
+ */
 export function body(props?: BodyProps & ChildrenProps): string {
   return renderElement("body", props);
 }

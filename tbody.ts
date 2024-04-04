@@ -18,7 +18,10 @@ export interface TbodyProps extends GlobalAttributes {
   valign?: string | undefined;
 }
 
-/** tbody renders the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element. */
+/**
+ * tbody renders the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tbody>
+ */
 export function tbody(props?: TbodyProps & ChildrenProps): string {
   return renderElement("tbody", props);
 }

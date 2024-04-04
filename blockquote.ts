@@ -9,7 +9,10 @@ export interface BlockquoteProps extends GlobalAttributes {
   cite?: string | undefined;
 }
 
-/** blockquote renders the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element. */
+/**
+ * blockquote renders the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/blockquote>
+ */
 export function blockquote(props?: BlockquoteProps & ChildrenProps): string {
   return renderElement("blockquote", props);
 }

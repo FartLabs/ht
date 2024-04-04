@@ -18,7 +18,10 @@ export interface TheadProps extends GlobalAttributes {
   valign?: string | undefined;
 }
 
-/** thead renders the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element. */
+/**
+ * thead renders the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead>
+ */
 export function thead(props?: TheadProps & ChildrenProps): string {
   return renderElement("thead", props);
 }

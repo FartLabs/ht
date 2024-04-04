@@ -13,6 +13,7 @@ export interface DirProps extends GlobalAttributes {
 
 /**
  * dir renders the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Element/dir) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dir>
  * @deprecated
  */
 export function dir(props?: DirProps & ChildrenProps): string {

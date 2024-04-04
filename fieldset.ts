@@ -11,7 +11,10 @@ export interface FieldsetProps extends GlobalAttributes {
   name?: string | undefined;
 }
 
-/** fieldset renders the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element. */
+/**
+ * fieldset renders the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset>
+ */
 export function fieldset(props?: FieldsetProps & ChildrenProps): string {
   return renderElement("fieldset", props);
 }

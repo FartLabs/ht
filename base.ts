@@ -10,7 +10,10 @@ export interface BaseProps extends GlobalAttributes {
   target?: string | undefined;
 }
 
-/** base renders the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element. */
+/**
+ * base renders the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base>
+ */
 export function base(props?: BaseProps & ChildrenProps): string {
   return renderElement("base", props, true);
 }

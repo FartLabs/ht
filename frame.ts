@@ -25,6 +25,7 @@ export interface FrameProps extends GlobalAttributes {
 
 /**
  * frame renders the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frame>
  * @deprecated
  */
 export function frame(props?: FrameProps & ChildrenProps): string {

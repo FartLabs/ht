@@ -22,7 +22,10 @@ export interface TextareaProps extends GlobalAttributes {
   wrap?: string | undefined;
 }
 
-/** textarea renders the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Element/textarea) element. */
+/**
+ * textarea renders the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Element/textarea) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/textarea>
+ */
 export function textarea(props?: TextareaProps & ChildrenProps): string {
   return renderElement("textarea", props);
 }

@@ -14,7 +14,10 @@ export interface PreProps extends GlobalAttributes {
   wrap?: string | undefined;
 }
 
-/** pre renders the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element. */
+/**
+ * pre renders the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre>
+ */
 export function pre(props?: PreProps & ChildrenProps): string {
   return renderElement("pre", props);
 }

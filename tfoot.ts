@@ -18,7 +18,10 @@ export interface TfootProps extends GlobalAttributes {
   valign?: string | undefined;
 }
 
-/** tfoot renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element. */
+/**
+ * tfoot renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot>
+ */
 export function tfoot(props?: TfootProps & ChildrenProps): string {
   return renderElement("tfoot", props);
 }

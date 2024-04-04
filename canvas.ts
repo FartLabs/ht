@@ -12,7 +12,10 @@ export interface CanvasProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** canvas renders the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element. */
+/**
+ * canvas renders the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas>
+ */
 export function canvas(props?: CanvasProps & ChildrenProps): string {
   return renderElement("canvas", props);
 }

@@ -10,7 +10,10 @@ export interface DelProps extends GlobalAttributes {
   datetime?: string | undefined;
 }
 
-/** del renders the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element. */
+/**
+ * del renders the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del>
+ */
 export function del(props?: DelProps & ChildrenProps): string {
   return renderElement("del", props);
 }

@@ -26,7 +26,10 @@ export interface TableProps extends GlobalAttributes {
   width?: string | undefined;
 }
 
-/** table renders the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element. */
+/**
+ * table renders the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/table>
+ */
 export function table(props?: TableProps & ChildrenProps): string {
   return renderElement("table", props);
 }
