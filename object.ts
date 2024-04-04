@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ObjectProps are the props for the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/object
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object>
  */
 export interface ObjectProps extends GlobalAttributes {
   /** @deprecated */

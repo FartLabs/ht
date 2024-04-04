@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * LegendProps are the props for the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Element/legend) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/legend
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/legend>
  */
 export interface LegendProps extends GlobalAttributes {
   /** @deprecated */

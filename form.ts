@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * FormProps are the props for the [`form`](https://developer.mozilla.org/docs/Web/HTML/Element/form) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/form
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/form>
  */
 export interface FormProps extends GlobalAttributes {
   "accept-charset"?: string | undefined;

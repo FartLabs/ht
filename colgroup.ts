@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ColgroupProps are the props for the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/colgroup
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup>
  */
 export interface ColgroupProps extends GlobalAttributes {
   /** @deprecated */

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * AProps are the props for the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/a
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
  */
 export interface AProps extends GlobalAttributes {
   attributionsrc?: string | undefined;
@@ -14,7 +14,6 @@ export interface AProps extends GlobalAttributes {
   download?: string | undefined;
   href?: string | undefined;
   hreflang?: string | undefined;
-  implicit_noopener?: string | undefined;
   /** @deprecated */
   name?: string | undefined;
   ping?: string | undefined;
@@ -25,7 +24,6 @@ export interface AProps extends GlobalAttributes {
   /** @deprecated */
   shape?: string | undefined;
   target?: string | undefined;
-  text_fragments?: string | undefined;
   type?: string | undefined;
 }
 

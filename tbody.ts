@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TbodyProps are the props for the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/tbody
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tbody>
  */
 export interface TbodyProps extends GlobalAttributes {
   /** @deprecated */

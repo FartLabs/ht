@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * FontProps are the props for the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/font
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/font>
  * @deprecated
  */
 export interface FontProps extends GlobalAttributes {

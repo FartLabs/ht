@@ -15,6 +15,7 @@ if (import.meta.main) {
   const globalAttrsInterface = globalAttrsFile.addInterface({
     isExported: true,
     name: "GlobalAttributes",
+    extends: ["DataAttributes"],
     docs: [{
       description:
         "GlobalAttributes are the global attributes for HTML elements.",
@@ -26,7 +27,29 @@ if (import.meta.main) {
       ],
     }],
   });
+  globalAttrsFile.addInterface({
+    isExported: true,
+    name: "DataAttributes",
+    docs: [{
+      description:
+        "DataAttributes are the attributes that start with `data-` for HTML elements.",
+      tags: [
+        {
+          tagName: "see",
+          text:
+            "<https://developer.mozilla.org/docs/Web/HTML/Global_attributes#data-*>",
+        },
+      ],
+    }],
+    properties: [
+      { name: "[attr: `data-${string}`]", type: "string | undefined" },
+    ],
+  });
   for (const attr in bcd.html.global_attributes) {
+    if (attr.includes("_")) {
+      continue;
+    }
+
     globalAttrsInterface.addProperty({
       name: attr,
       hasQuestionToken: true,
@@ -66,7 +89,6 @@ if (import.meta.main) {
     const propsName = `${capitalize(tag)}Props`;
     const url = bcd.html.elements[tag].__compat?.mdn_url;
     const propsInterface = sourceFile.addInterface({
-      // TODO: Do not define interface if no attributes are present.
       name: propsName,
       isExported: true,
       extends: ["GlobalAttributes"],
@@ -78,7 +100,8 @@ if (import.meta.main) {
       }),
     });
     for (const attr in bcd.html.elements[tag]) {
-      if (attr === "__compat") {
+      if (attr.includes("_")) {
+        // TODO: Handle special cases e.g. input elements.
         continue;
       }
 
@@ -163,7 +186,7 @@ function toDocs(data: {
 
   const tags = [];
   if (data.see) {
-    tags.push({ tagName: "see", text: data.see });
+    tags.push({ tagName: "see", text: `<${data.see}>` });
   }
 
   if (data.isDeprecated) {

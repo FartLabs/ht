@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * AudioProps are the props for the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/audio
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio>
  */
 export interface AudioProps extends GlobalAttributes {
   autoplay?: string | undefined;

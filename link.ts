@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * LinkProps are the props for the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/link
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
  */
 export interface LinkProps extends GlobalAttributes {
   as?: string | undefined;

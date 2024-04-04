@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * SlotProps are the props for the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/slot
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot>
  */
 export interface SlotProps extends GlobalAttributes {
   name?: string | undefined;

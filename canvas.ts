@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * CanvasProps are the props for the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/canvas
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas>
  */
 export interface CanvasProps extends GlobalAttributes {
   height?: string | undefined;

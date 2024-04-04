@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * IframeProps are the props for the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/iframe
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
  */
 export interface IframeProps extends GlobalAttributes {
   /** @deprecated */
@@ -15,8 +15,6 @@ export interface IframeProps extends GlobalAttributes {
   browsingtopics?: string | undefined;
   credentialless?: string | undefined;
   csp?: string | undefined;
-  /** @deprecated */
-  external_protocol_urls_blocked?: string | undefined;
   /** @deprecated */
   frameborder?: string | undefined;
   height?: string | undefined;

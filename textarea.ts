@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TextareaProps are the props for the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Element/textarea) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/textarea
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/textarea>
  */
 export interface TextareaProps extends GlobalAttributes {
   autocomplete?: string | undefined;

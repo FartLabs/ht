@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * QProps are the props for the [`q`](https://developer.mozilla.org/docs/Web/HTML/Element/q) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/q
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/q>
  */
 export interface QProps extends GlobalAttributes {
   cite?: string | undefined;

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TdProps are the props for the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/td
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/td>
  */
 export interface TdProps extends GlobalAttributes {
   /** @deprecated */

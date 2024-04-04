@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ParamProps are the props for the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/param
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param>
  * @deprecated
  */
 export interface ParamProps extends GlobalAttributes {

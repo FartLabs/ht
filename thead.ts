@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TheadProps are the props for the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/thead
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead>
  */
 export interface TheadProps extends GlobalAttributes {
   /** @deprecated */

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * OptgroupProps are the props for the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/optgroup
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup>
  */
 export interface OptgroupProps extends GlobalAttributes {
   disabled?: string | undefined;

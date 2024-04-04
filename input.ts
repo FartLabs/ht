@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * InputProps are the props for the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/input
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface InputProps extends GlobalAttributes {
   accept?: string | undefined;
@@ -36,28 +36,6 @@ export interface InputProps extends GlobalAttributes {
   readonly?: string | undefined;
   src?: string | undefined;
   step?: string | undefined;
-  type_button?: string | undefined;
-  type_checkbox?: string | undefined;
-  type_color?: string | undefined;
-  type_date?: string | undefined;
-  "type_datetime-local"?: string | undefined;
-  type_email?: string | undefined;
-  type_file?: string | undefined;
-  type_hidden?: string | undefined;
-  type_image?: string | undefined;
-  type_month?: string | undefined;
-  type_number?: string | undefined;
-  type_password?: string | undefined;
-  type_radio?: string | undefined;
-  type_range?: string | undefined;
-  type_reset?: string | undefined;
-  type_search?: string | undefined;
-  type_submit?: string | undefined;
-  type_tel?: string | undefined;
-  type_text?: string | undefined;
-  type_time?: string | undefined;
-  type_url?: string | undefined;
-  type_week?: string | undefined;
   /** @deprecated */
   usemap?: string | undefined;
   /** @deprecated */

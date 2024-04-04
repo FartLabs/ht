@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * MetaProps are the props for the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/meta
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta>
  */
 export interface MetaProps extends GlobalAttributes {
   charset?: string | undefined;

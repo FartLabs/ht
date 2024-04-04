@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TrackProps are the props for the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/track
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track>
  */
 export interface TrackProps extends GlobalAttributes {
   default?: string | undefined;

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * HeadProps are the props for the [`head`](https://developer.mozilla.org/docs/Web/HTML/Element/head) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/head
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/head>
  */
 export interface HeadProps extends GlobalAttributes {
   /** @deprecated */

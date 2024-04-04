@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * BaseProps are the props for the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/base
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base>
  */
 export interface BaseProps extends GlobalAttributes {
   href?: string | undefined;

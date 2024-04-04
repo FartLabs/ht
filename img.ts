@@ -3,13 +3,12 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ImgProps are the props for the [`img`](https://developer.mozilla.org/docs/Web/HTML/Element/img) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/img
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/img>
  */
 export interface ImgProps extends GlobalAttributes {
   /** @deprecated */
   align?: string | undefined;
   alt?: string | undefined;
-  aspect_ratio_computed_from_attributes?: string | undefined;
   attributionsrc?: string | undefined;
   /** @deprecated */
   border?: string | undefined;

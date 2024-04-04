@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TableProps are the props for the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/table
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/table>
  */
 export interface TableProps extends GlobalAttributes {
   /** @deprecated */

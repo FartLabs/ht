@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ScriptProps are the props for the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/script
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script>
  */
 export interface ScriptProps extends GlobalAttributes {
   async?: string | undefined;

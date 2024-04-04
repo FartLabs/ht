@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TemplateProps are the props for the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/template
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
  */
 export interface TemplateProps extends GlobalAttributes {
   shadowrootmode?: string | undefined;

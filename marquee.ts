@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * MarqueeProps are the props for the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/marquee
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
  * @deprecated
  */
 export interface MarqueeProps extends GlobalAttributes {

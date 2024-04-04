@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TfootProps are the props for the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/tfoot
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot>
  */
 export interface TfootProps extends GlobalAttributes {
   /** @deprecated */

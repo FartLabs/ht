@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * UlProps are the props for the [`ul`](https://developer.mozilla.org/docs/Web/HTML/Element/ul) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/ul
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ul>
  */
 export interface UlProps extends GlobalAttributes {
   /** @deprecated */

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * SourceProps are the props for the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/source
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source>
  */
 export interface SourceProps extends GlobalAttributes {
   height?: string | undefined;

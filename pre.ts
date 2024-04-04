@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * PreProps are the props for the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/pre
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre>
  */
 export interface PreProps extends GlobalAttributes {
   /** @deprecated */

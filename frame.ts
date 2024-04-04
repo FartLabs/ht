@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * FrameProps are the props for the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/frame
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frame>
  * @deprecated
  */
 export interface FrameProps extends GlobalAttributes {

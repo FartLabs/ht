@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * LabelProps are the props for the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/label
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label>
  */
 export interface LabelProps extends GlobalAttributes {
   for?: string | undefined;

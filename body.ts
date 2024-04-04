@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * BodyProps are the props for the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/body
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
  */
 export interface BodyProps extends GlobalAttributes {
   /** @deprecated */

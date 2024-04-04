@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * BlockquoteProps are the props for the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/blockquote
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/blockquote>
  */
 export interface BlockquoteProps extends GlobalAttributes {
   cite?: string | undefined;

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * HtmlProps are the props for the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/html
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
  */
 export interface HtmlProps extends GlobalAttributes {
   /** @deprecated */

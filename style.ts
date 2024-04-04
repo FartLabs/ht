@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * StyleProps are the props for the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/style
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style>
  */
 export interface StyleProps extends GlobalAttributes {
   blocking?: string | undefined;

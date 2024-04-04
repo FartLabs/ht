@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * DelProps are the props for the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/del
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del>
  */
 export interface DelProps extends GlobalAttributes {
   cite?: string | undefined;

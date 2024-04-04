@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * FramesetProps are the props for the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/frameset
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frameset>
  * @deprecated
  */
 export interface FramesetProps extends GlobalAttributes {

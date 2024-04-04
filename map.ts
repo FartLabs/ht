@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * MapProps are the props for the [`map`](https://developer.mozilla.org/docs/Web/HTML/Element/map) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/map
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/map>
  */
 export interface MapProps extends GlobalAttributes {
   name?: string | undefined;

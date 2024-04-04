@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * LiProps are the props for the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/li
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/li>
  */
 export interface LiProps extends GlobalAttributes {
   /** @deprecated */

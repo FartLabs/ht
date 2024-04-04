@@ -3,14 +3,13 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * AreaProps are the props for the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/area
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area>
  */
 export interface AreaProps extends GlobalAttributes {
   alt?: string | undefined;
   coords?: string | undefined;
   download?: string | undefined;
   href?: string | undefined;
-  implicit_noopener?: string | undefined;
   /** @deprecated */
   nohref?: string | undefined;
   ping?: string | undefined;

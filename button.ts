@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ButtonProps are the props for the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/button
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/button>
  */
 export interface ButtonProps extends GlobalAttributes {
   disabled?: string | undefined;

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * EmbedProps are the props for the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/embed
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed>
  */
 export interface EmbedProps extends GlobalAttributes {
   /** @deprecated */

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * ThProps are the props for the [`th`](https://developer.mozilla.org/docs/Web/HTML/Element/th) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/th
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/th>
  */
 export interface ThProps extends GlobalAttributes {
   abbr?: string | undefined;

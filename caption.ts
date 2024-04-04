@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * CaptionProps are the props for the [`caption`](https://developer.mozilla.org/docs/Web/HTML/Element/caption) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/caption
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/caption>
  */
 export interface CaptionProps extends GlobalAttributes {
   /** @deprecated */

@@ -3,7 +3,7 @@ import { renderElement } from "./lib/mod.ts";
 
 /**
  * TrProps are the props for the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/tr
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr>
  */
 export interface TrProps extends GlobalAttributes {
   /** @deprecated */
