@@ -1,5 +1,5 @@
-import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
-import { renderElement } from "./shared/mod.ts";
+import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import { renderElement } from "./lib/mod.ts";
 
 /**
  * OptionProps are the props for the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.

@@ -7,7 +7,7 @@ if (import.meta.main) {
 
   // Create a file that exports a global attributes interface.
   const globalAttrsFile = project.createSourceFile(
-    "./shared/global_attributes.ts",
+    "./lib/global_attributes.ts",
     undefined,
     { overwrite: true },
   );
@@ -51,13 +51,13 @@ if (import.meta.main) {
     // Add the type imports.
     sourceFile.addImportDeclaration({
       isTypeOnly: true,
-      moduleSpecifier: "./shared/mod.ts",
+      moduleSpecifier: "./lib/mod.ts",
       namedImports: ["ChildrenProps", "GlobalAttributes"],
     });
 
     // Add the variable imports.
     sourceFile.addImportDeclaration({
-      moduleSpecifier: "./shared/mod.ts",
+      moduleSpecifier: "./lib/mod.ts",
       namedImports: ["renderElement"],
     });
 

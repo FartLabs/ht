@@ -1,5 +1,5 @@
-import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
-import { renderElement } from "./shared/mod.ts";
+import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import { renderElement } from "./lib/mod.ts";
 
 /**
  * AudioProps are the props for the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.

@@ -1,5 +1,5 @@
-import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
-import { renderElement } from "./shared/mod.ts";
+import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import { renderElement } from "./lib/mod.ts";
 
 /**
  * BodyProps are the props for the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.

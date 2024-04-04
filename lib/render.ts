@@ -17,7 +17,10 @@ export function renderElement(
   return `${openingTag}${(props?.children ?? []).join("")}</${tag}>`;
 }
 
-function renderAttrs(props: Record<string, string>): string {
+/**
+ * renderAttrs renders HTML attributes to a string.
+ */
+export function renderAttrs(props: Record<string, string>): string {
   let attrs = "";
   for (const key in props) {
     if (key === "children") {
@@ -29,4 +32,17 @@ function renderAttrs(props: Record<string, string>): string {
   }
 
   return attrs;
+}
+
+/**
+ * renderStyle renders CSS styles to a string.
+ */
+export function renderStyle(props: Record<string, string>): string {
+  let styles = "";
+  for (const key in props) {
+    const value = props[key];
+    styles += `${key}:${value};`;
+  }
+
+  return styles;
 }
