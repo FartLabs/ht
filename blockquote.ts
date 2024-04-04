@@ -1,8 +1,15 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * blockquote renders a blockquote element.
+ * BlockquoteProps are the props for the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/blockquote
  */
-export function blockquote(props: Record<PropertyKey, unknown>): string {
+export interface BlockquoteProps {
+  children: unknown[] | undefined;
+  cite: string | undefined;
+}
+
+/** blockquote renders the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element. */
+export function blockquote(props: BlockquoteProps): string {
   return renderElement("blockquote", props);
 }

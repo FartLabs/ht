@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * dfn renders a dfn element.
+ * DfnProps are the props for the [`dfn`](https://developer.mozilla.org/docs/Web/HTML/Element/dfn) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/dfn
  */
-export function dfn(props: Record<PropertyKey, unknown>): string {
+export interface DfnProps {
+  children: unknown[] | undefined;
+}
+
+/** dfn renders the [`dfn`](https://developer.mozilla.org/docs/Web/HTML/Element/dfn) element. */
+export function dfn(props: DfnProps): string {
   return renderElement("dfn", props);
 }

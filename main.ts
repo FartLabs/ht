@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * main renders a main element.
+ * MainProps are the props for the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/main
  */
-export function main(props: Record<PropertyKey, unknown>): string {
+export interface MainProps {
+  children: unknown[] | undefined;
+}
+
+/** main renders the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element. */
+export function main(props: MainProps): string {
   return renderElement("main", props);
 }

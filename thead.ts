@@ -1,8 +1,24 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * thead renders a thead element.
+ * TheadProps are the props for the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/thead
  */
-export function thead(props: Record<PropertyKey, unknown>): string {
+export interface TheadProps {
+  children: unknown[] | undefined;
+  /** @deprecated */
+  align: string | undefined;
+  /** @deprecated */
+  bgcolor: string | undefined;
+  /** @deprecated */
+  char: string | undefined;
+  /** @deprecated */
+  charoff: string | undefined;
+  /** @deprecated */
+  valign: string | undefined;
+}
+
+/** thead renders the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element. */
+export function thead(props: TheadProps): string {
   return renderElement("thead", props);
 }

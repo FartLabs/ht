@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * u renders a u element.
+ * UProps are the props for the [`u`](https://developer.mozilla.org/docs/Web/HTML/Element/u) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/u
  */
-export function u(props: Record<PropertyKey, unknown>): string {
+export interface UProps {
+  children: unknown[] | undefined;
+}
+
+/** u renders the [`u`](https://developer.mozilla.org/docs/Web/HTML/Element/u) element. */
+export function u(props: UProps): string {
   return renderElement("u", props);
 }

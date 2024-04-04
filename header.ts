@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * header renders a header element.
+ * HeaderProps are the props for the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/header
  */
-export function header(props: Record<PropertyKey, unknown>): string {
+export interface HeaderProps {
+  children: unknown[] | undefined;
+}
+
+/** header renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element. */
+export function header(props: HeaderProps): string {
   return renderElement("header", props);
 }

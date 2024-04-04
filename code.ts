@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * code renders a code element.
+ * CodeProps are the props for the [`code`](https://developer.mozilla.org/docs/Web/HTML/Element/code) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/code
  */
-export function code(props: Record<PropertyKey, unknown>): string {
+export interface CodeProps {
+  children: unknown[] | undefined;
+}
+
+/** code renders the [`code`](https://developer.mozilla.org/docs/Web/HTML/Element/code) element. */
+export function code(props: CodeProps): string {
   return renderElement("code", props);
 }

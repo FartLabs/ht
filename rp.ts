@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * rp renders a rp element.
+ * RpProps are the props for the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Element/rp) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/rp
  */
-export function rp(props: Record<PropertyKey, unknown>): string {
+export interface RpProps {
+  children: unknown[] | undefined;
+}
+
+/** rp renders the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Element/rp) element. */
+export function rp(props: RpProps): string {
   return renderElement("rp", props);
 }

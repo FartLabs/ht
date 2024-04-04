@@ -1,8 +1,15 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * data renders a data element.
+ * DataProps are the props for the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/data
  */
-export function data(props: Record<PropertyKey, unknown>): string {
+export interface DataProps {
+  children: unknown[] | undefined;
+  value: string | undefined;
+}
+
+/** data renders the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element. */
+export function data(props: DataProps): string {
   return renderElement("data", props);
 }

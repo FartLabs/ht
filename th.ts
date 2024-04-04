@@ -1,8 +1,33 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * th renders a th element.
+ * ThProps are the props for the [`th`](https://developer.mozilla.org/docs/Web/HTML/Element/th) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/th
  */
-export function th(props: Record<PropertyKey, unknown>): string {
+export interface ThProps {
+  children: unknown[] | undefined;
+  abbr: string | undefined;
+  /** @deprecated */
+  align: string | undefined;
+  /** @deprecated */
+  axis: string | undefined;
+  /** @deprecated */
+  bgcolor: string | undefined;
+  /** @deprecated */
+  char: string | undefined;
+  /** @deprecated */
+  charoff: string | undefined;
+  colspan: string | undefined;
+  headers: string | undefined;
+  rowspan: string | undefined;
+  scope: string | undefined;
+  /** @deprecated */
+  valign: string | undefined;
+  /** @deprecated */
+  width: string | undefined;
+}
+
+/** th renders the [`th`](https://developer.mozilla.org/docs/Web/HTML/Element/th) element. */
+export function th(props: ThProps): string {
   return renderElement("th", props);
 }

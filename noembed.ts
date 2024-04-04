@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * noembed renders a noembed element.
+ * NoembedProps are the props for the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Element/noembed) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/noembed
  */
-export function noembed(props: Record<PropertyKey, unknown>): string {
+export interface NoembedProps {
+  children: unknown[] | undefined;
+}
+
+/** noembed renders the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Element/noembed) element. */
+export function noembed(props: NoembedProps): string {
   return renderElement("noembed", props);
 }

@@ -1,8 +1,28 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * area renders a area element.
+ * AreaProps are the props for the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/area
  */
-export function area(props: Record<PropertyKey, unknown>): string {
+export interface AreaProps {
+  children: unknown[] | undefined;
+  alt: string | undefined;
+  coords: string | undefined;
+  download: string | undefined;
+  href: string | undefined;
+  implicit_noopener: string | undefined;
+  /** @deprecated */
+  nohref: string | undefined;
+  ping: string | undefined;
+  referrerpolicy: string | undefined;
+  rel: string | undefined;
+  shape: string | undefined;
+  /** @deprecated */
+  tabindex: string | undefined;
+  target: string | undefined;
+}
+
+/** area renders the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
+export function area(props: AreaProps): string {
   return renderElement("area", props);
 }

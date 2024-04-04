@@ -1,8 +1,18 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * option renders a option element.
+ * OptionProps are the props for the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/option
  */
-export function option(props: Record<PropertyKey, unknown>): string {
+export interface OptionProps {
+  children: unknown[] | undefined;
+  disabled: string | undefined;
+  label: string | undefined;
+  selected: string | undefined;
+  value: string | undefined;
+}
+
+/** option renders the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element. */
+export function option(props: OptionProps): string {
   return renderElement("option", props);
 }

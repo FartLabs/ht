@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * abbr renders a abbr element.
+ * AbbrProps are the props for the [`abbr`](https://developer.mozilla.org/docs/Web/HTML/Element/abbr) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/abbr
  */
-export function abbr(props: Record<PropertyKey, unknown>): string {
+export interface AbbrProps {
+  children: unknown[] | undefined;
+}
+
+/** abbr renders the [`abbr`](https://developer.mozilla.org/docs/Web/HTML/Element/abbr) element. */
+export function abbr(props: AbbrProps): string {
   return renderElement("abbr", props);
 }

@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * nav renders a nav element.
+ * NavProps are the props for the [`nav`](https://developer.mozilla.org/docs/Web/HTML/Element/nav) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/nav
  */
-export function nav(props: Record<PropertyKey, unknown>): string {
+export interface NavProps {
+  children: unknown[] | undefined;
+}
+
+/** nav renders the [`nav`](https://developer.mozilla.org/docs/Web/HTML/Element/nav) element. */
+export function nav(props: NavProps): string {
   return renderElement("nav", props);
 }

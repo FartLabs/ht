@@ -1,8 +1,17 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * li renders a li element.
+ * LiProps are the props for the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/li
  */
-export function li(props: Record<PropertyKey, unknown>): string {
+export interface LiProps {
+  children: unknown[] | undefined;
+  /** @deprecated */
+  type: string | undefined;
+  value: string | undefined;
+}
+
+/** li renders the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element. */
+export function li(props: LiProps): string {
   return renderElement("li", props);
 }

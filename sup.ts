@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * sup renders a sup element.
+ * SupProps are the props for the [`sup`](https://developer.mozilla.org/docs/Web/HTML/Element/sup) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/sup
  */
-export function sup(props: Record<PropertyKey, unknown>): string {
+export interface SupProps {
+  children: unknown[] | undefined;
+}
+
+/** sup renders the [`sup`](https://developer.mozilla.org/docs/Web/HTML/Element/sup) element. */
+export function sup(props: SupProps): string {
   return renderElement("sup", props);
 }

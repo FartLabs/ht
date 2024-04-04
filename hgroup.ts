@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * hgroup renders a hgroup element.
+ * HgroupProps are the props for the [`hgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/hgroup) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/hgroup
  */
-export function hgroup(props: Record<PropertyKey, unknown>): string {
+export interface HgroupProps {
+  children: unknown[] | undefined;
+}
+
+/** hgroup renders the [`hgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/hgroup) element. */
+export function hgroup(props: HgroupProps): string {
   return renderElement("hgroup", props);
 }

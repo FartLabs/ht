@@ -1,8 +1,16 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * details renders a details element.
+ * DetailsProps are the props for the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/details
  */
-export function details(props: Record<PropertyKey, unknown>): string {
+export interface DetailsProps {
+  children: unknown[] | undefined;
+  name: string | undefined;
+  open: string | undefined;
+}
+
+/** details renders the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element. */
+export function details(props: DetailsProps): string {
   return renderElement("details", props);
 }

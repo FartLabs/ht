@@ -1,8 +1,15 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * label renders a label element.
+ * LabelProps are the props for the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/label
  */
-export function label(props: Record<PropertyKey, unknown>): string {
+export interface LabelProps {
+  children: unknown[] | undefined;
+  for: string | undefined;
+}
+
+/** label renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element. */
+export function label(props: LabelProps): string {
   return renderElement("label", props);
 }

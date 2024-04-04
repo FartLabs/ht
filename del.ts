@@ -1,8 +1,16 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * del renders a del element.
+ * DelProps are the props for the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/del
  */
-export function del(props: Record<PropertyKey, unknown>): string {
+export interface DelProps {
+  children: unknown[] | undefined;
+  cite: string | undefined;
+  datetime: string | undefined;
+}
+
+/** del renders the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element. */
+export function del(props: DelProps): string {
   return renderElement("del", props);
 }

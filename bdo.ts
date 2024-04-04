@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * bdo renders a bdo element.
+ * BdoProps are the props for the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Element/bdo) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/bdo
  */
-export function bdo(props: Record<PropertyKey, unknown>): string {
+export interface BdoProps {
+  children: unknown[] | undefined;
+}
+
+/** bdo renders the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Element/bdo) element. */
+export function bdo(props: BdoProps): string {
   return renderElement("bdo", props);
 }

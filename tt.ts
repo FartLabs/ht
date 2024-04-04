@@ -1,8 +1,14 @@
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * tt renders a tt element.
+ * TtProps are the props for the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Element/tt) element.
+ * @see https://developer.mozilla.org/docs/Web/HTML/Element/tt
  */
-export function tt(props: Record<PropertyKey, unknown>): string {
+export interface TtProps {
+  children: unknown[] | undefined;
+}
+
+/** tt renders the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Element/tt) element. */
+export function tt(props: TtProps): string {
   return renderElement("tt", props);
 }
