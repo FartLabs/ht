@@ -3,7 +3,7 @@
 [![JSR score](https://jsr.io/badges/@fartlabs/html/score)](https://jsr.io/@fartlabs/html)
 [![GitHub Actions](https://github.com/FartLabs/html/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/html/actions/workflows/check.yaml)
 
-JSX runtime and compiler for composing JSON data.
+An HTML rendering library.
 
 ## Getting started
 
