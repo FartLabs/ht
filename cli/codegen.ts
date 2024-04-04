@@ -203,7 +203,14 @@ if (import.meta.main) {
   // Save all the files.
   await project.save();
 
-  // TODO: Run `deno fmt` on the generated files.
+  // Run `deno fmt` on the generated files.
+  const command = new Deno.Command(Deno.execPath(), {
+    args: ["fmt", "./", "./lib/global_attributes.ts"],
+  });
+  const output = await command.output();
+  if (!output.success) {
+    throw new Error(new TextDecoder().decode(output.stderr));
+  }
 }
 
 function capitalize(s: string): string {
