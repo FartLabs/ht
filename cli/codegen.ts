@@ -1,6 +1,52 @@
+/**
+ * @fileoverview
+ *
+ * This script generates TypeScript files for each HTML element based on the
+ * data from the Browser Compatibility Data (BCD) project. It also generates a
+ * file that exports a global attributes interface and a mod file that exports
+ * all the element files.
+ * .
+ * ├── ./lib/
+ * │   └── ./lib/global_attributes.ts
+ * ├── ./a.ts
+ * ├── ./abbr.ts
+ * ├── ./acronym.ts
+ * ├── (...) - A TypeScript file for each HTML element.
+ * └── ./mod.ts
+ */
+
 import { Project } from "ts_morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
-import { isVoid } from "./void_elements.ts";
+
+/**
+ * voidElements is a list of all void elements in HTML.
+ * @see https://developer.mozilla.org/en-US/docs/Glossary/Void_element
+ */
+export const voidElements = [
+  "area",
+  "base",
+  "br",
+  "col",
+  "embed",
+  "hr",
+  "img",
+  "input",
+  "link",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr",
+];
+
+const voidElementSet = new Set(voidElements);
+
+/**
+ * isVoid returns true if the given tag is a void element.
+ */
+export function isVoid(tag: string): boolean {
+  return voidElementSet.has(tag);
+}
 
 if (import.meta.main) {
   // Create a project.
