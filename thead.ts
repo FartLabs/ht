@@ -1,24 +1,24 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * TheadProps are the props for the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/thead
  */
-export interface TheadProps {
-  children: unknown[] | undefined;
+export interface TheadProps extends GlobalAttributes {
   /** @deprecated */
-  align: string | undefined;
+  align?: string | undefined;
   /** @deprecated */
-  bgcolor: string | undefined;
+  bgcolor?: string | undefined;
   /** @deprecated */
-  char: string | undefined;
+  char?: string | undefined;
   /** @deprecated */
-  charoff: string | undefined;
+  charoff?: string | undefined;
   /** @deprecated */
-  valign: string | undefined;
+  valign?: string | undefined;
 }
 
 /** thead renders the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element. */
-export function thead(props: TheadProps): string {
+export function thead(props?: TheadProps & ChildrenProps): string {
   return renderElement("thead", props);
 }

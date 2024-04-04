@@ -1,15 +1,15 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * MapProps are the props for the [`map`](https://developer.mozilla.org/docs/Web/HTML/Element/map) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/map
  */
-export interface MapProps {
-  children: unknown[] | undefined;
-  name: string | undefined;
+export interface MapProps extends GlobalAttributes {
+  name?: string | undefined;
 }
 
 /** map renders the [`map`](https://developer.mozilla.org/docs/Web/HTML/Element/map) element. */
-export function map(props: MapProps): string {
+export function map(props?: MapProps & ChildrenProps): string {
   return renderElement("map", props);
 }

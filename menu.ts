@@ -1,20 +1,20 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * MenuProps are the props for the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/menu
  */
-export interface MenuProps {
-  children: unknown[] | undefined;
+export interface MenuProps extends GlobalAttributes {
   /** @deprecated */
-  hr_separator: string | undefined;
+  hr_separator?: string | undefined;
   /** @deprecated */
-  label: string | undefined;
+  label?: string | undefined;
   /** @deprecated */
-  type_menu: string | undefined;
+  type_menu?: string | undefined;
 }
 
 /** menu renders the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element. */
-export function menu(props: MenuProps): string {
+export function menu(props?: MenuProps & ChildrenProps): string {
   return renderElement("menu", props);
 }

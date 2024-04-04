@@ -1,9 +1,11 @@
+import type { ChildrenProps } from "./children_props.ts";
+
 /**
  * renderElement renders an HTML element to a string.
  */
 export function renderElement(
   tag: string,
-  props: { children?: unknown[] },
+  props?: ChildrenProps,
   isVoidElement = false,
 ): string {
   const attrs = renderAttrs(props as Record<string, string>);
@@ -12,7 +14,7 @@ export function renderElement(
     return openingTag;
   }
 
-  return `${openingTag}${(props.children ?? []).join("")}</${tag}>`;
+  return `${openingTag}${(props?.children ?? []).join("")}</${tag}>`;
 }
 
 function renderAttrs(props: Record<string, string>): string {

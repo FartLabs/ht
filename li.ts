@@ -1,17 +1,17 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * LiProps are the props for the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/li
  */
-export interface LiProps {
-  children: unknown[] | undefined;
+export interface LiProps extends GlobalAttributes {
   /** @deprecated */
-  type: string | undefined;
-  value: string | undefined;
+  type?: string | undefined;
+  value?: string | undefined;
 }
 
 /** li renders the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element. */
-export function li(props: LiProps): string {
+export function li(props?: LiProps & ChildrenProps): string {
   return renderElement("li", props);
 }

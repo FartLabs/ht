@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * StrikeProps are the props for the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/strike
+ * strike renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
+ * @deprecated
  */
-export interface StrikeProps {
-  children: unknown[] | undefined;
-}
-
-/** strike renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element. */
-export function strike(props: StrikeProps): string {
+export function strike(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("strike", props);
 }

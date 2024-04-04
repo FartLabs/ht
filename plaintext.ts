@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * PlaintextProps are the props for the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/plaintext
+ * plaintext renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
+ * @deprecated
  */
-export interface PlaintextProps {
-  children: unknown[] | undefined;
-}
-
-/** plaintext renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element. */
-export function plaintext(props: PlaintextProps): string {
+export function plaintext(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("plaintext", props);
 }

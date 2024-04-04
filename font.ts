@@ -1,20 +1,24 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * FontProps are the props for the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/font
+ * @deprecated
  */
-export interface FontProps {
-  children: unknown[] | undefined;
+export interface FontProps extends GlobalAttributes {
   /** @deprecated */
-  color: string | undefined;
+  color?: string | undefined;
   /** @deprecated */
-  face: string | undefined;
+  face?: string | undefined;
   /** @deprecated */
-  size: string | undefined;
+  size?: string | undefined;
 }
 
-/** font renders the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element. */
-export function font(props: FontProps): string {
+/**
+ * font renders the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+ * @deprecated
+ */
+export function font(props?: FontProps & ChildrenProps): string {
   return renderElement("font", props);
 }

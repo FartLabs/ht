@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * AcronymProps are the props for the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/acronym
+ * acronym renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
+ * @deprecated
  */
-export interface AcronymProps {
-  children: unknown[] | undefined;
-}
-
-/** acronym renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element. */
-export function acronym(props: AcronymProps): string {
+export function acronym(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("acronym", props);
 }

@@ -1,14 +1,7 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
-/**
- * NoscriptProps are the props for the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Element/noscript) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/noscript
- */
-export interface NoscriptProps {
-  children: unknown[] | undefined;
-}
-
 /** noscript renders the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Element/noscript) element. */
-export function noscript(props: NoscriptProps): string {
+export function noscript(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("noscript", props);
 }

@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * NoembedProps are the props for the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Element/noembed) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/noembed
+ * noembed renders the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Element/noembed) element.
+ * @deprecated
  */
-export interface NoembedProps {
-  children: unknown[] | undefined;
-}
-
-/** noembed renders the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Element/noembed) element. */
-export function noembed(props: NoembedProps): string {
+export function noembed(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("noembed", props);
 }

@@ -1,19 +1,19 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * HtmlProps are the props for the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/html
  */
-export interface HtmlProps {
-  children: unknown[] | undefined;
+export interface HtmlProps extends GlobalAttributes {
   /** @deprecated */
-  manifest: string | undefined;
+  manifest?: string | undefined;
   /** @deprecated */
-  version: string | undefined;
-  xmlns: string | undefined;
+  version?: string | undefined;
+  xmlns?: string | undefined;
 }
 
 /** html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element. */
-export function html(props: HtmlProps): string {
+export function html(props?: HtmlProps & ChildrenProps): string {
   return renderElement("html", props);
 }

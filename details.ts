@@ -1,16 +1,16 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * DetailsProps are the props for the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/details
  */
-export interface DetailsProps {
-  children: unknown[] | undefined;
-  name: string | undefined;
-  open: string | undefined;
+export interface DetailsProps extends GlobalAttributes {
+  name?: string | undefined;
+  open?: string | undefined;
 }
 
 /** details renders the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element. */
-export function details(props: DetailsProps): string {
+export function details(props?: DetailsProps & ChildrenProps): string {
   return renderElement("details", props);
 }

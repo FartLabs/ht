@@ -1,32 +1,32 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * TableProps are the props for the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/table
  */
-export interface TableProps {
-  children: unknown[] | undefined;
+export interface TableProps extends GlobalAttributes {
   /** @deprecated */
-  align: string | undefined;
+  align?: string | undefined;
   /** @deprecated */
-  bgcolor: string | undefined;
+  bgcolor?: string | undefined;
   /** @deprecated */
-  border: string | undefined;
+  border?: string | undefined;
   /** @deprecated */
-  cellpadding: string | undefined;
+  cellpadding?: string | undefined;
   /** @deprecated */
-  cellspacing: string | undefined;
+  cellspacing?: string | undefined;
   /** @deprecated */
-  frame: string | undefined;
+  frame?: string | undefined;
   /** @deprecated */
-  rules: string | undefined;
+  rules?: string | undefined;
   /** @deprecated */
-  summary: string | undefined;
+  summary?: string | undefined;
   /** @deprecated */
-  width: string | undefined;
+  width?: string | undefined;
 }
 
 /** table renders the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element. */
-export function table(props: TableProps): string {
+export function table(props?: TableProps & ChildrenProps): string {
   return renderElement("table", props);
 }

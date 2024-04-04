@@ -1,35 +1,35 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * TdProps are the props for the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/td
  */
-export interface TdProps {
-  children: unknown[] | undefined;
+export interface TdProps extends GlobalAttributes {
   /** @deprecated */
-  abbr: string | undefined;
+  abbr?: string | undefined;
   /** @deprecated */
-  align: string | undefined;
+  align?: string | undefined;
   /** @deprecated */
-  axis: string | undefined;
+  axis?: string | undefined;
   /** @deprecated */
-  bgcolor: string | undefined;
+  bgcolor?: string | undefined;
   /** @deprecated */
-  char: string | undefined;
+  char?: string | undefined;
   /** @deprecated */
-  charoff: string | undefined;
-  colspan: string | undefined;
-  headers: string | undefined;
-  rowspan: string | undefined;
+  charoff?: string | undefined;
+  colspan?: string | undefined;
+  headers?: string | undefined;
+  rowspan?: string | undefined;
   /** @deprecated */
-  scope: string | undefined;
+  scope?: string | undefined;
   /** @deprecated */
-  valign: string | undefined;
+  valign?: string | undefined;
   /** @deprecated */
-  width: string | undefined;
+  width?: string | undefined;
 }
 
 /** td renders the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element. */
-export function td(props: TdProps): string {
+export function td(props?: TdProps & ChildrenProps): string {
   return renderElement("td", props);
 }

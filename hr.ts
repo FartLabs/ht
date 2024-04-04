@@ -1,25 +1,25 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * HrProps are the props for the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/hr
  */
-export interface HrProps {
-  children: unknown[] | undefined;
+export interface HrProps extends GlobalAttributes {
   /** @deprecated */
-  align: string | undefined;
+  align?: string | undefined;
   /** @deprecated */
-  color: string | undefined;
-  hr_in_select: string | undefined;
+  color?: string | undefined;
+  hr_in_select?: string | undefined;
   /** @deprecated */
-  noshade: string | undefined;
+  noshade?: string | undefined;
   /** @deprecated */
-  size: string | undefined;
+  size?: string | undefined;
   /** @deprecated */
-  width: string | undefined;
+  width?: string | undefined;
 }
 
 /** hr renders the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element. */
-export function hr(props: HrProps): string {
+export function hr(props?: HrProps & ChildrenProps): string {
   return renderElement("hr", props);
 }

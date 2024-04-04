@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * CenterProps are the props for the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/center
+ * center renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element.
+ * @deprecated
  */
-export interface CenterProps {
-  children: unknown[] | undefined;
-}
-
-/** center renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element. */
-export function center(props: CenterProps): string {
+export function center(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("center", props);
 }

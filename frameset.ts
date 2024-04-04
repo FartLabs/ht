@@ -1,18 +1,22 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * FramesetProps are the props for the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/frameset
+ * @deprecated
  */
-export interface FramesetProps {
-  children: unknown[] | undefined;
+export interface FramesetProps extends GlobalAttributes {
   /** @deprecated */
-  cols: string | undefined;
+  cols?: string | undefined;
   /** @deprecated */
-  rows: string | undefined;
+  rows?: string | undefined;
 }
 
-/** frameset renders the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element. */
-export function frameset(props: FramesetProps): string {
+/**
+ * frameset renders the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
+ * @deprecated
+ */
+export function frameset(props?: FramesetProps & ChildrenProps): string {
   return renderElement("frameset", props);
 }

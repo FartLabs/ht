@@ -1,22 +1,26 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * ParamProps are the props for the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/param
+ * @deprecated
  */
-export interface ParamProps {
-  children: unknown[] | undefined;
+export interface ParamProps extends GlobalAttributes {
   /** @deprecated */
-  name: string | undefined;
+  name?: string | undefined;
   /** @deprecated */
-  type: string | undefined;
+  type?: string | undefined;
   /** @deprecated */
-  value: string | undefined;
+  value?: string | undefined;
   /** @deprecated */
-  valuetype: string | undefined;
+  valuetype?: string | undefined;
 }
 
-/** param renders the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element. */
-export function param(props: ParamProps): string {
+/**
+ * param renders the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
+ * @deprecated
+ */
+export function param(props?: ParamProps & ChildrenProps): string {
   return renderElement("param", props);
 }

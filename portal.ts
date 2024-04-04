@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * PortalProps are the props for the [`portal`](https://developer.mozilla.org/docs/Web/HTML/Element/portal) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/portal
+ * portal renders the [`portal`](https://developer.mozilla.org/docs/Web/HTML/Element/portal) element.
+ * @experimental
  */
-export interface PortalProps {
-  children: unknown[] | undefined;
-}
-
-/** portal renders the [`portal`](https://developer.mozilla.org/docs/Web/HTML/Element/portal) element. */
-export function portal(props: PortalProps): string {
+export function portal(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("portal", props);
 }

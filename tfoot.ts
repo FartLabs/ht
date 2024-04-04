@@ -1,24 +1,24 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
  * TfootProps are the props for the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
  * @see https://developer.mozilla.org/docs/Web/HTML/Element/tfoot
  */
-export interface TfootProps {
-  children: unknown[] | undefined;
+export interface TfootProps extends GlobalAttributes {
   /** @deprecated */
-  align: string | undefined;
+  align?: string | undefined;
   /** @deprecated */
-  bgcolor: string | undefined;
+  bgcolor?: string | undefined;
   /** @deprecated */
-  char: string | undefined;
+  char?: string | undefined;
   /** @deprecated */
-  charoff: string | undefined;
+  charoff?: string | undefined;
   /** @deprecated */
-  valign: string | undefined;
+  valign?: string | undefined;
 }
 
 /** tfoot renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element. */
-export function tfoot(props: TfootProps): string {
+export function tfoot(props?: TfootProps & ChildrenProps): string {
   return renderElement("tfoot", props);
 }

@@ -5,6 +5,41 @@ if (import.meta.main) {
   // Create a project.
   const project = new Project();
 
+  // Create a file that exports a global attributes interface.
+  const globalAttrsFile = project.createSourceFile(
+    "./shared/global_attributes.ts",
+    undefined,
+    { overwrite: true },
+  );
+  const globalAttrsInterface = globalAttrsFile.addInterface({
+    isExported: true,
+    name: "GlobalAttributes",
+    docs: [{
+      description:
+        "GlobalAttributes are the global attributes for HTML elements.",
+      tags: [
+        {
+          tagName: "see",
+          text: "https://developer.mozilla.org/docs/Web/HTML/Global_attributes",
+        },
+      ],
+    }],
+  });
+  for (const attr in bcd.html.global_attributes) {
+    globalAttrsInterface.addProperty({
+      name: attr,
+      hasQuestionToken: true,
+      type: "string | undefined",
+      docs: toDocs({
+        see: bcd.html.global_attributes[attr].__compat?.mdn_url,
+        isExperimental: bcd.html.global_attributes[attr].__compat?.status
+          ?.experimental,
+        isDeprecated: bcd.html.global_attributes[attr].__compat?.status
+          ?.deprecated,
+      }),
+    });
+  }
+
   // Create a file for each element.
   for (const tag in bcd.html.elements) {
     const sourceFile = project.createSourceFile(
@@ -13,7 +48,14 @@ if (import.meta.main) {
       { overwrite: true },
     );
 
-    // Add the renderElement function import.
+    // Add the type imports.
+    sourceFile.addImportDeclaration({
+      isTypeOnly: true,
+      moduleSpecifier: "./shared/mod.ts",
+      namedImports: ["ChildrenProps", "GlobalAttributes"],
+    });
+
+    // Add the variable imports.
     sourceFile.addImportDeclaration({
       moduleSpecifier: "./shared/mod.ts",
       namedImports: ["renderElement"],
@@ -26,21 +68,13 @@ if (import.meta.main) {
       // TODO: Do not define interface if no attributes are present.
       name: propsName,
       isExported: true,
-      // TODO: Generate ElementProps in shared module.
-      // extends: "ElementProps",
-      docs: [{
+      extends: ["GlobalAttributes"],
+      docs: toDocs({
         description:
           `${propsName} are the props for the [\`${tag}\`](${url}) element.`,
-        tags: [
-          // TODO: Deprecation message.
-          ...(url ? [{ tagName: "see", text: url }] : []),
-        ],
-      }],
-    });
-    // TODO: Add children property to ElementProps or leave for jsonx implementation.
-    propsInterface.addProperty({
-      name: "children",
-      type: "unknown[] | undefined",
+        see: url,
+        isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
+      }),
     });
     for (const attr in bcd.html.elements[tag]) {
       if (attr === "__compat") {
@@ -51,11 +85,15 @@ if (import.meta.main) {
         ?.deprecated;
       propsInterface.addProperty({
         name: attr.includes("-") ? `'${attr}'` : attr,
+        hasQuestionToken: true,
         type: "string | undefined",
-        docs: isDeprecated
-          ? [{ tags: [{ tagName: "deprecated" }] }]
-          : undefined,
+        docs: toDocs({ isDeprecated }),
       });
+    }
+    let isGlobalAttrs = false;
+    if (propsInterface.getProperties().length === 0) {
+      isGlobalAttrs = true;
+      propsInterface.remove();
     }
 
     // Add the element function.
@@ -63,13 +101,21 @@ if (import.meta.main) {
     sourceFile.addFunction({
       name: fnName,
       isExported: true,
-      parameters: [{ name: "props", type: propsName }],
+      parameters: [{
+        name: "props",
+        type: `${
+          isGlobalAttrs ? "GlobalAttributes" : propsName
+        } & ChildrenProps`,
+        hasQuestionToken: true,
+      }],
       returnType: "string",
       // TODO: Account for [void elements](https://developer.mozilla.org/en-US/docs/Glossary/Void_element).
       statements: `return renderElement("${tag}", props);`,
-      docs: [{
+      docs: toDocs({
         description: `${fnName} renders the [\`${tag}\`](${url}) element.`,
-      }],
+        isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
+        isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
+      }),
     });
   }
 
@@ -100,4 +146,39 @@ function toFunctionName(s: string): string {
   }
 
   return s;
+}
+
+function toDocs(data: {
+  description?: string;
+  see?: string;
+  isDeprecated?: boolean;
+  isExperimental?: boolean;
+}) {
+  const doc: Record<string, unknown> = {};
+  if (data.description) {
+    doc.description = data.description;
+  }
+
+  const tags = [];
+  if (data.see) {
+    tags.push({ tagName: "see", text: data.see });
+  }
+
+  if (data.isDeprecated) {
+    tags.push({ tagName: "deprecated" });
+  }
+
+  if (data.isExperimental) {
+    tags.push({ tagName: "experimental" });
+  }
+
+  if (tags.length > 0) {
+    doc.tags = tags;
+  }
+
+  if (Object.keys(doc).length === 0) {
+    return undefined;
+  }
+
+  return [doc];
 }

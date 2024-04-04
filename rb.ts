@@ -1,14 +1,10 @@
+import type { ChildrenProps, GlobalAttributes } from "./shared/mod.ts";
 import { renderElement } from "./shared/mod.ts";
 
 /**
- * RbProps are the props for the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Element/rb) element.
- * @see https://developer.mozilla.org/docs/Web/HTML/Element/rb
+ * rb renders the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Element/rb) element.
+ * @deprecated
  */
-export interface RbProps {
-  children: unknown[] | undefined;
-}
-
-/** rb renders the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Element/rb) element. */
-export function rb(props: RbProps): string {
+export function rb(props?: GlobalAttributes & ChildrenProps): string {
   return renderElement("rb", props);
 }
