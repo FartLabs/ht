@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -19,6 +19,6 @@ export interface SourceProps extends GlobalAttributes {
  * source renders the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source>
  */
-export function source(props?: SourceProps & ChildrenProps): string {
-  return renderElement("source", props, true);
+export function source(props?: SourceProps): string {
+  return renderElement("source", props as AnyProps, true);
 }

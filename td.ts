@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -33,6 +33,6 @@ export interface TdProps extends GlobalAttributes {
  * td renders the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/td>
  */
-export function td(props?: TdProps & ChildrenProps): string {
-  return renderElement("td", props);
+export function td(props?: TdProps, ...children: string[]): string {
+  return renderElement("td", props as AnyProps, false, children);
 }

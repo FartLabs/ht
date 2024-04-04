@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -15,6 +15,6 @@ export interface FieldsetProps extends GlobalAttributes {
  * fieldset renders the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset>
  */
-export function fieldset(props?: FieldsetProps & ChildrenProps): string {
-  return renderElement("fieldset", props);
+export function fieldset(props?: FieldsetProps, ...children: string[]): string {
+  return renderElement("fieldset", props as AnyProps, false, children);
 }

@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface LegendProps extends GlobalAttributes {
  * legend renders the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Element/legend) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/legend>
  */
-export function legend(props?: LegendProps & ChildrenProps): string {
-  return renderElement("legend", props);
+export function legend(props?: LegendProps, ...children: string[]): string {
+  return renderElement("legend", props as AnyProps, false, children);
 }

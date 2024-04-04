@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface HeadProps extends GlobalAttributes {
  * head renders the [`head`](https://developer.mozilla.org/docs/Web/HTML/Element/head) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/head>
  */
-export function head(props?: HeadProps & ChildrenProps): string {
-  return renderElement("head", props);
+export function head(props?: HeadProps, ...children: string[]): string {
+  return renderElement("head", props as AnyProps, false, children);
 }

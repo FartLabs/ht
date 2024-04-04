@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -18,6 +18,6 @@ export interface MetaProps extends GlobalAttributes {
  * meta renders the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta>
  */
-export function meta(props?: MetaProps & ChildrenProps): string {
-  return renderElement("meta", props, true);
+export function meta(props?: MetaProps): string {
+  return renderElement("meta", props as AnyProps, true);
 }

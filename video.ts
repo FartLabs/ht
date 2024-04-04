@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -26,6 +26,6 @@ export interface VideoProps extends GlobalAttributes {
  * video renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video>
  */
-export function video(props?: VideoProps & ChildrenProps): string {
-  return renderElement("video", props);
+export function video(props?: VideoProps, ...children: string[]): string {
+  return renderElement("video", props as AnyProps, false, children);
 }

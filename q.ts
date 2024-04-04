@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -13,6 +13,6 @@ export interface QProps extends GlobalAttributes {
  * q renders the [`q`](https://developer.mozilla.org/docs/Web/HTML/Element/q) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/q>
  */
-export function q(props?: QProps & ChildrenProps): string {
-  return renderElement("q", props);
+export function q(props?: QProps, ...children: string[]): string {
+  return renderElement("q", props as AnyProps, false, children);
 }

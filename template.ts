@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -13,6 +13,6 @@ export interface TemplateProps extends GlobalAttributes {
  * template renders the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
  */
-export function template(props?: TemplateProps & ChildrenProps): string {
-  return renderElement("template", props);
+export function template(props?: TemplateProps, ...children: string[]): string {
+  return renderElement("template", props as AnyProps, false, children);
 }

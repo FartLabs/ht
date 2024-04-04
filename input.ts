@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -46,6 +46,6 @@ export interface InputProps extends GlobalAttributes {
  * input renders the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
-export function input(props?: InputProps & ChildrenProps): string {
-  return renderElement("input", props, true);
+export function input(props?: InputProps): string {
+  return renderElement("input", props as AnyProps, true);
 }

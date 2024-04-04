@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -6,6 +6,9 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noembed>
  * @deprecated
  */
-export function noembed(props?: GlobalAttributes & ChildrenProps): string {
-  return renderElement("noembed", props);
+export function noembed(
+  props?: GlobalAttributes,
+  ...children: string[]
+): string {
+  return renderElement("noembed", props as AnyProps, false, children);
 }

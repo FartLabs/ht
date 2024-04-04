@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -21,6 +21,6 @@ export interface FormProps extends GlobalAttributes {
  * form renders the [`form`](https://developer.mozilla.org/docs/Web/HTML/Element/form) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/form>
  */
-export function form(props?: FormProps & ChildrenProps): string {
-  return renderElement("form", props);
+export function form(props?: FormProps, ...children: string[]): string {
+  return renderElement("form", props as AnyProps, false, children);
 }

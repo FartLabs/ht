@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface MenuProps extends GlobalAttributes {
  * menu renders the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/menu>
  */
-export function menu(props?: MenuProps & ChildrenProps): string {
-  return renderElement("menu", props);
+export function menu(props?: MenuProps, ...children: string[]): string {
+  return renderElement("menu", props as AnyProps, false, children);
 }

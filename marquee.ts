@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -36,6 +36,6 @@ export interface MarqueeProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
  * @deprecated
  */
-export function marquee(props?: MarqueeProps & ChildrenProps): string {
-  return renderElement("marquee", props);
+export function marquee(props?: MarqueeProps, ...children: string[]): string {
+  return renderElement("marquee", props as AnyProps, false, children);
 }

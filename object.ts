@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -36,6 +36,6 @@ export interface ObjectProps extends GlobalAttributes {
  * object renders the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object>
  */
-export function object(props?: ObjectProps & ChildrenProps): string {
-  return renderElement("object", props);
+export function object(props?: ObjectProps, ...children: string[]): string {
+  return renderElement("object", props as AnyProps, false, children);
 }

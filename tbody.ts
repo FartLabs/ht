@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -22,6 +22,6 @@ export interface TbodyProps extends GlobalAttributes {
  * tbody renders the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tbody>
  */
-export function tbody(props?: TbodyProps & ChildrenProps): string {
-  return renderElement("tbody", props);
+export function tbody(props?: TbodyProps, ...children: string[]): string {
+  return renderElement("tbody", props as AnyProps, false, children);
 }

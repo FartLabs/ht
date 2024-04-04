@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -24,6 +24,6 @@ export interface ButtonProps extends GlobalAttributes {
  * button renders the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/button>
  */
-export function button(props?: ButtonProps & ChildrenProps): string {
-  return renderElement("button", props);
+export function button(props?: ButtonProps, ...children: string[]): string {
+  return renderElement("button", props as AnyProps, false, children);
 }

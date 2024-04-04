@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface DetailsProps extends GlobalAttributes {
  * details renders the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/details>
  */
-export function details(props?: DetailsProps & ChildrenProps): string {
-  return renderElement("details", props);
+export function details(props?: DetailsProps, ...children: string[]): string {
+  return renderElement("details", props as AnyProps, false, children);
 }

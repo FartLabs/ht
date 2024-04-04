@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -22,6 +22,6 @@ export interface ParamProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param>
  * @deprecated
  */
-export function param(props?: ParamProps & ChildrenProps): string {
-  return renderElement("param", props, true);
+export function param(props?: ParamProps): string {
+  return renderElement("param", props as AnyProps, true);
 }

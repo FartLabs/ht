@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -23,6 +23,6 @@ export interface ColgroupProps extends GlobalAttributes {
  * colgroup renders the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup>
  */
-export function colgroup(props?: ColgroupProps & ChildrenProps): string {
-  return renderElement("colgroup", props);
+export function colgroup(props?: ColgroupProps, ...children: string[]): string {
+  return renderElement("colgroup", props as AnyProps, false, children);
 }

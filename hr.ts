@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -22,6 +22,6 @@ export interface HrProps extends GlobalAttributes {
  * hr renders the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/hr>
  */
-export function hr(props?: HrProps & ChildrenProps): string {
-  return renderElement("hr", props, true);
+export function hr(props?: HrProps): string {
+  return renderElement("hr", props as AnyProps, true);
 }

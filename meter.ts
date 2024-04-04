@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -18,6 +18,6 @@ export interface MeterProps extends GlobalAttributes {
  * meter renders the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter>
  */
-export function meter(props?: MeterProps & ChildrenProps): string {
-  return renderElement("meter", props);
+export function meter(props?: MeterProps, ...children: string[]): string {
+  return renderElement("meter", props as AnyProps, false, children);
 }

@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -17,6 +17,6 @@ export interface HtmlProps extends GlobalAttributes {
  * html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
  */
-export function html(props?: HtmlProps & ChildrenProps): string {
-  return renderElement("html", props);
+export function html(props?: HtmlProps, ...children: string[]): string {
+  return renderElement("html", props as AnyProps, false, children);
 }

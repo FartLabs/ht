@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -13,6 +13,6 @@ export interface MapProps extends GlobalAttributes {
  * map renders the [`map`](https://developer.mozilla.org/docs/Web/HTML/Element/map) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/map>
  */
-export function map(props?: MapProps & ChildrenProps): string {
-  return renderElement("map", props);
+export function map(props?: MapProps, ...children: string[]): string {
+  return renderElement("map", props as AnyProps, false, children);
 }

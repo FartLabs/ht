@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -22,6 +22,6 @@ export interface TrProps extends GlobalAttributes {
  * tr renders the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr>
  */
-export function tr(props?: TrProps & ChildrenProps): string {
-  return renderElement("tr", props);
+export function tr(props?: TrProps, ...children: string[]): string {
+  return renderElement("tr", props as AnyProps, false, children);
 }

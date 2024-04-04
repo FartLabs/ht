@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -39,6 +39,6 @@ export interface IframeProps extends GlobalAttributes {
  * iframe renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
  */
-export function iframe(props?: IframeProps & ChildrenProps): string {
-  return renderElement("iframe", props);
+export function iframe(props?: IframeProps, ...children: string[]): string {
+  return renderElement("iframe", props as AnyProps, false, children);
 }

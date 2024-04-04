@@ -122,7 +122,7 @@ if (import.meta.main) {
     sourceFile.addImportDeclaration({
       isTypeOnly: true,
       moduleSpecifier: "./lib/mod.ts",
-      namedImports: ["ChildrenProps", "GlobalAttributes"],
+      namedImports: ["AnyProps", "GlobalAttributes"],
     });
 
     // Add the variable imports.
@@ -171,17 +171,24 @@ if (import.meta.main) {
     sourceFile.addFunction({
       name: fnName,
       isExported: true,
-      parameters: [{
-        name: "props",
-        type: `${
-          isGlobalAttrs ? "GlobalAttributes" : propsName
-        } & ChildrenProps`,
-        hasQuestionToken: true,
-      }],
+      parameters: [
+        {
+          name: "props",
+          type: `${isGlobalAttrs ? "GlobalAttributes" : propsName}`,
+          hasQuestionToken: true,
+        },
+        ...(!isVoid(tag)
+          ? [{
+            name: "children",
+            type: "string[]",
+            isRestParameter: true,
+          }]
+          : []),
+      ],
       returnType: "string",
-      statements: `return renderElement("${tag}", props${
-        isVoid(tag) ? ", true" : ""
-      });`,
+      statements: isVoid(tag)
+        ? `return renderElement("${tag}", props as AnyProps, true);`
+        : `return renderElement("${tag}", props as AnyProps, false, children);`,
       docs: toDocs({
         description: `${fnName} renders the [\`${tag}\`](${url}) element.`,
         isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,

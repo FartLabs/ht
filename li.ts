@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -15,6 +15,6 @@ export interface LiProps extends GlobalAttributes {
  * li renders the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/li>
  */
-export function li(props?: LiProps & ChildrenProps): string {
-  return renderElement("li", props);
+export function li(props?: LiProps, ...children: string[]): string {
+  return renderElement("li", props as AnyProps, false, children);
 }

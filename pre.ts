@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -18,6 +18,6 @@ export interface PreProps extends GlobalAttributes {
  * pre renders the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre>
  */
-export function pre(props?: PreProps & ChildrenProps): string {
-  return renderElement("pre", props);
+export function pre(props?: PreProps, ...children: string[]): string {
+  return renderElement("pre", props as AnyProps, false, children);
 }

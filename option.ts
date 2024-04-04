@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -16,6 +16,6 @@ export interface OptionProps extends GlobalAttributes {
  * option renders the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/option>
  */
-export function option(props?: OptionProps & ChildrenProps): string {
-  return renderElement("option", props);
+export function option(props?: OptionProps, ...children: string[]): string {
+  return renderElement("option", props as AnyProps, false, children);
 }

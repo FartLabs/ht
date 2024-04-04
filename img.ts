@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -38,6 +38,6 @@ export interface ImgProps extends GlobalAttributes {
  * img renders the [`img`](https://developer.mozilla.org/docs/Web/HTML/Element/img) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/img>
  */
-export function img(props?: ImgProps & ChildrenProps): string {
-  return renderElement("img", props, true);
+export function img(props?: ImgProps): string {
+  return renderElement("img", props as AnyProps, true);
 }

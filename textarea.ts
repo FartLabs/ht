@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -26,6 +26,6 @@ export interface TextareaProps extends GlobalAttributes {
  * textarea renders the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Element/textarea) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/textarea>
  */
-export function textarea(props?: TextareaProps & ChildrenProps): string {
-  return renderElement("textarea", props);
+export function textarea(props?: TextareaProps, ...children: string[]): string {
+  return renderElement("textarea", props as AnyProps, false, children);
 }

@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface DelProps extends GlobalAttributes {
  * del renders the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del>
  */
-export function del(props?: DelProps & ChildrenProps): string {
-  return renderElement("del", props);
+export function del(props?: DelProps, ...children: string[]): string {
+  return renderElement("del", props as AnyProps, false, children);
 }

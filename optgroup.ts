@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface OptgroupProps extends GlobalAttributes {
  * optgroup renders the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup>
  */
-export function optgroup(props?: OptgroupProps & ChildrenProps): string {
-  return renderElement("optgroup", props);
+export function optgroup(props?: OptgroupProps, ...children: string[]): string {
+  return renderElement("optgroup", props as AnyProps, false, children);
 }

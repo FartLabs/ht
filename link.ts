@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -35,6 +35,6 @@ export interface LinkProps extends GlobalAttributes {
  * link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
  */
-export function link(props?: LinkProps & ChildrenProps): string {
-  return renderElement("link", props, true);
+export function link(props?: LinkProps): string {
+  return renderElement("link", props as AnyProps, true);
 }

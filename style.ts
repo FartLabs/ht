@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -16,6 +16,6 @@ export interface StyleProps extends GlobalAttributes {
  * style renders the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style>
  */
-export function style(props?: StyleProps & ChildrenProps): string {
-  return renderElement("style", props);
+export function style(props?: StyleProps, ...children: string[]): string {
+  return renderElement("style", props as AnyProps, false, children);
 }

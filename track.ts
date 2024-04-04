@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -17,6 +17,6 @@ export interface TrackProps extends GlobalAttributes {
  * track renders the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track>
  */
-export function track(props?: TrackProps & ChildrenProps): string {
-  return renderElement("track", props, true);
+export function track(props?: TrackProps): string {
+  return renderElement("track", props as AnyProps, true);
 }

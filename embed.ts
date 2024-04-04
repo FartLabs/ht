@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -20,6 +20,6 @@ export interface EmbedProps extends GlobalAttributes {
  * embed renders the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed>
  */
-export function embed(props?: EmbedProps & ChildrenProps): string {
-  return renderElement("embed", props, true);
+export function embed(props?: EmbedProps): string {
+  return renderElement("embed", props as AnyProps, true);
 }

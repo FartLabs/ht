@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -16,6 +16,6 @@ export interface DirProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dir>
  * @deprecated
  */
-export function dir(props?: DirProps & ChildrenProps): string {
-  return renderElement("dir", props);
+export function dir(props?: DirProps, ...children: string[]): string {
+  return renderElement("dir", props as AnyProps, false, children);
 }

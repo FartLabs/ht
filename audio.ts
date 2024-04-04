@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -21,6 +21,6 @@ export interface AudioProps extends GlobalAttributes {
  * audio renders the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio>
  */
-export function audio(props?: AudioProps & ChildrenProps): string {
-  return renderElement("audio", props);
+export function audio(props?: AudioProps, ...children: string[]): string {
+  return renderElement("audio", props as AnyProps, false, children);
 }

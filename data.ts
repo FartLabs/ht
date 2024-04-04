@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -13,6 +13,6 @@ export interface DataProps extends GlobalAttributes {
  * data renders the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/data>
  */
-export function data(props?: DataProps & ChildrenProps): string {
-  return renderElement("data", props);
+export function data(props?: DataProps, ...children: string[]): string {
+  return renderElement("data", props as AnyProps, false, children);
 }

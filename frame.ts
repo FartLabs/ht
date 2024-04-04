@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -28,6 +28,6 @@ export interface FrameProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frame>
  * @deprecated
  */
-export function frame(props?: FrameProps & ChildrenProps): string {
-  return renderElement("frame", props);
+export function frame(props?: FrameProps, ...children: string[]): string {
+  return renderElement("frame", props as AnyProps, false, children);
 }

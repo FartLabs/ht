@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface InsProps extends GlobalAttributes {
  * ins renders the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ins>
  */
-export function ins(props?: InsProps & ChildrenProps): string {
-  return renderElement("ins", props);
+export function ins(props?: InsProps, ...children: string[]): string {
+  return renderElement("ins", props as AnyProps, false, children);
 }

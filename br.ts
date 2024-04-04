@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -14,6 +14,6 @@ export interface BrProps extends GlobalAttributes {
  * br renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/br>
  */
-export function br(props?: BrProps & ChildrenProps): string {
-  return renderElement("br", props, true);
+export function br(props?: BrProps): string {
+  return renderElement("br", props as AnyProps, true);
 }

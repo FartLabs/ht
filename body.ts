@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -32,6 +32,6 @@ export interface BodyProps extends GlobalAttributes {
  * body renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
  */
-export function body(props?: BodyProps & ChildrenProps): string {
-  return renderElement("body", props);
+export function body(props?: BodyProps, ...children: string[]): string {
+  return renderElement("body", props as AnyProps, false, children);
 }

@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -22,6 +22,6 @@ export interface TfootProps extends GlobalAttributes {
  * tfoot renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot>
  */
-export function tfoot(props?: TfootProps & ChildrenProps): string {
-  return renderElement("tfoot", props);
+export function tfoot(props?: TfootProps, ...children: string[]): string {
+  return renderElement("tfoot", props as AnyProps, false, children);
 }

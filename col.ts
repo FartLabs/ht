@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -23,6 +23,6 @@ export interface ColProps extends GlobalAttributes {
  * col renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/col>
  */
-export function col(props?: ColProps & ChildrenProps): string {
-  return renderElement("col", props, true);
+export function col(props?: ColProps): string {
+  return renderElement("col", props as AnyProps, true);
 }

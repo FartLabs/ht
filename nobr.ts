@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -6,6 +6,6 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/nobr>
  * @deprecated
  */
-export function nobr(props?: GlobalAttributes & ChildrenProps): string {
-  return renderElement("nobr", props);
+export function nobr(props?: GlobalAttributes, ...children: string[]): string {
+  return renderElement("nobr", props as AnyProps, false, children);
 }

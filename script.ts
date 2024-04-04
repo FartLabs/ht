@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -23,6 +23,6 @@ export interface ScriptProps extends GlobalAttributes {
  * script renders the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script>
  */
-export function script(props?: ScriptProps & ChildrenProps): string {
-  return renderElement("script", props);
+export function script(props?: ScriptProps, ...children: string[]): string {
+  return renderElement("script", props as AnyProps, false, children);
 }

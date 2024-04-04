@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -13,6 +13,6 @@ export interface TimeProps extends GlobalAttributes {
  * time renders the [`time`](https://developer.mozilla.org/docs/Web/HTML/Element/time) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/time>
  */
-export function time(props?: TimeProps & ChildrenProps): string {
-  return renderElement("time", props);
+export function time(props?: TimeProps, ...children: string[]): string {
+  return renderElement("time", props as AnyProps, false, children);
 }

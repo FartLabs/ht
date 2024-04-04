@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -18,6 +18,6 @@ export interface SelectProps extends GlobalAttributes {
  * select renders the [`select`](https://developer.mozilla.org/docs/Web/HTML/Element/select) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/select>
  */
-export function select(props?: SelectProps & ChildrenProps): string {
-  return renderElement("select", props);
+export function select(props?: SelectProps, ...children: string[]): string {
+  return renderElement("select", props as AnyProps, false, children);
 }

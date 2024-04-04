@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -6,6 +6,9 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noframes>
  * @deprecated
  */
-export function noframes(props?: GlobalAttributes & ChildrenProps): string {
-  return renderElement("noframes", props);
+export function noframes(
+  props?: GlobalAttributes,
+  ...children: string[]
+): string {
+  return renderElement("noframes", props as AnyProps, false, children);
 }

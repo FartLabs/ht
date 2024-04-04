@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -31,6 +31,6 @@ export interface AProps extends GlobalAttributes {
  * a renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
  */
-export function a(props?: AProps & ChildrenProps): string {
-  return renderElement("a", props);
+export function a(props?: AProps, ...children: string[]): string {
+  return renderElement("a", props as AnyProps, false, children);
 }

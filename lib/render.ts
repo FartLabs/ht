@@ -1,29 +1,35 @@
-import type { ChildrenProps } from "./children_props.ts";
+/**
+ * AnyProps are the props for any HTML element.
+ */
+export type AnyProps = Record<string, string | undefined>;
 
 /**
  * renderElement renders an HTML element to a string.
  */
 export function renderElement(
   tag: string,
-  props?: ChildrenProps,
-  isVoid = false,
+  props?: AnyProps,
+  isVoid?: boolean,
+  children?: string[],
 ): string {
-  const attrs = renderAttrs(props as Record<string, string>);
+  const attrs = renderAttrs(props);
   const openingTag = `<${tag}${attrs ? ` ${attrs}` : ""}>`;
   if (isVoid) {
     return openingTag;
   }
 
-  return `${openingTag}${(props?.children ?? []).join("")}</${tag}>`;
+  return `${openingTag}${children?.join("")}</${tag}>`;
 }
 
 /**
  * renderAttrs renders HTML attributes to a string.
  */
-export function renderAttrs(props: Record<string, string>): string {
+export function renderAttrs(
+  props?: AnyProps,
+): string {
   let attrs = "";
   for (const key in props) {
-    if (key === "children") {
+    if (key === "children" || props[key] === undefined) {
       continue;
     }
 
@@ -37,7 +43,7 @@ export function renderAttrs(props: Record<string, string>): string {
 /**
  * renderStyle renders CSS styles to a string.
  */
-export function renderStyle(props: Record<string, string>): string {
+export function renderStyle(props?: Record<string, string>): string {
   let styles = "";
   for (const key in props) {
     const value = props[key];

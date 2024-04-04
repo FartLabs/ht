@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -25,6 +25,6 @@ export interface AreaProps extends GlobalAttributes {
  * area renders the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area>
  */
-export function area(props?: AreaProps & ChildrenProps): string {
-  return renderElement("area", props, true);
+export function area(props?: AreaProps): string {
+  return renderElement("area", props as AnyProps, true);
 }

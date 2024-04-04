@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -17,6 +17,6 @@ export interface OlProps extends GlobalAttributes {
  * ol renders the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol>
  */
-export function ol(props?: OlProps & ChildrenProps): string {
-  return renderElement("ol", props);
+export function ol(props?: OlProps, ...children: string[]): string {
+  return renderElement("ol", props as AnyProps, false, children);
 }

@@ -1,4 +1,4 @@
-import type { ChildrenProps, GlobalAttributes } from "./lib/mod.ts";
+import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
@@ -6,6 +6,9 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe>
  * @experimental
  */
-export function fencedframe(props?: GlobalAttributes & ChildrenProps): string {
-  return renderElement("fencedframe", props);
+export function fencedframe(
+  props?: GlobalAttributes,
+  ...children: string[]
+): string {
+  return renderElement("fencedframe", props as AnyProps, false, children);
 }
