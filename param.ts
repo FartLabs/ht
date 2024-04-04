@@ -22,5 +22,5 @@ export interface ParamProps extends GlobalAttributes {
  * @deprecated
  */
 export function param(props?: ParamProps & ChildrenProps): string {
-  return renderElement("param", props);
+  return renderElement("param", props, true);
 }

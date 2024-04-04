@@ -16,5 +16,5 @@ export interface MetaProps extends GlobalAttributes {
 
 /** meta renders the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element. */
 export function meta(props?: MetaProps & ChildrenProps): string {
-  return renderElement("meta", props);
+  return renderElement("meta", props, true);
 }

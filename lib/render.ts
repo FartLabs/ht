@@ -6,11 +6,11 @@ import type { ChildrenProps } from "./children_props.ts";
 export function renderElement(
   tag: string,
   props?: ChildrenProps,
-  isVoidElement = false,
+  isVoid = false,
 ): string {
   const attrs = renderAttrs(props as Record<string, string>);
   const openingTag = `<${tag}${attrs ? ` ${attrs}` : ""}>`;
-  if (isVoidElement) {
+  if (isVoid) {
     return openingTag;
   }
 

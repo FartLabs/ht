@@ -12,5 +12,5 @@ export interface BrProps extends GlobalAttributes {
 
 /** br renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element. */
 export function br(props?: BrProps & ChildrenProps): string {
-  return renderElement("br", props);
+  return renderElement("br", props, true);
 }

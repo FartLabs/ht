@@ -15,5 +15,5 @@ export interface TrackProps extends GlobalAttributes {
 
 /** track renders the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element. */
 export function track(props?: TrackProps & ChildrenProps): string {
-  return renderElement("track", props);
+  return renderElement("track", props, true);
 }

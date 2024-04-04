@@ -21,5 +21,5 @@ export interface ColProps extends GlobalAttributes {
 
 /** col renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element. */
 export function col(props?: ColProps & ChildrenProps): string {
-  return renderElement("col", props);
+  return renderElement("col", props, true);
 }

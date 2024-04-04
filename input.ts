@@ -66,5 +66,5 @@ export interface InputProps extends GlobalAttributes {
 
 /** input renders the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
 export function input(props?: InputProps & ChildrenProps): string {
-  return renderElement("input", props);
+  return renderElement("input", props, true);
 }

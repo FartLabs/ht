@@ -1,5 +1,6 @@
 import { Project } from "ts_morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
+import { isVoid } from "./void_elements.ts";
 
 if (import.meta.main) {
   // Create a project.
@@ -109,8 +110,9 @@ if (import.meta.main) {
         hasQuestionToken: true,
       }],
       returnType: "string",
-      // TODO: Account for [void elements](https://developer.mozilla.org/en-US/docs/Glossary/Void_element).
-      statements: `return renderElement("${tag}", props);`,
+      statements: `return renderElement("${tag}", props${
+        isVoid(tag) ? ", true" : ""
+      });`,
       docs: toDocs({
         description: `${fnName} renders the [\`${tag}\`](${url}) element.`,
         isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
@@ -126,7 +128,7 @@ if (import.meta.main) {
     { overwrite: true },
   );
   for (const tag in bcd.html.elements) {
-    modFile.addStatements(`export * from "./${tag}";`);
+    modFile.addStatements(`export * from "./${tag}.ts";`);
   }
 
   // Save all the files.

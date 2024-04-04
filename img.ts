@@ -37,5 +37,5 @@ export interface ImgProps extends GlobalAttributes {
 
 /** img renders the [`img`](https://developer.mozilla.org/docs/Web/HTML/Element/img) element. */
 export function img(props?: ImgProps & ChildrenProps): string {
-  return renderElement("img", props);
+  return renderElement("img", props, true);
 }

@@ -21,5 +21,5 @@ export interface HrProps extends GlobalAttributes {
 
 /** hr renders the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element. */
 export function hr(props?: HrProps & ChildrenProps): string {
-  return renderElement("hr", props);
+  return renderElement("hr", props, true);
 }
