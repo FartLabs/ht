@@ -6,6 +6,7 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style>
  */
 export interface StyleProps extends GlobalAttributes {
+  /** @experimental */
   blocking?: string | undefined;
   media?: string | undefined;
   /** @deprecated */

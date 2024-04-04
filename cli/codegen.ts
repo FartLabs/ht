@@ -111,9 +111,10 @@ if (import.meta.main) {
   }
 
   // Create a file for each element.
-  for (const tag in bcd.html.elements) {
+  const descriptors = getDescriptors();
+  for (const descriptor of descriptors) {
     const sourceFile = project.createSourceFile(
-      `${tag}.ts`,
+      `${descriptor.tag}.ts`,
       undefined,
       { overwrite: true },
     );
@@ -132,52 +133,45 @@ if (import.meta.main) {
     });
 
     // Add an interface for the props.
-    const propsName = `${capitalize(tag)}Props`;
-    const url = bcd.html.elements[tag].__compat?.mdn_url;
-    const propsInterface = sourceFile.addInterface({
-      name: propsName,
-      isExported: true,
-      extends: ["GlobalAttributes"],
-      docs: toDocs({
-        description:
-          `${propsName} are the props for the [\`${tag}\`](${url}) element.`,
-        see: url,
-        isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
-      }),
-    });
-    for (const attr in bcd.html.elements[tag]) {
-      if (attr.includes("_")) {
-        // TODO: Handle special cases e.g. input elements.
-        continue;
-      }
-
-      const isDeprecated = bcd.html.elements[tag][attr].__compat?.status
-        ?.deprecated;
-      propsInterface.addProperty({
-        name: attr.includes("-") ? `'${attr}'` : attr,
-        hasQuestionToken: true,
-        type: "string | undefined",
-        docs: toDocs({ isDeprecated }),
+    if (descriptor.attrs.length > 0) {
+      sourceFile.addInterface({
+        name: descriptor.propsInterfaceName,
+        isExported: true,
+        extends: ["GlobalAttributes"],
+        docs: toDocs({
+          description:
+            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
+        }),
+        properties: descriptor.attrs.map((attr) => {
+          return {
+            name: attr.includes("-") ? `'${attr}'` : attr,
+            hasQuestionToken: true,
+            type: "string | undefined",
+            docs: toDocs({
+              isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
+                ?.status?.experimental,
+              isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
+                ?.status?.deprecated,
+            }),
+          };
+        }),
       });
-    }
-    let isGlobalAttrs = false;
-    if (propsInterface.getProperties().length === 0) {
-      isGlobalAttrs = true;
-      propsInterface.remove();
     }
 
     // Add the element render function.
-    const fnName = toFunctionName(tag);
     sourceFile.addFunction({
-      name: fnName,
+      name: descriptor.functionName,
       isExported: true,
       parameters: [
         {
           name: "props",
-          type: `${isGlobalAttrs ? "GlobalAttributes" : propsName}`,
+          type: descriptor.propsInterfaceName,
           hasQuestionToken: true,
         },
-        ...(!isVoid(tag)
+        ...(!descriptor.isVoid
           ? [{
             name: "children",
             type: "string[]",
@@ -186,15 +180,16 @@ if (import.meta.main) {
           : []),
       ],
       returnType: "string",
-      statements: isVoid(tag)
-        ? `return renderElement("${tag}", props as AnyProps, true);`
-        : `return renderElement("${tag}", props as AnyProps, false, children);`,
       docs: toDocs({
-        description: `${fnName} renders the [\`${tag}\`](${url}) element.`,
-        isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
-        isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
-        see: url,
+        description:
+          `${descriptor.functionName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+        isDeprecated: descriptor.isDeprecated,
+        isExperimental: descriptor.isExperimental,
+        see: descriptor.see,
       }),
+      statements: descriptor.isVoid
+        ? `return renderElement("${descriptor.tag}", props as AnyProps, true);`
+        : `return renderElement("${descriptor.tag}", props as AnyProps, false, children);`,
     });
   }
 
@@ -204,8 +199,8 @@ if (import.meta.main) {
     undefined,
     { overwrite: true },
   );
-  for (const tag in bcd.html.elements) {
-    modFile.addStatements(`export * from "./${tag}.ts";`);
+  for (const descriptor of descriptors) {
+    modFile.addStatements(`export * from "./${descriptor.tag}.ts";`);
   }
 
   // Save all the files.
@@ -219,6 +214,47 @@ if (import.meta.main) {
   if (!output.success) {
     throw new Error(new TextDecoder().decode(output.stderr));
   }
+}
+
+interface Descriptor {
+  tag: string;
+  functionName: string;
+  propsInterfaceName: string;
+  isVoid: boolean;
+  attrs: string[];
+  description?: string;
+  see?: string;
+  isDeprecated?: boolean;
+  isExperimental?: boolean;
+}
+
+/**
+ * getDescriptors returns the descriptors for each HTML element.
+ */
+export function getDescriptors(): Descriptor[] {
+  const descriptors: Descriptor[] = [];
+  for (const tag in bcd.html.elements) {
+    const attrs = getAttrs(tag);
+    descriptors.push({
+      tag,
+      functionName: toFunctionName(tag),
+      propsInterfaceName: attrs.length === 0
+        ? "GlobalAttributes"
+        : `${capitalize(tag)}Props`,
+      isVoid: isVoid(tag),
+      attrs,
+      see: bcd.html.elements[tag].__compat?.mdn_url,
+      isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
+      isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
+    });
+  }
+
+  return descriptors;
+}
+
+function getAttrs(tag: string): string[] {
+  return Object.keys(bcd.html.elements[tag])
+    .filter((attr) => !attr.includes("_"));
 }
 
 function capitalize(s: string): string {

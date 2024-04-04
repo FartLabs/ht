@@ -6,6 +6,7 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
  */
 export interface AProps extends GlobalAttributes {
+  /** @experimental */
   attributionsrc?: string | undefined;
   /** @deprecated */
   charset?: string | undefined;

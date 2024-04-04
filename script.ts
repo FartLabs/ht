@@ -7,7 +7,9 @@ import { renderElement } from "./lib/mod.ts";
  */
 export interface ScriptProps extends GlobalAttributes {
   async?: string | undefined;
+  /** @experimental */
   attributionsrc?: string | undefined;
+  /** @experimental */
   blocking?: string | undefined;
   crossorigin?: string | undefined;
   defer?: string | undefined;

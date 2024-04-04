@@ -12,8 +12,11 @@ export interface IframeProps extends GlobalAttributes {
   allowfullscreen?: string | undefined;
   /** @deprecated */
   allowpaymentrequest?: string | undefined;
+  /** @experimental */
   browsingtopics?: string | undefined;
+  /** @experimental */
   credentialless?: string | undefined;
+  /** @experimental */
   csp?: string | undefined;
   /** @deprecated */
   frameborder?: string | undefined;

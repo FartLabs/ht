@@ -7,6 +7,7 @@ import { renderElement } from "./lib/mod.ts";
  */
 export interface LinkProps extends GlobalAttributes {
   as?: string | undefined;
+  /** @experimental */
   blocking?: string | undefined;
   /** @deprecated */
   charset?: string | undefined;

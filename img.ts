@@ -9,6 +9,7 @@ export interface ImgProps extends GlobalAttributes {
   /** @deprecated */
   align?: string | undefined;
   alt?: string | undefined;
+  /** @experimental */
   attributionsrc?: string | undefined;
   /** @deprecated */
   border?: string | undefined;
