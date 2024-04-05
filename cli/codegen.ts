@@ -39,7 +39,10 @@ export const voidElements = [
   "wbr",
 ];
 
-const voidElementSet = new Set(voidElements);
+/**
+ * voidElementSet is a set of all void elements in HTML.
+ */
+export const voidElementSet = new Set(voidElements);
 
 /**
  * isVoid returns true if the given tag is a void element.
@@ -230,7 +233,12 @@ if (import.meta.main) {
   }
 }
 
-interface Descriptor {
+/**
+ * Descriptor represents the data for an HTML element.
+ *
+ * From this data, we can generate a TypeScript file for each element.
+ */
+export interface Descriptor {
   tag: string;
   functionName: string;
   propsInterfaceName: string;
@@ -266,16 +274,25 @@ export function getDescriptors(): Descriptor[] {
   return descriptors;
 }
 
-function getAttrs(tag: string): string[] {
+/**
+ * getAttrs returns the attributes for the given HTML element tag.
+ */
+export function getAttrs(tag: string): string[] {
   return Object.keys(bcd.html.elements[tag])
     .filter((attr) => !attr.includes("_"));
 }
 
-function capitalize(s: string): string {
+/**
+ * capitalize capitalizes the first letter of the given string.
+ */
+export function capitalize(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-function toFunctionName(s: string): string {
+/**
+ * toFunctionName converts the given string to a valid function name.
+ */
+export function toFunctionName(s: string): string {
   // Handle special cases to avoid conflicts.
   if (s === "var") {
     return "var_";
@@ -284,7 +301,10 @@ function toFunctionName(s: string): string {
   return s;
 }
 
-function toDocs(data: {
+/**
+ * toDocs is a helper function that converts the given data to a JSDoc comment.
+ */
+export function toDocs(data: {
   description?: string;
   see?: string;
   isDeprecated?: boolean;
