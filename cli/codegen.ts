@@ -15,7 +15,7 @@
  * └── ./mod.ts
  */
 
-import { Project } from "ts_morph";
+import { Project } from "ts-morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
 /**

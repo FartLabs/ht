@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "imports": {
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^5.5.19",
-    "ts_morph": "https://deno.land/x/ts_morph@22.0.0/mod.ts"
+    "ts-morph": "npm:ts-morph@^22.0.0"
   },
   "tasks": {
     "generate": "deno run -A cli/codegen.ts"
