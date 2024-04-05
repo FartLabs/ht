@@ -1,7 +1,7 @@
-# html
+# [@fartlabs/ht](https://jsr.io/@fartlabs/ht)
 
-[![JSR score](https://jsr.io/badges/@fartlabs/html/score)](https://jsr.io/@fartlabs/html)
-[![GitHub Actions](https://github.com/FartLabs/html/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/html/actions/workflows/check.yaml)
+[![JSR score](https://jsr.io/badges/@fartlabs/ht/score)](https://jsr.io/@fartlabs/ht)
+[![GitHub Actions](https://github.com/FartLabs/ht/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/ht/actions/workflows/check.yaml)
 
 An HTML rendering library.
 
@@ -18,13 +18,13 @@ deno init
 3\. Add html as a project dependency.
 
 ```sh
-deno add @fartlabs/html
+deno add @fartlabs/ht
 ```
 
 4\. Add a file ending in `.[j|t]s` to your project. For example, `main.ts`.
 
 ```ts
-import { a } from "@fartlabs/html";
+import { a } from "@fartlabs/ht";
 
 const html = a({ href: "https://example.com" }, "Hello, world!");
 
