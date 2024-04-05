@@ -15,7 +15,7 @@
  * └── ./mod.ts
  */
 
-import { Project } from "ts_morph";
+import { Project } from "ts-morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
 /**
@@ -209,8 +209,10 @@ if (import.meta.main) {
   // Update the deno.json exports.
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
+    "./cli/codegen.ts": "./cli/codegen.ts",
+    "./lib/global_attributes.ts": "./lib/global_attributes.ts",
+    "./lib/render.ts": "./lib/render.ts",
     ".": "./mod.ts",
-    "./cli/codegen": "./cli/codegen.ts",
     ...Object.fromEntries(descriptors.map((descriptor) => [
       `./${descriptor.tag}`,
       `./${descriptor.tag}.ts`,
