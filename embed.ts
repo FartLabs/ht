@@ -2,17 +2,27 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * EmbedProps are the props for the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+ * EmbedElementProps are the props for the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed>
  */
-export interface EmbedProps extends GlobalAttributes {
-  /** @deprecated */
+export interface EmbedElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @deprecated
+   */
   align?: string | undefined;
+  /** `height` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
   height?: string | undefined;
-  /** @deprecated */
+  /**
+   * `name` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @deprecated
+   */
   name?: string | undefined;
+  /** `src` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
   src?: string | undefined;
+  /** `type` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
   type?: string | undefined;
+  /** `width` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
   width?: string | undefined;
 }
 
@@ -20,6 +30,6 @@ export interface EmbedProps extends GlobalAttributes {
  * embed renders the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed>
  */
-export function embed(props?: EmbedProps): string {
+export function embed(props?: EmbedElementProps): string {
   return renderElement("embed", props as AnyProps, true);
 }

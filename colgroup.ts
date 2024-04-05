@@ -2,20 +2,36 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * ColgroupProps are the props for the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+ * ColgroupElementProps are the props for the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup>
  */
-export interface ColgroupProps extends GlobalAttributes {
-  /** @deprecated */
+export interface ColgroupElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `char` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @deprecated
+   */
   char?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charoff` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @deprecated
+   */
   charoff?: string | undefined;
+  /** `span` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element. */
   span?: string | undefined;
-  /** @deprecated */
+  /**
+   * `valign` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @deprecated
+   */
   valign?: string | undefined;
-  /** @deprecated */
+  /**
+   * `width` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @deprecated
+   */
   width?: string | undefined;
 }
 
@@ -23,6 +39,9 @@ export interface ColgroupProps extends GlobalAttributes {
  * colgroup renders the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup>
  */
-export function colgroup(props?: ColgroupProps, ...children: string[]): string {
+export function colgroup(
+  props?: ColgroupElementProps,
+  ...children: string[]
+): string {
   return renderElement("colgroup", props as AnyProps, false, children);
 }

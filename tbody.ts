@@ -2,19 +2,34 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TbodyProps are the props for the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+ * TbodyElementProps are the props for the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tbody>
  */
-export interface TbodyProps extends GlobalAttributes {
-  /** @deprecated */
+export interface TbodyElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `char` is an attribute of the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+   * @deprecated
+   */
   char?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charoff` is an attribute of the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+   * @deprecated
+   */
   charoff?: string | undefined;
-  /** @deprecated */
+  /**
+   * `valign` is an attribute of the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
+   * @deprecated
+   */
   valign?: string | undefined;
 }
 
@@ -22,6 +37,9 @@ export interface TbodyProps extends GlobalAttributes {
  * tbody renders the [`tbody`](https://developer.mozilla.org/docs/Web/HTML/Element/tbody) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tbody>
  */
-export function tbody(props?: TbodyProps, ...children: string[]): string {
+export function tbody(
+  props?: TbodyElementProps,
+  ...children: string[]
+): string {
   return renderElement("tbody", props as AnyProps, false, children);
 }

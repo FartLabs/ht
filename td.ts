@@ -2,30 +2,60 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TdProps are the props for the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+ * TdElementProps are the props for the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/td>
  */
-export interface TdProps extends GlobalAttributes {
-  /** @deprecated */
+export interface TdElementProps extends GlobalAttributes {
+  /**
+   * `abbr` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   abbr?: string | undefined;
-  /** @deprecated */
+  /**
+   * `align` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `axis` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   axis?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `char` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   char?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charoff` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   charoff?: string | undefined;
+  /** `colspan` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element. */
   colspan?: string | undefined;
+  /** `headers` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element. */
   headers?: string | undefined;
+  /** `rowspan` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element. */
   rowspan?: string | undefined;
-  /** @deprecated */
+  /**
+   * `scope` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   scope?: string | undefined;
-  /** @deprecated */
+  /**
+   * `valign` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   valign?: string | undefined;
-  /** @deprecated */
+  /**
+   * `width` is an attribute of the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
+   * @deprecated
+   */
   width?: string | undefined;
 }
 
@@ -33,6 +63,6 @@ export interface TdProps extends GlobalAttributes {
  * td renders the [`td`](https://developer.mozilla.org/docs/Web/HTML/Element/td) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/td>
  */
-export function td(props?: TdProps, ...children: string[]): string {
+export function td(props?: TdElementProps, ...children: string[]): string {
   return renderElement("td", props as AnyProps, false, children);
 }

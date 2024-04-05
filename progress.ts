@@ -2,11 +2,13 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * ProgressProps are the props for the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element.
+ * ProgressElementProps are the props for the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/progress>
  */
-export interface ProgressProps extends GlobalAttributes {
+export interface ProgressElementProps extends GlobalAttributes {
+  /** `max` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element. */
   max?: string | undefined;
+  /** `value` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element. */
   value?: string | undefined;
 }
 
@@ -14,6 +16,9 @@ export interface ProgressProps extends GlobalAttributes {
  * progress renders the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/progress>
  */
-export function progress(props?: ProgressProps, ...children: string[]): string {
+export function progress(
+  props?: ProgressElementProps,
+  ...children: string[]
+): string {
   return renderElement("progress", props as AnyProps, false, children);
 }

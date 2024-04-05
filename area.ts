@@ -2,22 +2,37 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * AreaProps are the props for the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
+ * AreaElementProps are the props for the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area>
  */
-export interface AreaProps extends GlobalAttributes {
+export interface AreaElementProps extends GlobalAttributes {
+  /** `alt` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   alt?: string | undefined;
+  /** `coords` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   coords?: string | undefined;
+  /** `download` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   download?: string | undefined;
+  /** `href` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   href?: string | undefined;
-  /** @deprecated */
+  /**
+   * `nohref` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
+   * @deprecated
+   */
   nohref?: string | undefined;
+  /** `ping` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   ping?: string | undefined;
+  /** `referrerpolicy` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   referrerpolicy?: string | undefined;
+  /** `rel` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   rel?: string | undefined;
+  /** `shape` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   shape?: string | undefined;
-  /** @deprecated */
+  /**
+   * `tabindex` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
+   * @deprecated
+   */
   tabindex?: string | undefined;
+  /** `target` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element. */
   target?: string | undefined;
 }
 
@@ -25,6 +40,6 @@ export interface AreaProps extends GlobalAttributes {
  * area renders the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area>
  */
-export function area(props?: AreaProps): string {
+export function area(props?: AreaElementProps): string {
   return renderElement("area", props as AnyProps, true);
 }

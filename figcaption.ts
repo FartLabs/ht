@@ -2,11 +2,17 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
+ * FigcaptionElementProps are the props for the [`figcaption`](https://developer.mozilla.org/docs/Web/HTML/Element/figcaption) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/figcaption>
+ */
+export type FigcaptionElementProps = GlobalAttributes;
+
+/**
  * figcaption renders the [`figcaption`](https://developer.mozilla.org/docs/Web/HTML/Element/figcaption) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/figcaption>
  */
 export function figcaption(
-  props?: GlobalAttributes,
+  props?: FigcaptionElementProps,
   ...children: string[]
 ): string {
   return renderElement("figcaption", props as AnyProps, false, children);

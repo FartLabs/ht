@@ -2,27 +2,54 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TableProps are the props for the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+ * TableElementProps are the props for the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/table>
  */
-export interface TableProps extends GlobalAttributes {
-  /** @deprecated */
+export interface TableElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `border` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   border?: string | undefined;
-  /** @deprecated */
+  /**
+   * `cellpadding` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   cellpadding?: string | undefined;
-  /** @deprecated */
+  /**
+   * `cellspacing` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   cellspacing?: string | undefined;
-  /** @deprecated */
+  /**
+   * `frame` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   frame?: string | undefined;
-  /** @deprecated */
+  /**
+   * `rules` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   rules?: string | undefined;
-  /** @deprecated */
+  /**
+   * `summary` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   summary?: string | undefined;
-  /** @deprecated */
+  /**
+   * `width` is an attribute of the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
+   * @deprecated
+   */
   width?: string | undefined;
 }
 
@@ -30,6 +57,9 @@ export interface TableProps extends GlobalAttributes {
  * table renders the [`table`](https://developer.mozilla.org/docs/Web/HTML/Element/table) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/table>
  */
-export function table(props?: TableProps, ...children: string[]): string {
+export function table(
+  props?: TableElementProps,
+  ...children: string[]
+): string {
   return renderElement("table", props as AnyProps, false, children);
 }

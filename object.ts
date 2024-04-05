@@ -2,33 +2,66 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * ObjectProps are the props for the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+ * ObjectElementProps are the props for the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object>
  */
-export interface ObjectProps extends GlobalAttributes {
-  /** @deprecated */
+export interface ObjectElementProps extends GlobalAttributes {
+  /**
+   * `archive` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   archive?: string | undefined;
-  /** @deprecated */
+  /**
+   * `border` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   border?: string | undefined;
-  /** @deprecated */
+  /**
+   * `classid` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   classid?: string | undefined;
-  /** @deprecated */
+  /**
+   * `codebase` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   codebase?: string | undefined;
-  /** @deprecated */
+  /**
+   * `codetype` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   codetype?: string | undefined;
+  /** `data` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
   data?: string | undefined;
-  /** @deprecated */
+  /**
+   * `declare` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   declare?: string | undefined;
+  /** `form` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
   form?: string | undefined;
+  /** `height` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
   height?: string | undefined;
+  /** `name` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
   name?: string | undefined;
-  /** @deprecated */
+  /**
+   * `standby` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   standby?: string | undefined;
-  /** @deprecated */
+  /**
+   * `tabindex` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   tabindex?: string | undefined;
+  /** `type` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
   type?: string | undefined;
-  /** @deprecated */
+  /**
+   * `usemap` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @deprecated
+   */
   usemap?: string | undefined;
+  /** `width` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
   width?: string | undefined;
 }
 
@@ -36,6 +69,9 @@ export interface ObjectProps extends GlobalAttributes {
  * object renders the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object>
  */
-export function object(props?: ObjectProps, ...children: string[]): string {
+export function object(
+  props?: ObjectElementProps,
+  ...children: string[]
+): string {
   return renderElement("object", props as AnyProps, false, children);
 }

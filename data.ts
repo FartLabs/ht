@@ -2,10 +2,11 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * DataProps are the props for the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element.
+ * DataElementProps are the props for the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/data>
  */
-export interface DataProps extends GlobalAttributes {
+export interface DataElementProps extends GlobalAttributes {
+  /** `value` is an attribute of the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element. */
   value?: string | undefined;
 }
 
@@ -13,6 +14,6 @@ export interface DataProps extends GlobalAttributes {
  * data renders the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/data>
  */
-export function data(props?: DataProps, ...children: string[]): string {
+export function data(props?: DataElementProps, ...children: string[]): string {
   return renderElement("data", props as AnyProps, false, children);
 }

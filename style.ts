@@ -2,14 +2,21 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * StyleProps are the props for the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
+ * StyleElementProps are the props for the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style>
  */
-export interface StyleProps extends GlobalAttributes {
-  /** @experimental */
+export interface StyleElementProps extends GlobalAttributes {
+  /**
+   * `blocking` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
+   * @experimental
+   */
   blocking?: string | undefined;
+  /** `media` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element. */
   media?: string | undefined;
-  /** @deprecated */
+  /**
+   * `type` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
+   * @deprecated
+   */
   type?: string | undefined;
 }
 
@@ -17,6 +24,9 @@ export interface StyleProps extends GlobalAttributes {
  * style renders the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style>
  */
-export function style(props?: StyleProps, ...children: string[]): string {
+export function style(
+  props?: StyleElementProps,
+  ...children: string[]
+): string {
   return renderElement("style", props as AnyProps, false, children);
 }

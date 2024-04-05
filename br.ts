@@ -2,11 +2,14 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * BrProps are the props for the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
+ * BrElementProps are the props for the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/br>
  */
-export interface BrProps extends GlobalAttributes {
-  /** @deprecated */
+export interface BrElementProps extends GlobalAttributes {
+  /**
+   * `clear` is an attribute of the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
+   * @deprecated
+   */
   clear?: string | undefined;
 }
 
@@ -14,6 +17,6 @@ export interface BrProps extends GlobalAttributes {
  * br renders the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/br>
  */
-export function br(props?: BrProps): string {
+export function br(props?: BrElementProps): string {
   return renderElement("br", props as AnyProps, true);
 }

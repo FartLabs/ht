@@ -2,13 +2,18 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * CanvasProps are the props for the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
+ * CanvasElementProps are the props for the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas>
  */
-export interface CanvasProps extends GlobalAttributes {
+export interface CanvasElementProps extends GlobalAttributes {
+  /** `height` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element. */
   height?: string | undefined;
-  /** @deprecated */
+  /**
+   * `moz-opaque` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
+   * @deprecated
+   */
   "moz-opaque"?: string | undefined;
+  /** `width` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element. */
   width?: string | undefined;
 }
 
@@ -16,6 +21,9 @@ export interface CanvasProps extends GlobalAttributes {
  * canvas renders the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas>
  */
-export function canvas(props?: CanvasProps, ...children: string[]): string {
+export function canvas(
+  props?: CanvasElementProps,
+  ...children: string[]
+): string {
   return renderElement("canvas", props as AnyProps, false, children);
 }

@@ -2,39 +2,79 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * IframeProps are the props for the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+ * IframeElementProps are the props for the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
  */
-export interface IframeProps extends GlobalAttributes {
-  /** @deprecated */
+export interface IframeElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   align?: string | undefined;
+  /** `allow` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   allow?: string | undefined;
+  /** `allowfullscreen` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   allowfullscreen?: string | undefined;
-  /** @deprecated */
+  /**
+   * `allowpaymentrequest` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   allowpaymentrequest?: string | undefined;
-  /** @experimental */
+  /**
+   * `browsingtopics` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @experimental
+   */
   browsingtopics?: string | undefined;
-  /** @experimental */
+  /**
+   * `credentialless` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @experimental
+   */
   credentialless?: string | undefined;
-  /** @experimental */
+  /**
+   * `csp` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @experimental
+   */
   csp?: string | undefined;
-  /** @deprecated */
+  /**
+   * `frameborder` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   frameborder?: string | undefined;
+  /** `height` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   height?: string | undefined;
+  /** `loading` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   loading?: string | undefined;
-  /** @deprecated */
+  /**
+   * `longdesc` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   longdesc?: string | undefined;
-  /** @deprecated */
+  /**
+   * `marginheight` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   marginheight?: string | undefined;
-  /** @deprecated */
+  /**
+   * `marginwidth` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   marginwidth?: string | undefined;
+  /** `name` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   name?: string | undefined;
+  /** `referrerpolicy` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   referrerpolicy?: string | undefined;
+  /** `sandbox` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   sandbox?: string | undefined;
-  /** @deprecated */
+  /**
+   * `scrolling` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
+   * @deprecated
+   */
   scrolling?: string | undefined;
+  /** `src` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   src?: string | undefined;
+  /** `srcdoc` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   srcdoc?: string | undefined;
+  /** `width` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element. */
   width?: string | undefined;
 }
 
@@ -42,6 +82,9 @@ export interface IframeProps extends GlobalAttributes {
  * iframe renders the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/iframe>
  */
-export function iframe(props?: IframeProps, ...children: string[]): string {
+export function iframe(
+  props?: IframeElementProps,
+  ...children: string[]
+): string {
   return renderElement("iframe", props as AnyProps, false, children);
 }

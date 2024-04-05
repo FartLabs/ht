@@ -2,10 +2,11 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * BlockquoteProps are the props for the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element.
+ * BlockquoteElementProps are the props for the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/blockquote>
  */
-export interface BlockquoteProps extends GlobalAttributes {
+export interface BlockquoteElementProps extends GlobalAttributes {
+  /** `cite` is an attribute of the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element. */
   cite?: string | undefined;
 }
 
@@ -14,7 +15,7 @@ export interface BlockquoteProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/blockquote>
  */
 export function blockquote(
-  props?: BlockquoteProps,
+  props?: BlockquoteElementProps,
   ...children: string[]
 ): string {
   return renderElement("blockquote", props as AnyProps, false, children);

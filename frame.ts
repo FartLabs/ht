@@ -2,24 +2,45 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * FrameProps are the props for the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+ * FrameElementProps are the props for the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frame>
  * @deprecated
  */
-export interface FrameProps extends GlobalAttributes {
-  /** @deprecated */
+export interface FrameElementProps extends GlobalAttributes {
+  /**
+   * `frameborder` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   frameborder?: string | undefined;
-  /** @deprecated */
+  /**
+   * `marginheight` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   marginheight?: string | undefined;
-  /** @deprecated */
+  /**
+   * `marginwidth` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   marginwidth?: string | undefined;
-  /** @deprecated */
+  /**
+   * `name` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   name?: string | undefined;
-  /** @deprecated */
+  /**
+   * `noresize` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   noresize?: string | undefined;
-  /** @deprecated */
+  /**
+   * `scrolling` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   scrolling?: string | undefined;
-  /** @deprecated */
+  /**
+   * `src` is an attribute of the [`frame`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) element.
+   * @deprecated
+   */
   src?: string | undefined;
 }
 
@@ -28,6 +49,9 @@ export interface FrameProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frame>
  * @deprecated
  */
-export function frame(props?: FrameProps, ...children: string[]): string {
+export function frame(
+  props?: FrameElementProps,
+  ...children: string[]
+): string {
   return renderElement("frame", props as AnyProps, false, children);
 }

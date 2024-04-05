@@ -2,33 +2,62 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * LinkProps are the props for the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+ * LinkElementProps are the props for the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
  */
-export interface LinkProps extends GlobalAttributes {
+export interface LinkElementProps extends GlobalAttributes {
+  /** `as` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   as?: string | undefined;
-  /** @experimental */
+  /**
+   * `blocking` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+   * @experimental
+   */
   blocking?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charset` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+   * @deprecated
+   */
   charset?: string | undefined;
+  /** `crossorigin` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   crossorigin?: string | undefined;
+  /** `disabled` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   disabled?: string | undefined;
+  /** `fetchpriority` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   fetchpriority?: string | undefined;
+  /** `href` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   href?: string | undefined;
+  /** `hreflang` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   hreflang?: string | undefined;
+  /** `imagesizes` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   imagesizes?: string | undefined;
+  /** `imagesrcset` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   imagesrcset?: string | undefined;
+  /** `integrity` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   integrity?: string | undefined;
+  /** `media` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   media?: string | undefined;
-  /** @deprecated */
+  /**
+   * `methods` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+   * @deprecated
+   */
   methods?: string | undefined;
+  /** `referrerpolicy` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   referrerpolicy?: string | undefined;
+  /** `rel` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   rel?: string | undefined;
-  /** @deprecated */
+  /**
+   * `rev` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+   * @deprecated
+   */
   rev?: string | undefined;
+  /** `sizes` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   sizes?: string | undefined;
-  /** @deprecated */
+  /**
+   * `target` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
+   * @deprecated
+   */
   target?: string | undefined;
+  /** `type` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element. */
   type?: string | undefined;
 }
 
@@ -36,6 +65,6 @@ export interface LinkProps extends GlobalAttributes {
  * link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
  */
-export function link(props?: LinkProps): string {
+export function link(props?: LinkElementProps): string {
   return renderElement("link", props as AnyProps, true);
 }

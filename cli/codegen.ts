@@ -154,12 +154,27 @@ if (import.meta.main) {
             hasQuestionToken: true,
             type: "string | undefined",
             docs: toDocs({
+              description:
+                `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
               isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
                 ?.status?.experimental,
               isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
                 ?.status?.deprecated,
             }),
           };
+        }),
+      });
+    } else {
+      sourceFile.addTypeAlias({
+        name: descriptor.propsInterfaceName,
+        isExported: true,
+        type: "GlobalAttributes",
+        docs: toDocs({
+          description:
+            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
         }),
       });
     }
@@ -260,9 +275,7 @@ export function getDescriptors(): Descriptor[] {
     descriptors.push({
       tag,
       functionName: toFunctionName(tag),
-      propsInterfaceName: attrs.length === 0
-        ? "GlobalAttributes"
-        : `${capitalize(tag)}Props`,
+      propsInterfaceName: `${capitalize(tag)}ElementProps`,
       isVoid: isVoid(tag),
       attrs,
       see: bcd.html.elements[tag].__compat?.mdn_url,

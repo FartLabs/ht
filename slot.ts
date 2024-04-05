@@ -2,10 +2,11 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * SlotProps are the props for the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
+ * SlotElementProps are the props for the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot>
  */
-export interface SlotProps extends GlobalAttributes {
+export interface SlotElementProps extends GlobalAttributes {
+  /** `name` is an attribute of the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element. */
   name?: string | undefined;
 }
 
@@ -13,6 +14,6 @@ export interface SlotProps extends GlobalAttributes {
  * slot renders the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot>
  */
-export function slot(props?: SlotProps, ...children: string[]): string {
+export function slot(props?: SlotElementProps, ...children: string[]): string {
   return renderElement("slot", props as AnyProps, false, children);
 }

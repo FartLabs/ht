@@ -2,29 +2,59 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * BodyProps are the props for the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+ * BodyElementProps are the props for the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
  */
-export interface BodyProps extends GlobalAttributes {
-  /** @deprecated */
+export interface BodyElementProps extends GlobalAttributes {
+  /**
+   * `alink` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   alink?: string | undefined;
-  /** @deprecated */
+  /**
+   * `background` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   background?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bottommargin` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   bottommargin?: string | undefined;
-  /** @deprecated */
+  /**
+   * `leftmargin` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   leftmargin?: string | undefined;
-  /** @deprecated */
+  /**
+   * `link` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   link?: string | undefined;
-  /** @deprecated */
+  /**
+   * `rightmargin` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   rightmargin?: string | undefined;
-  /** @deprecated */
+  /**
+   * `text` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   text?: string | undefined;
-  /** @deprecated */
+  /**
+   * `topmargin` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   topmargin?: string | undefined;
-  /** @deprecated */
+  /**
+   * `vlink` is an attribute of the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
+   * @deprecated
+   */
   vlink?: string | undefined;
 }
 
@@ -32,6 +62,6 @@ export interface BodyProps extends GlobalAttributes {
  * body renders the [`body`](https://developer.mozilla.org/docs/Web/HTML/Element/body) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/body>
  */
-export function body(props?: BodyProps, ...children: string[]): string {
+export function body(props?: BodyElementProps, ...children: string[]): string {
   return renderElement("body", props as AnyProps, false, children);
 }

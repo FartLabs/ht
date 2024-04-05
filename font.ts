@@ -2,16 +2,25 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * FontProps are the props for the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+ * FontElementProps are the props for the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/font>
  * @deprecated
  */
-export interface FontProps extends GlobalAttributes {
-  /** @deprecated */
+export interface FontElementProps extends GlobalAttributes {
+  /**
+   * `color` is an attribute of the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+   * @deprecated
+   */
   color?: string | undefined;
-  /** @deprecated */
+  /**
+   * `face` is an attribute of the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+   * @deprecated
+   */
   face?: string | undefined;
-  /** @deprecated */
+  /**
+   * `size` is an attribute of the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+   * @deprecated
+   */
   size?: string | undefined;
 }
 
@@ -20,6 +29,6 @@ export interface FontProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/font>
  * @deprecated
  */
-export function font(props?: FontProps, ...children: string[]): string {
+export function font(props?: FontElementProps, ...children: string[]): string {
   return renderElement("font", props as AnyProps, false, children);
 }

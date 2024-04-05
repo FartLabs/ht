@@ -2,14 +2,21 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * HtmlProps are the props for the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+ * HtmlElementProps are the props for the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
  */
-export interface HtmlProps extends GlobalAttributes {
-  /** @deprecated */
+export interface HtmlElementProps extends GlobalAttributes {
+  /**
+   * `manifest` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+   * @deprecated
+   */
   manifest?: string | undefined;
-  /** @deprecated */
+  /**
+   * `version` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+   * @deprecated
+   */
   version?: string | undefined;
+  /** `xmlns` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element. */
   xmlns?: string | undefined;
 }
 
@@ -17,6 +24,6 @@ export interface HtmlProps extends GlobalAttributes {
  * html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
  */
-export function html(props?: HtmlProps, ...children: string[]): string {
+export function html(props?: HtmlElementProps, ...children: string[]): string {
   return renderElement("html", props as AnyProps, false, children);
 }
