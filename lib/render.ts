@@ -34,7 +34,11 @@ export function renderAttrs(
     }
 
     const value = props[key];
-    attrs += `${key}="${value}" `;
+    if (attrs.length !== 0) {
+      attrs += " ";
+    }
+
+    attrs += `${key}="${value}"`;
   }
 
   return attrs;
