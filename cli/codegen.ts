@@ -37,12 +37,12 @@ export const voidElements = [
   "source",
   "track",
   "wbr",
-];
+] as const;
 
 /**
  * voidElementSet is a set of all void elements in HTML.
  */
-export const voidElementSet = new Set(voidElements);
+const voidElementSet = new Set<string>(voidElements);
 
 /**
  * isVoid returns true if the given tag is a void element.
@@ -309,7 +309,7 @@ export function toDocs(data: {
   see?: string;
   isDeprecated?: boolean;
   isExperimental?: boolean;
-}) {
+}): Record<string, unknown>[] | undefined {
   const doc: Record<string, unknown> = {};
   if (data.description) {
     doc.description = data.description;
