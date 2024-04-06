@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * VarElementProps are the props for the [`var`](https://developer.mozilla.org/docs/Web/HTML/Element/var) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/var>
  */
-export type VarElementProps = GlobalAttributes;
+export interface VarElementProps extends GlobalAttributes {
+}
 
 /**
  * var_ renders the [`var`](https://developer.mozilla.org/docs/Web/HTML/Element/var) element.

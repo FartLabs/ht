@@ -165,10 +165,10 @@ if (import.meta.main) {
         }),
       });
     } else {
-      sourceFile.addTypeAlias({
+      sourceFile.addInterface({
         name: descriptor.propsInterfaceName,
         isExported: true,
-        type: "GlobalAttributes",
+        extends: ["GlobalAttributes"],
         docs: toDocs({
           description:
             `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,

@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * EmElementProps are the props for the [`em`](https://developer.mozilla.org/docs/Web/HTML/Element/em) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/em>
  */
-export type EmElementProps = GlobalAttributes;
+export interface EmElementProps extends GlobalAttributes {
+}
 
 /**
  * em renders the [`em`](https://developer.mozilla.org/docs/Web/HTML/Element/em) element.

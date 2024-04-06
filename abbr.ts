@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * AbbrElementProps are the props for the [`abbr`](https://developer.mozilla.org/docs/Web/HTML/Element/abbr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/abbr>
  */
-export type AbbrElementProps = GlobalAttributes;
+export interface AbbrElementProps extends GlobalAttributes {
+}
 
 /**
  * abbr renders the [`abbr`](https://developer.mozilla.org/docs/Web/HTML/Element/abbr) element.

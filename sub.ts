@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * SubElementProps are the props for the [`sub`](https://developer.mozilla.org/docs/Web/HTML/Element/sub) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/sub>
  */
-export type SubElementProps = GlobalAttributes;
+export interface SubElementProps extends GlobalAttributes {
+}
 
 /**
  * sub renders the [`sub`](https://developer.mozilla.org/docs/Web/HTML/Element/sub) element.

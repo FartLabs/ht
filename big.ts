@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/big>
  * @deprecated
  */
-export type BigElementProps = GlobalAttributes;
+export interface BigElementProps extends GlobalAttributes {
+}
 
 /**
  * big renders the [`big`](https://developer.mozilla.org/docs/Web/HTML/Element/big) element.

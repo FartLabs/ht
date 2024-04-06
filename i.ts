@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * IElementProps are the props for the [`i`](https://developer.mozilla.org/docs/Web/HTML/Element/i) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/i>
  */
-export type IElementProps = GlobalAttributes;
+export interface IElementProps extends GlobalAttributes {
+}
 
 /**
  * i renders the [`i`](https://developer.mozilla.org/docs/Web/HTML/Element/i) element.

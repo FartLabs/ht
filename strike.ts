@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strike>
  * @deprecated
  */
-export type StrikeElementProps = GlobalAttributes;
+export interface StrikeElementProps extends GlobalAttributes {
+}
 
 /**
  * strike renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.

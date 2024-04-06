@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/portal>
  * @experimental
  */
-export type PortalElementProps = GlobalAttributes;
+export interface PortalElementProps extends GlobalAttributes {
+}
 
 /**
  * portal renders the [`portal`](https://developer.mozilla.org/docs/Web/HTML/Element/portal) element.

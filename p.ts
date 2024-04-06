@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * PElementProps are the props for the [`p`](https://developer.mozilla.org/docs/Web/HTML/Element/p) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/p>
  */
-export type PElementProps = GlobalAttributes;
+export interface PElementProps extends GlobalAttributes {
+}
 
 /**
  * p renders the [`p`](https://developer.mozilla.org/docs/Web/HTML/Element/p) element.

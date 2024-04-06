@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/center>
  * @deprecated
  */
-export type CenterElementProps = GlobalAttributes;
+export interface CenterElementProps extends GlobalAttributes {
+}
 
 /**
  * center renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element.

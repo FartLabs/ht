@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * DlElementProps are the props for the [`dl`](https://developer.mozilla.org/docs/Web/HTML/Element/dl) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dl>
  */
-export type DlElementProps = GlobalAttributes;
+export interface DlElementProps extends GlobalAttributes {
+}
 
 /**
  * dl renders the [`dl`](https://developer.mozilla.org/docs/Web/HTML/Element/dl) element.

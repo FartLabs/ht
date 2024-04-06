@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * RubyElementProps are the props for the [`ruby`](https://developer.mozilla.org/docs/Web/HTML/Element/ruby) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ruby>
  */
-export type RubyElementProps = GlobalAttributes;
+export interface RubyElementProps extends GlobalAttributes {
+}
 
 /**
  * ruby renders the [`ruby`](https://developer.mozilla.org/docs/Web/HTML/Element/ruby) element.

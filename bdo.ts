@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * BdoElementProps are the props for the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Element/bdo) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/bdo>
  */
-export type BdoElementProps = GlobalAttributes;
+export interface BdoElementProps extends GlobalAttributes {
+}
 
 /**
  * bdo renders the [`bdo`](https://developer.mozilla.org/docs/Web/HTML/Element/bdo) element.

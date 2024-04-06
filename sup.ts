@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * SupElementProps are the props for the [`sup`](https://developer.mozilla.org/docs/Web/HTML/Element/sup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/sup>
  */
-export type SupElementProps = GlobalAttributes;
+export interface SupElementProps extends GlobalAttributes {
+}
 
 /**
  * sup renders the [`sup`](https://developer.mozilla.org/docs/Web/HTML/Element/sup) element.

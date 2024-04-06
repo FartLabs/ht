@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * TitleElementProps are the props for the [`title`](https://developer.mozilla.org/docs/Web/HTML/Element/title) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/title>
  */
-export type TitleElementProps = GlobalAttributes;
+export interface TitleElementProps extends GlobalAttributes {
+}
 
 /**
  * title renders the [`title`](https://developer.mozilla.org/docs/Web/HTML/Element/title) element.

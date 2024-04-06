@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * StrongElementProps are the props for the [`strong`](https://developer.mozilla.org/docs/Web/HTML/Element/strong) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strong>
  */
-export type StrongElementProps = GlobalAttributes;
+export interface StrongElementProps extends GlobalAttributes {
+}
 
 /**
  * strong renders the [`strong`](https://developer.mozilla.org/docs/Web/HTML/Element/strong) element.

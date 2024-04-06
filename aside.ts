@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * AsideElementProps are the props for the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/aside>
  */
-export type AsideElementProps = GlobalAttributes;
+export interface AsideElementProps extends GlobalAttributes {
+}
 
 /**
  * aside renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.

@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe>
  * @experimental
  */
-export type FencedframeElementProps = GlobalAttributes;
+export interface FencedframeElementProps extends GlobalAttributes {
+}
 
 /**
  * fencedframe renders the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe) element.

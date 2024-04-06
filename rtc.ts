@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rtc>
  * @deprecated
  */
-export type RtcElementProps = GlobalAttributes;
+export interface RtcElementProps extends GlobalAttributes {
+}
 
 /**
  * rtc renders the [`rtc`](https://developer.mozilla.org/docs/Web/HTML/Element/rtc) element.

@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * RpElementProps are the props for the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Element/rp) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rp>
  */
-export type RpElementProps = GlobalAttributes;
+export interface RpElementProps extends GlobalAttributes {
+}
 
 /**
  * rp renders the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Element/rp) element.

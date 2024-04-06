@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * DfnElementProps are the props for the [`dfn`](https://developer.mozilla.org/docs/Web/HTML/Element/dfn) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dfn>
  */
-export type DfnElementProps = GlobalAttributes;
+export interface DfnElementProps extends GlobalAttributes {
+}
 
 /**
  * dfn renders the [`dfn`](https://developer.mozilla.org/docs/Web/HTML/Element/dfn) element.

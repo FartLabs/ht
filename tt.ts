@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tt>
  * @deprecated
  */
-export type TtElementProps = GlobalAttributes;
+export interface TtElementProps extends GlobalAttributes {
+}
 
 /**
  * tt renders the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Element/tt) element.

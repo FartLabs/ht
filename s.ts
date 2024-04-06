@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * SElementProps are the props for the [`s`](https://developer.mozilla.org/docs/Web/HTML/Element/s) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/s>
  */
-export interface SElementProps extends GlobalAttributes {}
+export interface SElementProps extends GlobalAttributes {
+}
 
 /**
  * s renders the [`s`](https://developer.mozilla.org/docs/Web/HTML/Element/s) element.

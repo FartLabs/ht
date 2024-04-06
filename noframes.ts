@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noframes>
  * @deprecated
  */
-export type NoframesElementProps = GlobalAttributes;
+export interface NoframesElementProps extends GlobalAttributes {
+}
 
 /**
  * noframes renders the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Element/noframes) element.

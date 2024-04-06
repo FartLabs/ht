@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/xmp>
  * @deprecated
  */
-export type XmpElementProps = GlobalAttributes;
+export interface XmpElementProps extends GlobalAttributes {
+}
 
 /**
  * xmp renders the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Element/xmp) element.

@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * SearchElementProps are the props for the [`search`](https://developer.mozilla.org/docs/Web/HTML/Element/search) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/search>
  */
-export type SearchElementProps = GlobalAttributes;
+export interface SearchElementProps extends GlobalAttributes {
+}
 
 /**
  * search renders the [`search`](https://developer.mozilla.org/docs/Web/HTML/Element/search) element.

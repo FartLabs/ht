@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noembed>
  * @deprecated
  */
-export type NoembedElementProps = GlobalAttributes;
+export interface NoembedElementProps extends GlobalAttributes {
+}
 
 /**
  * noembed renders the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Element/noembed) element.

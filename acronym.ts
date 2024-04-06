@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/acronym>
  * @deprecated
  */
-export type AcronymElementProps = GlobalAttributes;
+export interface AcronymElementProps extends GlobalAttributes {
+}
 
 /**
  * acronym renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.

@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * ArticleElementProps are the props for the [`article`](https://developer.mozilla.org/docs/Web/HTML/Element/article) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/article>
  */
-export type ArticleElementProps = GlobalAttributes;
+export interface ArticleElementProps extends GlobalAttributes {
+}
 
 /**
  * article renders the [`article`](https://developer.mozilla.org/docs/Web/HTML/Element/article) element.

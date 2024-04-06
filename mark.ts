@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * MarkElementProps are the props for the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Element/mark) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/mark>
  */
-export type MarkElementProps = GlobalAttributes;
+export interface MarkElementProps extends GlobalAttributes {
+}
 
 /**
  * mark renders the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Element/mark) element.

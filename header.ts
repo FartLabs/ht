@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * HeaderElementProps are the props for the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/header>
  */
-export type HeaderElementProps = GlobalAttributes;
+export interface HeaderElementProps extends GlobalAttributes {
+}
 
 /**
  * header renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.

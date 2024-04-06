@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * CiteElementProps are the props for the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Element/cite) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/cite>
  */
-export type CiteElementProps = GlobalAttributes;
+export interface CiteElementProps extends GlobalAttributes {
+}
 
 /**
  * cite renders the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Element/cite) element.

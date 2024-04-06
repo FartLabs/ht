@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/nobr>
  * @deprecated
  */
-export type NobrElementProps = GlobalAttributes;
+export interface NobrElementProps extends GlobalAttributes {
+}
 
 /**
  * nobr renders the [`nobr`](https://developer.mozilla.org/docs/Web/HTML/Element/nobr) element.

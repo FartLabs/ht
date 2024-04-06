@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * DdElementProps are the props for the [`dd`](https://developer.mozilla.org/docs/Web/HTML/Element/dd) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dd>
  */
-export type DdElementProps = GlobalAttributes;
+export interface DdElementProps extends GlobalAttributes {
+}
 
 /**
  * dd renders the [`dd`](https://developer.mozilla.org/docs/Web/HTML/Element/dd) element.

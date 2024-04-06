@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * SpanElementProps are the props for the [`span`](https://developer.mozilla.org/docs/Web/HTML/Element/span) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/span>
  */
-export type SpanElementProps = GlobalAttributes;
+export interface SpanElementProps extends GlobalAttributes {
+}
 
 /**
  * span renders the [`span`](https://developer.mozilla.org/docs/Web/HTML/Element/span) element.

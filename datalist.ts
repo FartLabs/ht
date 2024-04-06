@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * DatalistElementProps are the props for the [`datalist`](https://developer.mozilla.org/docs/Web/HTML/Element/datalist) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/datalist>
  */
-export type DatalistElementProps = GlobalAttributes;
+export interface DatalistElementProps extends GlobalAttributes {
+}
 
 /**
  * datalist renders the [`datalist`](https://developer.mozilla.org/docs/Web/HTML/Element/datalist) element.

@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * H1ElementProps are the props for the [`h1`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements>
  */
-export type H1ElementProps = GlobalAttributes;
+export interface H1ElementProps extends GlobalAttributes {
+}
 
 /**
  * h1 renders the [`h1`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.

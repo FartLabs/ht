@@ -6,7 +6,8 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/plaintext>
  * @deprecated
  */
-export type PlaintextElementProps = GlobalAttributes;
+export interface PlaintextElementProps extends GlobalAttributes {
+}
 
 /**
  * plaintext renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.

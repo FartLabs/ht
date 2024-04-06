@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * SmallElementProps are the props for the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/small>
  */
-export type SmallElementProps = GlobalAttributes;
+export interface SmallElementProps extends GlobalAttributes {
+}
 
 /**
  * small renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.

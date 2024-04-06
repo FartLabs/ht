@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * H5ElementProps are the props for the [`h5`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements>
  */
-export type H5ElementProps = GlobalAttributes;
+export interface H5ElementProps extends GlobalAttributes {
+}
 
 /**
  * h5 renders the [`h5`](https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements) element.

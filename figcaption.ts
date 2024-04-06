@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * FigcaptionElementProps are the props for the [`figcaption`](https://developer.mozilla.org/docs/Web/HTML/Element/figcaption) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/figcaption>
  */
-export type FigcaptionElementProps = GlobalAttributes;
+export interface FigcaptionElementProps extends GlobalAttributes {
+}
 
 /**
  * figcaption renders the [`figcaption`](https://developer.mozilla.org/docs/Web/HTML/Element/figcaption) element.

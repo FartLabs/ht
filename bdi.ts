@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * BdiElementProps are the props for the [`bdi`](https://developer.mozilla.org/docs/Web/HTML/Element/bdi) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/bdi>
  */
-export type BdiElementProps = GlobalAttributes;
+export interface BdiElementProps extends GlobalAttributes {
+}
 
 /**
  * bdi renders the [`bdi`](https://developer.mozilla.org/docs/Web/HTML/Element/bdi) element.

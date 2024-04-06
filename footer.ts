@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * FooterElementProps are the props for the [`footer`](https://developer.mozilla.org/docs/Web/HTML/Element/footer) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/footer>
  */
-export type FooterElementProps = GlobalAttributes;
+export interface FooterElementProps extends GlobalAttributes {
+}
 
 /**
  * footer renders the [`footer`](https://developer.mozilla.org/docs/Web/HTML/Element/footer) element.

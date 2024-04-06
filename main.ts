@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * MainElementProps are the props for the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/main>
  */
-export type MainElementProps = GlobalAttributes;
+export interface MainElementProps extends GlobalAttributes {
+}
 
 /**
  * main renders the [`main`](https://developer.mozilla.org/docs/Web/HTML/Element/main) element.

@@ -5,7 +5,8 @@ import { renderElement } from "./lib/mod.ts";
  * AddressElementProps are the props for the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/address>
  */
-export type AddressElementProps = GlobalAttributes;
+export interface AddressElementProps extends GlobalAttributes {
+}
 
 /**
  * address renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
