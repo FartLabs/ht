@@ -2,20 +2,36 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * ColProps are the props for the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+ * ColElementProps are the props for the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/col>
  */
-export interface ColProps extends GlobalAttributes {
-  /** @deprecated */
+export interface ColElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `char` is an attribute of the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+   * @deprecated
+   */
   char?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charoff` is an attribute of the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+   * @deprecated
+   */
   charoff?: string | undefined;
+  /** `span` is an attribute of the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element. */
   span?: string | undefined;
-  /** @deprecated */
+  /**
+   * `valign` is an attribute of the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+   * @deprecated
+   */
   valign?: string | undefined;
-  /** @deprecated */
+  /**
+   * `width` is an attribute of the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
+   * @deprecated
+   */
   width?: string | undefined;
 }
 
@@ -23,6 +39,6 @@ export interface ColProps extends GlobalAttributes {
  * col renders the [`col`](https://developer.mozilla.org/docs/Web/HTML/Element/col) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/col>
  */
-export function col(props?: ColProps): string {
+export function col(props?: ColElementProps): string {
   return renderElement("col", props as AnyProps, true);
 }

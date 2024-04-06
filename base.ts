@@ -2,11 +2,13 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * BaseProps are the props for the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
+ * BaseElementProps are the props for the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base>
  */
-export interface BaseProps extends GlobalAttributes {
+export interface BaseElementProps extends GlobalAttributes {
+  /** `href` is an attribute of the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element. */
   href?: string | undefined;
+  /** `target` is an attribute of the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element. */
   target?: string | undefined;
 }
 
@@ -14,6 +16,6 @@ export interface BaseProps extends GlobalAttributes {
  * base renders the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base>
  */
-export function base(props?: BaseProps): string {
+export function base(props?: BaseElementProps): string {
   return renderElement("base", props as AnyProps, true);
 }

@@ -2,19 +2,34 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * HrProps are the props for the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+ * HrElementProps are the props for the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/hr>
  */
-export interface HrProps extends GlobalAttributes {
-  /** @deprecated */
+export interface HrElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `color` is an attribute of the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+   * @deprecated
+   */
   color?: string | undefined;
-  /** @deprecated */
+  /**
+   * `noshade` is an attribute of the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+   * @deprecated
+   */
   noshade?: string | undefined;
-  /** @deprecated */
+  /**
+   * `size` is an attribute of the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+   * @deprecated
+   */
   size?: string | undefined;
-  /** @deprecated */
+  /**
+   * `width` is an attribute of the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
+   * @deprecated
+   */
   width?: string | undefined;
 }
 
@@ -22,6 +37,6 @@ export interface HrProps extends GlobalAttributes {
  * hr renders the [`hr`](https://developer.mozilla.org/docs/Web/HTML/Element/hr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/hr>
  */
-export function hr(props?: HrProps): string {
+export function hr(props?: HrElementProps): string {
   return renderElement("hr", props as AnyProps, true);
 }

@@ -2,19 +2,34 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TrProps are the props for the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+ * TrElementProps are the props for the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr>
  */
-export interface TrProps extends GlobalAttributes {
-  /** @deprecated */
+export interface TrElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `char` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @deprecated
+   */
   char?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charoff` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @deprecated
+   */
   charoff?: string | undefined;
-  /** @deprecated */
+  /**
+   * `valign` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @deprecated
+   */
   valign?: string | undefined;
 }
 
@@ -22,6 +37,6 @@ export interface TrProps extends GlobalAttributes {
  * tr renders the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr>
  */
-export function tr(props?: TrProps, ...children: string[]): string {
+export function tr(props?: TrElementProps, ...children: string[]): string {
   return renderElement("tr", props as AnyProps, false, children);
 }

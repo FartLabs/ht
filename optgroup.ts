@@ -2,11 +2,13 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * OptgroupProps are the props for the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
+ * OptgroupElementProps are the props for the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup>
  */
-export interface OptgroupProps extends GlobalAttributes {
+export interface OptgroupElementProps extends GlobalAttributes {
+  /** `disabled` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element. */
   disabled?: string | undefined;
+  /** `label` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element. */
   label?: string | undefined;
 }
 
@@ -14,6 +16,9 @@ export interface OptgroupProps extends GlobalAttributes {
  * optgroup renders the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup>
  */
-export function optgroup(props?: OptgroupProps, ...children: string[]): string {
+export function optgroup(
+  props?: OptgroupElementProps,
+  ...children: string[]
+): string {
   return renderElement("optgroup", props as AnyProps, false, children);
 }

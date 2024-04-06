@@ -2,11 +2,14 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * MenuProps are the props for the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
+ * MenuElementProps are the props for the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/menu>
  */
-export interface MenuProps extends GlobalAttributes {
-  /** @deprecated */
+export interface MenuElementProps extends GlobalAttributes {
+  /**
+   * `label` is an attribute of the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
+   * @deprecated
+   */
   label?: string | undefined;
 }
 
@@ -14,6 +17,6 @@ export interface MenuProps extends GlobalAttributes {
  * menu renders the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/menu>
  */
-export function menu(props?: MenuProps, ...children: string[]): string {
+export function menu(props?: MenuElementProps, ...children: string[]): string {
   return renderElement("menu", props as AnyProps, false, children);
 }

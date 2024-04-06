@@ -136,33 +136,33 @@ if (import.meta.main) {
     });
 
     // Add an interface for the props.
-    if (descriptor.attrs.length > 0) {
-      sourceFile.addInterface({
-        name: descriptor.propsInterfaceName,
-        isExported: true,
-        extends: ["GlobalAttributes"],
-        docs: toDocs({
-          description:
-            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-          see: descriptor.see,
-          isDeprecated: descriptor.isDeprecated,
-          isExperimental: descriptor.isExperimental,
-        }),
-        properties: descriptor.attrs.map((attr) => {
-          return {
-            name: attr.includes("-") ? `'${attr}'` : attr,
-            hasQuestionToken: true,
-            type: "string | undefined",
-            docs: toDocs({
-              isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
-                ?.status?.experimental,
-              isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
-                ?.status?.deprecated,
-            }),
-          };
-        }),
-      });
-    }
+    sourceFile.addInterface({
+      name: descriptor.propsInterfaceName,
+      isExported: true,
+      extends: ["GlobalAttributes"],
+      docs: toDocs({
+        description:
+          `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+        see: descriptor.see,
+        isDeprecated: descriptor.isDeprecated,
+        isExperimental: descriptor.isExperimental,
+      }),
+      properties: descriptor.attrs.map((attr) => {
+        return {
+          name: attr.includes("-") ? `'${attr}'` : attr,
+          hasQuestionToken: true,
+          type: "string | undefined",
+          docs: toDocs({
+            description:
+              `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+            isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
+              ?.status?.experimental,
+            isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
+              ?.status?.deprecated,
+          }),
+        };
+      }),
+    });
 
     // Add the element render function.
     sourceFile.addFunction({
@@ -260,9 +260,7 @@ export function getDescriptors(): Descriptor[] {
     descriptors.push({
       tag,
       functionName: toFunctionName(tag),
-      propsInterfaceName: attrs.length === 0
-        ? "GlobalAttributes"
-        : `${capitalize(tag)}Props`,
+      propsInterfaceName: `${capitalize(tag)}ElementProps`,
       isVoid: isVoid(tag),
       attrs,
       see: bcd.html.elements[tag].__compat?.mdn_url,

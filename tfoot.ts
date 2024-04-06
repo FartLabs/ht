@@ -2,19 +2,34 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TfootProps are the props for the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+ * TfootElementProps are the props for the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot>
  */
-export interface TfootProps extends GlobalAttributes {
-  /** @deprecated */
+export interface TfootElementProps extends GlobalAttributes {
+  /**
+   * `align` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @deprecated
+   */
   align?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `char` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @deprecated
+   */
   char?: string | undefined;
-  /** @deprecated */
+  /**
+   * `charoff` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @deprecated
+   */
   charoff?: string | undefined;
-  /** @deprecated */
+  /**
+   * `valign` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @deprecated
+   */
   valign?: string | undefined;
 }
 
@@ -22,6 +37,9 @@ export interface TfootProps extends GlobalAttributes {
  * tfoot renders the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot>
  */
-export function tfoot(props?: TfootProps, ...children: string[]): string {
+export function tfoot(
+  props?: TfootElementProps,
+  ...children: string[]
+): string {
   return renderElement("tfoot", props as AnyProps, false, children);
 }

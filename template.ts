@@ -2,10 +2,11 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TemplateProps are the props for the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
+ * TemplateElementProps are the props for the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
  */
-export interface TemplateProps extends GlobalAttributes {
+export interface TemplateElementProps extends GlobalAttributes {
+  /** `shadowrootmode` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element. */
   shadowrootmode?: string | undefined;
 }
 
@@ -13,6 +14,9 @@ export interface TemplateProps extends GlobalAttributes {
  * template renders the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
  */
-export function template(props?: TemplateProps, ...children: string[]): string {
+export function template(
+  props?: TemplateElementProps,
+  ...children: string[]
+): string {
   return renderElement("template", props as AnyProps, false, children);
 }

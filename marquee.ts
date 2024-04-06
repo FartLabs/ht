@@ -2,32 +2,65 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * MarqueeProps are the props for the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+ * MarqueeElementProps are the props for the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
  * @deprecated
  */
-export interface MarqueeProps extends GlobalAttributes {
-  /** @deprecated */
+export interface MarqueeElementProps extends GlobalAttributes {
+  /**
+   * `behavior` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   behavior?: string | undefined;
-  /** @deprecated */
+  /**
+   * `bgcolor` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   bgcolor?: string | undefined;
-  /** @deprecated */
+  /**
+   * `direction` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   direction?: string | undefined;
-  /** @deprecated */
+  /**
+   * `height` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   height?: string | undefined;
-  /** @deprecated */
+  /**
+   * `hspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   hspace?: string | undefined;
-  /** @deprecated */
+  /**
+   * `loop` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   loop?: string | undefined;
-  /** @deprecated */
+  /**
+   * `scrollamount` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   scrollamount?: string | undefined;
-  /** @deprecated */
+  /**
+   * `scrolldelay` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   scrolldelay?: string | undefined;
-  /** @deprecated */
+  /**
+   * `truespeed` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   truespeed?: string | undefined;
-  /** @deprecated */
+  /**
+   * `vspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   vspace?: string | undefined;
-  /** @deprecated */
+  /**
+   * `width` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
+   * @deprecated
+   */
   width?: string | undefined;
 }
 
@@ -36,6 +69,9 @@ export interface MarqueeProps extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
  * @deprecated
  */
-export function marquee(props?: MarqueeProps, ...children: string[]): string {
+export function marquee(
+  props?: MarqueeElementProps,
+  ...children: string[]
+): string {
   return renderElement("marquee", props as AnyProps, false, children);
 }
