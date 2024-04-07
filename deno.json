@@ -1,7 +1,7 @@
 {
   "lock": false,
   "name": "@fartlabs/ht",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "imports": {
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^5.5.19",
     "ts-morph": "npm:ts-morph@^22.0.0"
