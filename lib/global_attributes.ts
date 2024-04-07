@@ -1,6 +1,6 @@
 /**
  * GlobalAttributes are the global attributes for HTML elements.
- * @see https://developer.mozilla.org/docs/Web/HTML/Global_attributes
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes>
  */
 export interface GlobalAttributes extends DataAttributes {
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/accesskey> */

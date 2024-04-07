@@ -6,6 +6,29 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface InputElementProps extends GlobalAttributes {
+  type?:
+    | "button"
+    | "checkbox"
+    | "color"
+    | "date"
+    | "datetime-local"
+    | "email"
+    | "file"
+    | "hidden"
+    | "image"
+    | "month"
+    | "number"
+    | "password"
+    | "radio"
+    | "range"
+    | "reset"
+    | "search"
+    | "submit"
+    | "tel"
+    | "text"
+    | "time"
+    | "url"
+    | "week";
   /** `accept` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
   accept?: string | undefined;
   /**

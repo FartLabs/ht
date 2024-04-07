@@ -65,31 +65,21 @@ if (import.meta.main) {
     isExported: true,
     name: "GlobalAttributes",
     extends: ["DataAttributes"],
-    docs: [{
+    docs: toDocs({
       description:
         "GlobalAttributes are the global attributes for HTML elements.",
-      tags: [
-        {
-          tagName: "see",
-          text: "https://developer.mozilla.org/docs/Web/HTML/Global_attributes",
-        },
-      ],
-    }],
+      see: "https://developer.mozilla.org/docs/Web/HTML/Global_attributes",
+    }),
   });
   globalAttrsFile.addInterface({
     isExported: true,
     name: "DataAttributes",
-    docs: [{
+    docs: toDocs({
       description:
         "DataAttributes are the attributes that start with `data-` for HTML elements.",
-      tags: [
-        {
-          tagName: "see",
-          text:
-            "<https://developer.mozilla.org/docs/Web/HTML/Global_attributes#data-*>",
-        },
-      ],
-    }],
+      see:
+        "https://developer.mozilla.org/docs/Web/HTML/Global_attributes#data-*",
+    }),
     properties: [
       { name: "[attr: `data-${string}`]", type: "string | undefined" },
     ],
@@ -136,31 +126,41 @@ if (import.meta.main) {
     });
 
     // Add an interface for the props.
+    type InterfaceProperties = Parameters<
+      typeof sourceFile.addInterface
+    >[0]["properties"];
+    const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
+      name: attr.includes("-") ? `'${attr}'` : attr,
+      hasQuestionToken: true,
+      type: "string | undefined",
+      docs: toDocs({
+        description:
+          `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+        isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
+          ?.status?.experimental,
+        isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
+          ?.status?.deprecated,
+      }),
+    }));
+    if (descriptor.tag === "input") {
+      properties.unshift({
+        name: "type",
+        hasQuestionToken: true,
+        type: getInputTypes().map((type) => `'${type}'`).join(" | "),
+      });
+    }
+
     sourceFile.addInterface({
       name: descriptor.propsInterfaceName,
       isExported: true,
       extends: ["GlobalAttributes"],
+      properties,
       docs: toDocs({
         description:
           `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
         see: descriptor.see,
         isDeprecated: descriptor.isDeprecated,
         isExperimental: descriptor.isExperimental,
-      }),
-      properties: descriptor.attrs.map((attr) => {
-        return {
-          name: attr.includes("-") ? `'${attr}'` : attr,
-          hasQuestionToken: true,
-          type: "string | undefined",
-          docs: toDocs({
-            description:
-              `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-            isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
-              ?.status?.experimental,
-            isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
-              ?.status?.deprecated,
-          }),
-        };
       }),
     });
 
@@ -278,6 +278,17 @@ export function getDescriptors(): Descriptor[] {
 export function getAttrs(tag: string): string[] {
   return Object.keys(bcd.html.elements[tag])
     .filter((attr) => !attr.includes("_"));
+}
+
+/**
+ * getInputTypes returns the types of input elements.
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+ */
+export function getInputTypes(): string[] {
+  const re = /^type_/;
+  return Object.keys(bcd.html.elements.input)
+    .filter((attr) => re.test(attr))
+    .map((attr) => attr.replace(re, ""));
 }
 
 /**
