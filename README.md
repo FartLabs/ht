@@ -26,7 +26,7 @@ deno add @fartlabs/ht
 ```ts
 import { a } from "@fartlabs/ht";
 
-const html = a({ href: "https://example.com" }, "Hello, world!");
+const html = a({ href: "https://jsr.io/@fartlabs/ht" }, "@fartlabs/ht");
 
 Deno.writeTextFileSync("index.html", html);
 ```
@@ -40,7 +40,7 @@ deno run --allow-write main.ts
 Resulting `index.html`:
 
 ```html
-<a href="https://example.com">Hello, world!</a>
+<a href="https://jsr.io/@fartlabs/ht">@fartlabs/ht</a>
 ```
 
 ## Contribute
