@@ -112,6 +112,13 @@ if (import.meta.main) {
       { overwrite: true },
     );
 
+    // Add file prelude.
+    sourceFile.addStatements(`/**
+ * @fileoverview
+ *
+ * This file was generated. Do not modify this file directly.
+ */`);
+
     // Add the type imports.
     sourceFile.addImportDeclaration({
       isTypeOnly: true,
@@ -143,6 +150,7 @@ if (import.meta.main) {
       }),
     }));
     if (descriptor.tag === "input") {
+      // TODO(https://github.com/FartLabs/htx/issues/5): Resolve.
       properties.unshift({
         name: "type",
         hasQuestionToken: true,
