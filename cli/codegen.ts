@@ -15,7 +15,7 @@
  * └── ./mod.ts
  */
 
-import { Project } from "ts-morph";
+import { Project, SourceFile } from "ts-morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
 /**
@@ -132,45 +132,8 @@ if (import.meta.main) {
       namedImports: ["renderElement"],
     });
 
-    // Add an interface for the props.
-    type InterfaceProperties = Parameters<
-      typeof sourceFile.addInterface
-    >[0]["properties"];
-    const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
-      name: attr.includes("-") ? `'${attr}'` : attr,
-      hasQuestionToken: true,
-      type: "string | undefined",
-      docs: toDocs({
-        description:
-          `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
-          ?.status?.experimental,
-        isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
-          ?.status?.deprecated,
-      }),
-    }));
-    if (descriptor.tag === "input") {
-      // TODO(https://github.com/FartLabs/htx/issues/5): Resolve.
-      properties.unshift({
-        name: "type",
-        hasQuestionToken: true,
-        type: getInputTypes().map((type) => `'${type}'`).join(" | "),
-      });
-    }
-
-    sourceFile.addInterface({
-      name: descriptor.propsInterfaceName,
-      isExported: true,
-      extends: ["GlobalAttributes"],
-      properties,
-      docs: toDocs({
-        description:
-          `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        see: descriptor.see,
-        isDeprecated: descriptor.isDeprecated,
-        isExperimental: descriptor.isExperimental,
-      }),
-    });
+    // Add the props interface.
+    addPropsInterfaces(sourceFile, descriptor);
 
     // Add the element render function.
     sourceFile.addFunction({
@@ -242,21 +205,103 @@ if (import.meta.main) {
 }
 
 /**
- * Descriptor represents the data for an HTML element.
- *
- * From this data, we can generate a TypeScript file for each element.
+ * addPropsInterfaces adds the interfaces to the given source file.
  */
-export interface Descriptor {
-  tag: string;
-  functionName: string;
-  propsInterfaceName: string;
-  isVoid: boolean;
-  attrs: string[];
-  description?: string;
-  see?: string;
-  isDeprecated?: boolean;
-  isExperimental?: boolean;
+export function addPropsInterfaces(
+  sourceFile: SourceFile,
+  descriptor: Descriptor,
+): void {
+  const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
+    name: attr.includes("-") ? `'${attr}'` : attr,
+    hasQuestionToken: true,
+    type: "string | undefined",
+    docs: toDocs({
+      description:
+        `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+      isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
+        ?.status?.experimental,
+      isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
+        ?.status?.deprecated,
+    }),
+  }));
+
+  if (descriptor.tag === "input") {
+    // Use base input interface.
+    const baseInterfaceName = `${descriptor.propsInterfaceName}Base`;
+    sourceFile.addInterface({
+      name: baseInterfaceName,
+      isExported: true,
+      extends: ["GlobalAttributes"],
+      properties: properties,
+      docs: toDocs({
+        description:
+          `${baseInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+        see: descriptor.see,
+        isDeprecated: descriptor.isDeprecated,
+        isExperimental: descriptor.isExperimental,
+      }),
+    });
+
+    // Add the input types.
+    for (const inputType of getInputTypes()) {
+      const inputInterfaceName = capitalize(inputType) +
+        descriptor.propsInterfaceName;
+
+      // TODO: Read properties from BCD.
+      // https://github.com/mdn/browser-compat-data/blob/main/html/elements/input
+      sourceFile.addInterface({
+        name: inputInterfaceName,
+        isExported: true,
+        extends: [baseInterfaceName],
+        properties: [
+          {
+            name: "type",
+            hasQuestionToken: true,
+            type: `'${inputType}'`,
+          },
+        ],
+        docs: toDocs({
+          description:
+            `${inputInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element with the \`type="${inputType}"\` attribute.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
+        }),
+      });
+    }
+  } else {
+    sourceFile.addInterface({
+      name: descriptor.propsInterfaceName,
+      isExported: true,
+      extends: ["GlobalAttributes"],
+      properties,
+      docs: toDocs({
+        description:
+          `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+        see: descriptor.see,
+        isDeprecated: descriptor.isDeprecated,
+        isExperimental: descriptor.isExperimental,
+      }),
+    });
+  }
+
+  if (descriptor.tag === "input") {
+    // TODO(https://github.com/FartLabs/htx/issues/5): Resolve.
+    // We need to define a base input interface from which the specific
+    // input types extend. This may have to be special, similar to the
+    // global attributes file.
+    //
+    // properties.unshift({
+    //   name: "type",
+    //   hasQuestionToken: true,
+    //   type: getInputTypes().map((type) => `'${type}'`).join(" | "),
+    // });
+  }
 }
+
+type InterfaceProperties = Parameters<
+  SourceFile["addInterface"]
+>[number]["properties"];
 
 /**
  * getDescriptors returns the descriptors for each HTML element.
@@ -278,6 +323,23 @@ export function getDescriptors(): Descriptor[] {
   }
 
   return descriptors;
+}
+
+/**
+ * Descriptor represents the data for an HTML element.
+ *
+ * From this data, we can generate a TypeScript file for each element.
+ */
+export interface Descriptor {
+  tag: string;
+  functionName: string;
+  propsInterfaceName: string;
+  isVoid: boolean;
+  attrs: string[];
+  description?: string;
+  see?: string;
+  isDeprecated?: boolean;
+  isExperimental?: boolean;
 }
 
 /**
