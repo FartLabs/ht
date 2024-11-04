@@ -11,11 +11,20 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/output>
  */
 export interface OutputElementProps extends GlobalAttributes {
-  /** `for` is an attribute of the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element. */
+  /**
+   * `for` is an attribute of the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/output#for>
+   */
   for?: string | undefined;
-  /** `form` is an attribute of the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element. */
+  /**
+   * `form` is an attribute of the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/output#form>
+   */
   form?: string | undefined;
-  /** `name` is an attribute of the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element. */
+  /**
+   * `name` is an attribute of the [`output`](https://developer.mozilla.org/docs/Web/HTML/Element/output) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/output#name>
+   */
   name?: string | undefined;
 }
 

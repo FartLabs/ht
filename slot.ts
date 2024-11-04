@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot>
  */
 export interface SlotElementProps extends GlobalAttributes {
-  /** `name` is an attribute of the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element. */
+  /**
+   * `name` is an attribute of the [`slot`](https://developer.mozilla.org/docs/Web/HTML/Element/slot) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/slot#name>
+   */
   name?: string | undefined;
 }
 

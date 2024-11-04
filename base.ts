@@ -11,9 +11,15 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base>
  */
 export interface BaseElementProps extends GlobalAttributes {
-  /** `href` is an attribute of the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element. */
+  /**
+   * `href` is an attribute of the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base#href>
+   */
   href?: string | undefined;
-  /** `target` is an attribute of the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element. */
+  /**
+   * `target` is an attribute of the [`base`](https://developer.mozilla.org/docs/Web/HTML/Element/base) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/base#target>
+   */
   target?: string | undefined;
 }
 

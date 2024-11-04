@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
  */
 export interface TemplateElementProps extends GlobalAttributes {
-  /** `shadowrootmode` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element. */
+  /**
+   * `shadowrootmode` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template#shadowrootmode>
+   */
   shadowrootmode?: string | undefined;
 }
 

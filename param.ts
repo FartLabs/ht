@@ -14,21 +14,25 @@ import { renderElement } from "./lib/mod.ts";
 export interface ParamElementProps extends GlobalAttributes {
   /**
    * `name` is an attribute of the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param#name>
    * @deprecated
    */
   name?: string | undefined;
   /**
    * `type` is an attribute of the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param#type>
    * @deprecated
    */
   type?: string | undefined;
   /**
    * `value` is an attribute of the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param#value>
    * @deprecated
    */
   value?: string | undefined;
   /**
    * `valuetype` is an attribute of the [`param`](https://developer.mozilla.org/docs/Web/HTML/Element/param) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/param#valuetype>
    * @deprecated
    */
   valuetype?: string | undefined;

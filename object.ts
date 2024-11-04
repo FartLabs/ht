@@ -13,60 +13,87 @@ import { renderElement } from "./lib/mod.ts";
 export interface ObjectElementProps extends GlobalAttributes {
   /**
    * `archive` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#archive>
    * @deprecated
    */
   archive?: string | undefined;
   /**
    * `border` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#border>
    * @deprecated
    */
   border?: string | undefined;
   /**
    * `classid` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#classid>
    * @deprecated
    */
   classid?: string | undefined;
   /**
    * `codebase` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#codebase>
    * @deprecated
    */
   codebase?: string | undefined;
   /**
    * `codetype` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#codetype>
    * @deprecated
    */
   codetype?: string | undefined;
-  /** `data` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+  /**
+   * `data` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#data>
+   */
   data?: string | undefined;
   /**
    * `declare` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#declare>
    * @deprecated
    */
   declare?: string | undefined;
-  /** `form` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+  /**
+   * `form` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#form>
+   */
   form?: string | undefined;
-  /** `height` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+  /**
+   * `height` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#height>
+   */
   height?: string | undefined;
-  /** `name` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+  /**
+   * `name` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#name>
+   */
   name?: string | undefined;
   /**
    * `standby` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#standby>
    * @deprecated
    */
   standby?: string | undefined;
   /**
    * `tabindex` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#tabindex>
    * @deprecated
    */
   tabindex?: string | undefined;
-  /** `type` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+  /**
+   * `type` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#type>
+   */
   type?: string | undefined;
   /**
    * `usemap` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#usemap>
    * @deprecated
    */
   usemap?: string | undefined;
-  /** `width` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element. */
+  /**
+   * `width` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#width>
+   */
   width?: string | undefined;
 }
 

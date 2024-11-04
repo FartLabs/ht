@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/blockquote>
  */
 export interface BlockquoteElementProps extends GlobalAttributes {
-  /** `cite` is an attribute of the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element. */
+  /**
+   * `cite` is an attribute of the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Element/blockquote) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/blockquote#cite>
+   */
   cite?: string | undefined;
 }
 

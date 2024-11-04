@@ -13,6 +13,7 @@ import { renderElement } from "./lib/mod.ts";
 export interface HeadElementProps extends GlobalAttributes {
   /**
    * `profile` is an attribute of the [`head`](https://developer.mozilla.org/docs/Web/HTML/Element/head) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/head#profile>
    * @deprecated
    */
   profile?: string | undefined;

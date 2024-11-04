@@ -13,6 +13,7 @@ import { renderElement } from "./lib/mod.ts";
 export interface BrElementProps extends GlobalAttributes {
   /**
    * `clear` is an attribute of the [`br`](https://developer.mozilla.org/docs/Web/HTML/Element/br) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/br#clear>
    * @deprecated
    */
   clear?: string | undefined;

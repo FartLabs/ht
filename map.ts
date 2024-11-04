@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/map>
  */
 export interface MapElementProps extends GlobalAttributes {
-  /** `name` is an attribute of the [`map`](https://developer.mozilla.org/docs/Web/HTML/Element/map) element. */
+  /**
+   * `name` is an attribute of the [`map`](https://developer.mozilla.org/docs/Web/HTML/Element/map) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/map#name>
+   */
   name?: string | undefined;
 }
 

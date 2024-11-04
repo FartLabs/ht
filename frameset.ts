@@ -14,11 +14,13 @@ import { renderElement } from "./lib/mod.ts";
 export interface FramesetElementProps extends GlobalAttributes {
   /**
    * `cols` is an attribute of the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frameset#cols>
    * @deprecated
    */
   cols?: string | undefined;
   /**
    * `rows` is an attribute of the [`frameset`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/frameset#rows>
    * @deprecated
    */
   rows?: string | undefined;

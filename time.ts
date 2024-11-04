@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/time>
  */
 export interface TimeElementProps extends GlobalAttributes {
-  /** `datetime` is an attribute of the [`time`](https://developer.mozilla.org/docs/Web/HTML/Element/time) element. */
+  /**
+   * `datetime` is an attribute of the [`time`](https://developer.mozilla.org/docs/Web/HTML/Element/time) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/time#datetime>
+   */
   datetime?: string | undefined;
 }
 

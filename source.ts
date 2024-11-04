@@ -11,19 +11,40 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source>
  */
 export interface SourceElementProps extends GlobalAttributes {
-  /** `height` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `height` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#height>
+   */
   height?: string | undefined;
-  /** `media` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `media` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#media>
+   */
   media?: string | undefined;
-  /** `sizes` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `sizes` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#sizes>
+   */
   sizes?: string | undefined;
-  /** `src` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `src` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#src>
+   */
   src?: string | undefined;
-  /** `srcset` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `srcset` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#srcset>
+   */
   srcset?: string | undefined;
-  /** `type` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `type` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#type>
+   */
   type?: string | undefined;
-  /** `width` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element. */
+  /**
+   * `width` is an attribute of the [`source`](https://developer.mozilla.org/docs/Web/HTML/Element/source) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/source#width>
+   */
   width?: string | undefined;
 }
 

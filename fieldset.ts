@@ -11,11 +11,20 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset>
  */
 export interface FieldsetElementProps extends GlobalAttributes {
-  /** `disabled` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element. */
+  /**
+   * `disabled` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset#disabled>
+   */
   disabled?: string | undefined;
-  /** `form` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element. */
+  /**
+   * `form` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset#form>
+   */
   form?: string | undefined;
-  /** `name` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element. */
+  /**
+   * `name` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Element/fieldset) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fieldset#name>
+   */
   name?: string | undefined;
 }
 

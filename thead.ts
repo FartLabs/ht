@@ -13,26 +13,31 @@ import { renderElement } from "./lib/mod.ts";
 export interface TheadElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead#align>
    * @deprecated
    */
   align?: string | undefined;
   /**
    * `bgcolor` is an attribute of the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead#bgcolor>
    * @deprecated
    */
   bgcolor?: string | undefined;
   /**
    * `char` is an attribute of the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead#char>
    * @deprecated
    */
   char?: string | undefined;
   /**
    * `charoff` is an attribute of the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead#charoff>
    * @deprecated
    */
   charoff?: string | undefined;
   /**
    * `valign` is an attribute of the [`thead`](https://developer.mozilla.org/docs/Web/HTML/Element/thead) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/thead#valign>
    * @deprecated
    */
   valign?: string | undefined;

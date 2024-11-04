@@ -11,9 +11,15 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ins>
  */
 export interface InsElementProps extends GlobalAttributes {
-  /** `cite` is an attribute of the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element. */
+  /**
+   * `cite` is an attribute of the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ins#cite>
+   */
   cite?: string | undefined;
-  /** `datetime` is an attribute of the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element. */
+  /**
+   * `datetime` is an attribute of the [`ins`](https://developer.mozilla.org/docs/Web/HTML/Element/ins) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ins#datetime>
+   */
   datetime?: string | undefined;
 }
 

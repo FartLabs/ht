@@ -13,15 +13,20 @@ import { renderElement } from "./lib/mod.ts";
 export interface HtmlElementProps extends GlobalAttributes {
   /**
    * `manifest` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html#manifest>
    * @deprecated
    */
   manifest?: string | undefined;
   /**
    * `version` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html#version>
    * @deprecated
    */
   version?: string | undefined;
-  /** `xmlns` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element. */
+  /**
+   * `xmlns` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html#xmlns>
+   */
   xmlns?: string | undefined;
 }
 

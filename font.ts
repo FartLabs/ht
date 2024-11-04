@@ -14,16 +14,19 @@ import { renderElement } from "./lib/mod.ts";
 export interface FontElementProps extends GlobalAttributes {
   /**
    * `color` is an attribute of the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/font#color>
    * @deprecated
    */
   color?: string | undefined;
   /**
    * `face` is an attribute of the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/font#face>
    * @deprecated
    */
   face?: string | undefined;
   /**
    * `size` is an attribute of the [`font`](https://developer.mozilla.org/docs/Web/HTML/Element/font) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/font#size>
    * @deprecated
    */
   size?: string | undefined;

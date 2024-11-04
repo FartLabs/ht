@@ -11,9 +11,15 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/progress>
  */
 export interface ProgressElementProps extends GlobalAttributes {
-  /** `max` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element. */
+  /**
+   * `max` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/progress#max>
+   */
   max?: string | undefined;
-  /** `value` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element. */
+  /**
+   * `value` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Element/progress) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/progress#value>
+   */
   value?: string | undefined;
 }
 

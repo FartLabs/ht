@@ -13,28 +13,36 @@ import { renderElement } from "./lib/mod.ts";
 export interface ColgroupElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup#align>
    * @deprecated
    */
   align?: string | undefined;
   /**
    * `char` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup#char>
    * @deprecated
    */
   char?: string | undefined;
   /**
    * `charoff` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup#charoff>
    * @deprecated
    */
   charoff?: string | undefined;
-  /** `span` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element. */
+  /**
+   * `span` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup#span>
+   */
   span?: string | undefined;
   /**
    * `valign` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup#valign>
    * @deprecated
    */
   valign?: string | undefined;
   /**
    * `width` is an attribute of the [`colgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/colgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/colgroup#width>
    * @deprecated
    */
   width?: string | undefined;

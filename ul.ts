@@ -13,11 +13,13 @@ import { renderElement } from "./lib/mod.ts";
 export interface UlElementProps extends GlobalAttributes {
   /**
    * `compact` is an attribute of the [`ul`](https://developer.mozilla.org/docs/Web/HTML/Element/ul) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ul#compact>
    * @deprecated
    */
   compact?: string | undefined;
   /**
    * `type` is an attribute of the [`ul`](https://developer.mozilla.org/docs/Web/HTML/Element/ul) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ul#type>
    * @deprecated
    */
   type?: string | undefined;

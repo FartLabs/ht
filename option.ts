@@ -11,13 +11,25 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/option>
  */
 export interface OptionElementProps extends GlobalAttributes {
-  /** `disabled` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element. */
+  /**
+   * `disabled` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/option#disabled>
+   */
   disabled?: string | undefined;
-  /** `label` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element. */
+  /**
+   * `label` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/option#label>
+   */
   label?: string | undefined;
-  /** `selected` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element. */
+  /**
+   * `selected` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/option#selected>
+   */
   selected?: string | undefined;
-  /** `value` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element. */
+  /**
+   * `value` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Element/option) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/option#value>
+   */
   value?: string | undefined;
 }
 

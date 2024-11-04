@@ -231,6 +231,7 @@ export function addPropsInterfaces(
     hasQuestionToken: true,
     type: "string | undefined",
     docs: toDocs({
+      see: `${descriptor.see}#${attr}`,
       description:
         `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
       isExperimental: bcd.html.elements[descriptor.tag][attr].__compat

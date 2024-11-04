@@ -11,9 +11,15 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/details>
  */
 export interface DetailsElementProps extends GlobalAttributes {
-  /** `name` is an attribute of the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element. */
+  /**
+   * `name` is an attribute of the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/details#name>
+   */
   name?: string | undefined;
-  /** `open` is an attribute of the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element. */
+  /**
+   * `open` is an attribute of the [`details`](https://developer.mozilla.org/docs/Web/HTML/Element/details) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/details#open>
+   */
   open?: string | undefined;
 }
 

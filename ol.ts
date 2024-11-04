@@ -13,14 +13,24 @@ import { renderElement } from "./lib/mod.ts";
 export interface OlElementProps extends GlobalAttributes {
   /**
    * `compact` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#compact>
    * @deprecated
    */
   compact?: string | undefined;
-  /** `reversed` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element. */
+  /**
+   * `reversed` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#reversed>
+   */
   reversed?: string | undefined;
-  /** `start` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element. */
+  /**
+   * `start` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#start>
+   */
   start?: string | undefined;
-  /** `type` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element. */
+  /**
+   * `type` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#type>
+   */
   type?: string | undefined;
 }
 
