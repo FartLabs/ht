@@ -15,7 +15,9 @@
  * └── ./mod.ts
  */
 
-import { Project, SourceFile } from "ts-morph";
+import { toPascalCase } from "@std/text/to-pascal-case";
+import type { SourceFile } from "ts-morph";
+import { Project } from "ts-morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
 /**
@@ -106,65 +108,7 @@ if (import.meta.main) {
   // Create a file for each element.
   const descriptors = getDescriptors();
   for (const descriptor of descriptors) {
-    const sourceFile = project.createSourceFile(
-      `${descriptor.tag}.ts`,
-      undefined,
-      { overwrite: true },
-    );
-
-    // Add file prelude.
-    sourceFile.addStatements(`/**
- * @fileoverview
- *
- * This file was generated. Do not modify this file directly.
- */`);
-
-    // Add the type imports.
-    sourceFile.addImportDeclaration({
-      isTypeOnly: true,
-      moduleSpecifier: "./lib/mod.ts",
-      namedImports: ["AnyProps", "GlobalAttributes"],
-    });
-
-    // Add the variable imports.
-    sourceFile.addImportDeclaration({
-      moduleSpecifier: "./lib/mod.ts",
-      namedImports: ["renderElement"],
-    });
-
-    // Add the props interface.
-    addPropsInterfaces(sourceFile, descriptor);
-
-    // Add the element render function.
-    sourceFile.addFunction({
-      name: descriptor.functionName,
-      isExported: true,
-      parameters: [
-        {
-          name: "props",
-          type: descriptor.propsInterfaceName,
-          hasQuestionToken: true,
-        },
-        ...(!descriptor.isVoid
-          ? [{
-            name: "children",
-            type: "string[]",
-            isRestParameter: true,
-          }]
-          : []),
-      ],
-      returnType: "string",
-      docs: toDocs({
-        description:
-          `${descriptor.functionName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        isDeprecated: descriptor.isDeprecated,
-        isExperimental: descriptor.isExperimental,
-        see: descriptor.see,
-      }),
-      statements: descriptor.isVoid
-        ? `return renderElement("${descriptor.tag}", props as AnyProps, true);`
-        : `return renderElement("${descriptor.tag}", props as AnyProps, false, children);`,
-    });
+    addElementFile(project, descriptor);
   }
 
   // Create the mod file.
@@ -205,6 +149,77 @@ if (import.meta.main) {
 }
 
 /**
+ * addElementFile adds a TypeScript file for the given HTML element descriptor.
+ */
+export function addElementFile(
+  project: Project,
+  descriptor: Descriptor,
+): void {
+  const sourceFile = project.createSourceFile(
+    `${descriptor.tag}.ts`,
+    undefined,
+    { overwrite: true },
+  );
+
+  // Add file prelude.
+  sourceFile.addStatements(`/**
+* @fileoverview
+*
+* This file was generated. Do not modify this file directly.
+*/`);
+
+  // Add the type imports.
+  sourceFile.addImportDeclaration({
+    isTypeOnly: true,
+    moduleSpecifier: "./lib/mod.ts",
+    namedImports: ["AnyProps", "GlobalAttributes"],
+  });
+
+  // Add the variable imports.
+  sourceFile.addImportDeclaration({
+    moduleSpecifier: "./lib/mod.ts",
+    namedImports: ["renderElement"],
+  });
+
+  // Add the props interface.
+  addPropsInterfaces(sourceFile, descriptor);
+
+  // Add the element render function.
+  const propsRenderTypeCast = descriptor.tag !== "input"
+    ? " as AnyProps"
+    : " as unknown as AnyProps";
+  sourceFile.addFunction({
+    name: descriptor.functionName,
+    isExported: true,
+    parameters: [
+      {
+        name: "props",
+        type: descriptor.propsInterfaceName,
+        hasQuestionToken: true,
+      },
+      ...(!descriptor.isVoid
+        ? [{
+          name: "children",
+          type: "string[]",
+          isRestParameter: true,
+        }]
+        : []),
+    ],
+    returnType: "string",
+    docs: toDocs({
+      description:
+        `${descriptor.functionName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+      isDeprecated: descriptor.isDeprecated,
+      isExperimental: descriptor.isExperimental,
+      see: descriptor.see,
+    }),
+    statements: descriptor.isVoid
+      ? `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, true);`
+      : `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, false, children);`,
+  });
+}
+
+/**
  * addPropsInterfaces adds the interfaces to the given source file.
  */
 export function addPropsInterfaces(
@@ -225,77 +240,77 @@ export function addPropsInterfaces(
     }),
   }));
 
-  if (descriptor.tag === "input") {
-    // Use base input interface.
-    const baseInterfaceName = `${descriptor.propsInterfaceName}Base`;
-    sourceFile.addInterface({
-      name: baseInterfaceName,
-      isExported: true,
-      extends: ["GlobalAttributes"],
-      properties: properties,
-      docs: toDocs({
-        description:
-          `${baseInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        see: descriptor.see,
-        isDeprecated: descriptor.isDeprecated,
-        isExperimental: descriptor.isExperimental,
-      }),
-    });
-
-    // Add the input types.
-    for (const inputType of getInputTypes()) {
-      const inputInterfaceName = capitalize(inputType) +
-        descriptor.propsInterfaceName;
-
-      // TODO: Read properties from BCD.
-      // https://github.com/mdn/browser-compat-data/blob/main/html/elements/input
+  switch (descriptor.tag) {
+    case "input": {
+      // Use base input interface.
+      const baseInterfaceName = `${descriptor.propsInterfaceName}Base`;
       sourceFile.addInterface({
-        name: inputInterfaceName,
+        name: baseInterfaceName,
         isExported: true,
-        extends: [baseInterfaceName],
-        properties: [
-          {
-            name: "type",
-            hasQuestionToken: true,
-            type: `'${inputType}'`,
-          },
-        ],
+        extends: ["GlobalAttributes"],
+        properties,
         docs: toDocs({
           description:
-            `${inputInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element with the \`type="${inputType}"\` attribute.`,
+            `${baseInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
+        }),
+      });
+
+      // Add the input types.
+      const inputInterfaceNames: string[] = [];
+      for (const inputType of getInputTypes()) {
+        const inputInterfaceName = toPascalCase(inputType) +
+          descriptor.propsInterfaceName;
+        inputInterfaceNames.push(inputInterfaceName);
+        sourceFile.addInterface({
+          name: inputInterfaceName,
+          isExported: true,
+          extends: [baseInterfaceName],
+          properties: [
+            { name: "type", type: `'${inputType}'` },
+          ],
+          docs: toDocs({
+            description:
+              `${inputInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element with the \`type="${inputType}"\` attribute.`,
+            see: descriptor.see,
+            isDeprecated: descriptor.isDeprecated,
+            isExperimental: descriptor.isExperimental,
+          }),
+        });
+      }
+
+      sourceFile.addTypeAlias({
+        name: descriptor.propsInterfaceName,
+        isExported: true,
+        type: inputInterfaceNames.join(" | "),
+        docs: toDocs({
+          description:
+            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
+        }),
+      });
+      break;
+    }
+
+    default: {
+      sourceFile.addInterface({
+        name: descriptor.propsInterfaceName,
+        isExported: true,
+        extends: ["GlobalAttributes"],
+        properties,
+        docs: toDocs({
+          description:
+            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
           see: descriptor.see,
           isDeprecated: descriptor.isDeprecated,
           isExperimental: descriptor.isExperimental,
         }),
       });
     }
-  } else {
-    sourceFile.addInterface({
-      name: descriptor.propsInterfaceName,
-      isExported: true,
-      extends: ["GlobalAttributes"],
-      properties,
-      docs: toDocs({
-        description:
-          `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        see: descriptor.see,
-        isDeprecated: descriptor.isDeprecated,
-        isExperimental: descriptor.isExperimental,
-      }),
-    });
-  }
-
-  if (descriptor.tag === "input") {
-    // TODO(https://github.com/FartLabs/htx/issues/5): Resolve.
-    // We need to define a base input interface from which the specific
-    // input types extend. This may have to be special, similar to the
-    // global attributes file.
-    //
-    // properties.unshift({
-    //   name: "type",
-    //   hasQuestionToken: true,
-    //   type: getInputTypes().map((type) => `'${type}'`).join(" | "),
-    // });
   }
 }
 
@@ -313,7 +328,7 @@ export function getDescriptors(): Descriptor[] {
     descriptors.push({
       tag,
       functionName: toFunctionName(tag),
-      propsInterfaceName: `${capitalize(tag)}ElementProps`,
+      propsInterfaceName: `${toPascalCase(tag)}ElementProps`,
       isVoid: isVoid(tag),
       attrs,
       see: bcd.html.elements[tag].__compat?.mdn_url,
@@ -359,13 +374,6 @@ export function getInputTypes(): string[] {
   return Object.keys(bcd.html.elements.input)
     .filter((attr) => re.test(attr))
     .map((attr) => attr.replace(re, ""));
-}
-
-/**
- * capitalize capitalizes the first letter of the given string.
- */
-export function capitalize(s: string): string {
-  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 /**

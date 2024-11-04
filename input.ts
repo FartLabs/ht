@@ -11,78 +11,78 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface InputElementPropsBase extends GlobalAttributes {
-    /** `accept` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    accept?: string | undefined;
-    /**
-     * `align` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
-     * @deprecated
-     */
-    align?: string | undefined;
-    /** `alt` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    alt?: string | undefined;
-    /** `capture` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    capture?: string | undefined;
-    /** `checked` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    checked?: string | undefined;
-    /** `dirname` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    dirname?: string | undefined;
-    /** `disabled` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    disabled?: string | undefined;
-    /** `form` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    form?: string | undefined;
-    /** `formaction` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    formaction?: string | undefined;
-    /** `formenctype` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    formenctype?: string | undefined;
-    /** `formmethod` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    formmethod?: string | undefined;
-    /** `formnovalidate` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    formnovalidate?: string | undefined;
-    /** `formtarget` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    formtarget?: string | undefined;
-    /** `list` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    list?: string | undefined;
-    /** `max` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    max?: string | undefined;
-    /** `maxlength` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    maxlength?: string | undefined;
-    /** `min` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    min?: string | undefined;
-    /** `minlength` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    minlength?: string | undefined;
-    /**
-     * `mozactionhint` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
-     * @deprecated
-     */
-    mozactionhint?: string | undefined;
-    /** `multiple` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    multiple?: string | undefined;
-    /** `name` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    name?: string | undefined;
-    /** `pattern` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    pattern?: string | undefined;
-    /** `placeholder` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    placeholder?: string | undefined;
-    /** `popovertarget` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    popovertarget?: string | undefined;
-    /** `popovertargetaction` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    popovertargetaction?: string | undefined;
-    /** `readonly` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    readonly?: string | undefined;
-    /** `src` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    src?: string | undefined;
-    /** `step` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
-    step?: string | undefined;
-    /**
-     * `usemap` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
-     * @deprecated
-     */
-    usemap?: string | undefined;
-    /**
-     * `x-moz-errormessage` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
-     * @deprecated
-     */
-    'x-moz-errormessage'?: string | undefined;
+  /** `accept` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  accept?: string | undefined;
+  /**
+   * `align` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @deprecated
+   */
+  align?: string | undefined;
+  /** `alt` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  alt?: string | undefined;
+  /** `capture` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  capture?: string | undefined;
+  /** `checked` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  checked?: string | undefined;
+  /** `dirname` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  dirname?: string | undefined;
+  /** `disabled` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  disabled?: string | undefined;
+  /** `form` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  form?: string | undefined;
+  /** `formaction` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  formaction?: string | undefined;
+  /** `formenctype` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  formenctype?: string | undefined;
+  /** `formmethod` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  formmethod?: string | undefined;
+  /** `formnovalidate` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  formnovalidate?: string | undefined;
+  /** `formtarget` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  formtarget?: string | undefined;
+  /** `list` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  list?: string | undefined;
+  /** `max` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  max?: string | undefined;
+  /** `maxlength` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  maxlength?: string | undefined;
+  /** `min` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  min?: string | undefined;
+  /** `minlength` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  minlength?: string | undefined;
+  /**
+   * `mozactionhint` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @deprecated
+   */
+  mozactionhint?: string | undefined;
+  /** `multiple` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  multiple?: string | undefined;
+  /** `name` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  name?: string | undefined;
+  /** `pattern` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  pattern?: string | undefined;
+  /** `placeholder` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  placeholder?: string | undefined;
+  /** `popovertarget` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  popovertarget?: string | undefined;
+  /** `popovertargetaction` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  popovertargetaction?: string | undefined;
+  /** `readonly` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  readonly?: string | undefined;
+  /** `src` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  src?: string | undefined;
+  /** `step` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element. */
+  step?: string | undefined;
+  /**
+   * `usemap` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @deprecated
+   */
+  usemap?: string | undefined;
+  /**
+   * `x-moz-errormessage` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @deprecated
+   */
+  "x-moz-errormessage"?: string | undefined;
 }
 
 /**
@@ -90,7 +90,7 @@ export interface InputElementPropsBase extends GlobalAttributes {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface ButtonInputElementProps extends InputElementPropsBase {
-    type?: 'button';
+  type: "button";
 }
 
 /**
@@ -98,7 +98,7 @@ export interface ButtonInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface CheckboxInputElementProps extends InputElementPropsBase {
-    type?: 'checkbox';
+  type: "checkbox";
 }
 
 /**
@@ -106,7 +106,7 @@ export interface CheckboxInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface ColorInputElementProps extends InputElementPropsBase {
-    type?: 'color';
+  type: "color";
 }
 
 /**
@@ -114,15 +114,15 @@ export interface ColorInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface DateInputElementProps extends InputElementPropsBase {
-    type?: 'date';
+  type: "date";
 }
 
 /**
- * Datetime-localInputElementProps are the props for the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element with the `type="datetime-local"` attribute.
+ * DatetimeLocalInputElementProps are the props for the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element with the `type="datetime-local"` attribute.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
-export interface Datetime-localInputElementProps extends InputElementPropsBase {
-    type?: 'datetime-local';
+export interface DatetimeLocalInputElementProps extends InputElementPropsBase {
+  type: "datetime-local";
 }
 
 /**
@@ -130,7 +130,7 @@ export interface Datetime-localInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface EmailInputElementProps extends InputElementPropsBase {
-    type?: 'email';
+  type: "email";
 }
 
 /**
@@ -138,7 +138,7 @@ export interface EmailInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface FileInputElementProps extends InputElementPropsBase {
-    type?: 'file';
+  type: "file";
 }
 
 /**
@@ -146,7 +146,7 @@ export interface FileInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface HiddenInputElementProps extends InputElementPropsBase {
-    type?: 'hidden';
+  type: "hidden";
 }
 
 /**
@@ -154,7 +154,7 @@ export interface HiddenInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface ImageInputElementProps extends InputElementPropsBase {
-    type?: 'image';
+  type: "image";
 }
 
 /**
@@ -162,7 +162,7 @@ export interface ImageInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface MonthInputElementProps extends InputElementPropsBase {
-    type?: 'month';
+  type: "month";
 }
 
 /**
@@ -170,7 +170,7 @@ export interface MonthInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface NumberInputElementProps extends InputElementPropsBase {
-    type?: 'number';
+  type: "number";
 }
 
 /**
@@ -178,7 +178,7 @@ export interface NumberInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface PasswordInputElementProps extends InputElementPropsBase {
-    type?: 'password';
+  type: "password";
 }
 
 /**
@@ -186,7 +186,7 @@ export interface PasswordInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface RadioInputElementProps extends InputElementPropsBase {
-    type?: 'radio';
+  type: "radio";
 }
 
 /**
@@ -194,7 +194,7 @@ export interface RadioInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface RangeInputElementProps extends InputElementPropsBase {
-    type?: 'range';
+  type: "range";
 }
 
 /**
@@ -202,7 +202,7 @@ export interface RangeInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface ResetInputElementProps extends InputElementPropsBase {
-    type?: 'reset';
+  type: "reset";
 }
 
 /**
@@ -210,7 +210,7 @@ export interface ResetInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface SearchInputElementProps extends InputElementPropsBase {
-    type?: 'search';
+  type: "search";
 }
 
 /**
@@ -218,7 +218,7 @@ export interface SearchInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface SubmitInputElementProps extends InputElementPropsBase {
-    type?: 'submit';
+  type: "submit";
 }
 
 /**
@@ -226,7 +226,7 @@ export interface SubmitInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface TelInputElementProps extends InputElementPropsBase {
-    type?: 'tel';
+  type: "tel";
 }
 
 /**
@@ -234,7 +234,7 @@ export interface TelInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface TextInputElementProps extends InputElementPropsBase {
-    type?: 'text';
+  type: "text";
 }
 
 /**
@@ -242,7 +242,7 @@ export interface TextInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface TimeInputElementProps extends InputElementPropsBase {
-    type?: 'time';
+  type: "time";
 }
 
 /**
@@ -250,7 +250,7 @@ export interface TimeInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface UrlInputElementProps extends InputElementPropsBase {
-    type?: 'url';
+  type: "url";
 }
 
 /**
@@ -258,13 +258,41 @@ export interface UrlInputElementProps extends InputElementPropsBase {
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export interface WeekInputElementProps extends InputElementPropsBase {
-    type?: 'week';
+  type: "week";
 }
+
+/**
+ * InputElementProps are the props for the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
+ */
+export type InputElementProps =
+  | ButtonInputElementProps
+  | CheckboxInputElementProps
+  | ColorInputElementProps
+  | DateInputElementProps
+  | DatetimeLocalInputElementProps
+  | EmailInputElementProps
+  | FileInputElementProps
+  | HiddenInputElementProps
+  | ImageInputElementProps
+  | MonthInputElementProps
+  | NumberInputElementProps
+  | PasswordInputElementProps
+  | RadioInputElementProps
+  | RangeInputElementProps
+  | ResetInputElementProps
+  | SearchInputElementProps
+  | SubmitInputElementProps
+  | TelInputElementProps
+  | TextInputElementProps
+  | TimeInputElementProps
+  | UrlInputElementProps
+  | WeekInputElementProps;
 
 /**
  * input renders the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input>
  */
 export function input(props?: InputElementProps): string {
-    return renderElement("input", props as AnyProps, true);
+  return renderElement("input", props as unknown as AnyProps, true);
 }
