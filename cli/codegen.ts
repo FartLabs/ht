@@ -243,17 +243,26 @@ export function addPropsInterfaces(
 
   switch (descriptor.tag) {
     case "input": {
-      // Use base input interface.
-      const baseInterfaceName = `${descriptor.propsInterfaceName}Base`;
+      sourceFile.addTypeAlias({
+        name: "InputElementType",
+        isExported: true,
+        type: getInputTypes().map((type) => `"${type}"`).join(" | "),
+      });
+
       sourceFile.addInterface({
-        name: baseInterfaceName,
+        name: descriptor.propsInterfaceName,
         isExported: true,
         extends: ["GlobalAttributes"],
         properties: [
           ...properties,
           {
+            name: "type",
+            type: "InputElementType | undefined",
+          },
+          {
             name: "value",
             type: "string | undefined",
+            hasQuestionToken: true,
             docs: toDocs({
               description: "`value` is the value of the input element.",
               see:
@@ -263,43 +272,7 @@ export function addPropsInterfaces(
         ],
         docs: toDocs({
           description:
-            `${baseInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-          see: descriptor.see,
-          isDeprecated: descriptor.isDeprecated,
-          isExperimental: descriptor.isExperimental,
-        }),
-      });
-
-      // Add the input types.
-      const inputInterfaceNames: string[] = [];
-      for (const inputType of getInputTypes()) {
-        const inputInterfaceName = toPascalCase(inputType) +
-          descriptor.propsInterfaceName;
-        inputInterfaceNames.push(inputInterfaceName);
-        sourceFile.addInterface({
-          name: inputInterfaceName,
-          isExported: true,
-          extends: [baseInterfaceName],
-          properties: [
-            { name: "type", type: `'${inputType}'` },
-          ],
-          docs: toDocs({
-            description:
-              `${inputInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element with the \`type="${inputType}"\` attribute.`,
-            see: descriptor.see,
-            isDeprecated: descriptor.isDeprecated,
-            isExperimental: descriptor.isExperimental,
-          }),
-        });
-      }
-
-      sourceFile.addTypeAlias({
-        name: descriptor.propsInterfaceName,
-        isExported: true,
-        type: inputInterfaceNames.join(" | "),
-        docs: toDocs({
-          description:
-            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+            `${descriptor.propsInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
           see: descriptor.see,
           isDeprecated: descriptor.isDeprecated,
           isExperimental: descriptor.isExperimental,
