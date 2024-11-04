@@ -12,6 +12,12 @@ import { renderElement } from "./lib/mod.ts";
  */
 export interface AElementProps extends GlobalAttributes {
   /**
+   * `attributionsourceid` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#attributionsourceid>
+   * @experimental
+   */
+  attributionsourceid?: string | undefined;
+  /**
    * `attributionsrc` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#attributionsrc>
    * @experimental
@@ -44,6 +50,12 @@ export interface AElementProps extends GlobalAttributes {
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#hreflang>
    */
   hreflang?: string | undefined;
+  /**
+   * `hreftranslate` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#hreftranslate>
+   * @experimental
+   */
+  hreftranslate?: string | undefined;
   /**
    * `name` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#name>

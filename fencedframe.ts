@@ -12,6 +12,24 @@ import { renderElement } from "./lib/mod.ts";
  * @experimental
  */
 export interface FencedframeElementProps extends GlobalAttributes {
+  /**
+   * `allow` is an attribute of the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe#allow>
+   * @experimental
+   */
+  allow?: string | undefined;
+  /**
+   * `height` is an attribute of the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe#height>
+   * @experimental
+   */
+  height?: string | undefined;
+  /**
+   * `width` is an attribute of the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/fencedframe#width>
+   * @experimental
+   */
+  width?: string | undefined;
 }
 
 /**

@@ -11,12 +11,6 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/menu>
  */
 export interface MenuElementProps extends GlobalAttributes {
-  /**
-   * `label` is an attribute of the [`menu`](https://developer.mozilla.org/docs/Web/HTML/Element/menu) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/menu#label>
-   * @deprecated
-   */
-  label?: string | undefined;
 }
 
 /**

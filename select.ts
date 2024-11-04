@@ -12,6 +12,11 @@ import { renderElement } from "./lib/mod.ts";
  */
 export interface SelectElementProps extends GlobalAttributes {
   /**
+   * `autocomplete` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Element/select) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/select#autocomplete>
+   */
+  autocomplete?: string | undefined;
+  /**
    * `disabled` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Element/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/select#disabled>
    */

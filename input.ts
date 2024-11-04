@@ -56,6 +56,11 @@ export interface InputElementProps extends GlobalAttributes {
    */
   alt?: string | undefined;
   /**
+   * `autocomplete` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#autocomplete>
+   */
+  autocomplete?: string | undefined;
+  /**
    * `capture` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#capture>
    */
@@ -172,6 +177,16 @@ export interface InputElementProps extends GlobalAttributes {
    */
   readonly?: string | undefined;
   /**
+   * `required` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#required>
+   */
+  required?: string | undefined;
+  /**
+   * `size` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#size>
+   */
+  size?: string | undefined;
+  /**
    * `src` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#src>
    */
@@ -187,12 +202,6 @@ export interface InputElementProps extends GlobalAttributes {
    * @deprecated
    */
   usemap?: string | undefined;
-  /**
-   * `x-moz-errormessage` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Element/input) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#x-moz-errormessage>
-   * @deprecated
-   */
-  "x-moz-errormessage"?: string | undefined;
   /**
    * `type` is the type of the input element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#type>

@@ -58,12 +58,6 @@ export interface AreaElementProps extends GlobalAttributes {
    */
   shape?: string | undefined;
   /**
-   * `tabindex` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area#tabindex>
-   * @deprecated
-   */
-  tabindex?: string | undefined;
-  /**
    * `target` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Element/area) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/area#target>
    */

@@ -74,12 +74,6 @@ export interface ObjectElementProps extends GlobalAttributes {
    */
   standby?: string | undefined;
   /**
-   * `tabindex` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#tabindex>
-   * @deprecated
-   */
-  tabindex?: string | undefined;
-  /**
    * `type` is an attribute of the [`object`](https://developer.mozilla.org/docs/Web/HTML/Element/object) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/object#type>
    */

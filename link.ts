@@ -74,12 +74,6 @@ export interface LinkElementProps extends GlobalAttributes {
    */
   media?: string | undefined;
   /**
-   * `methods` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#methods>
-   * @deprecated
-   */
-  methods?: string | undefined;
-  /**
    * `referrerpolicy` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#referrerpolicy>
    */

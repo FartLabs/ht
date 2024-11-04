@@ -5,10 +5,15 @@
 export interface GlobalAttributes extends DataAttributes {
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/accesskey> */
   accesskey?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/anchor>
+   * @experimental
+   */
+  anchor?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autocapitalize> */
   autocapitalize?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/HTML/Attributes/autocomplete> */
-  autocomplete?: string | undefined;
+  /** @experimental */
+  autocorrect?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autofocus> */
   autofocus?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/class> */
@@ -31,22 +36,8 @@ export interface GlobalAttributes extends DataAttributes {
   inert?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/inputmode> */
   inputmode?: string | undefined;
-  /** @experimental */
-  invokeaction?: string | undefined;
-  /** @experimental */
-  invoketarget?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/is> */
   is?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemid> */
-  itemid?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemprop> */
-  itemprop?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemref> */
-  itemref?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemscope> */
-  itemscope?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/itemtype> */
-  itemtype?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/lang> */
   lang?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/nonce> */
@@ -72,6 +63,8 @@ export interface GlobalAttributes extends DataAttributes {
    * @experimental
    */
   virtualkeyboardpolicy?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/writingsuggestions> */
+  writingsuggestions?: string | undefined;
 }
 
 /**
