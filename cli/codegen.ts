@@ -247,6 +247,10 @@ export function addPropsInterfaces(
         name: "InputElementType",
         isExported: true,
         type: getInputTypes().map((type) => `"${type}"`).join(" | "),
+        docs: toDocs({
+          description: "InputElementType is the type of the input element.",
+          see: "https://developer.mozilla.org/docs/Web/HTML/Element/input#type",
+        }),
       });
 
       sourceFile.addInterface({
@@ -257,7 +261,13 @@ export function addPropsInterfaces(
           ...properties,
           {
             name: "type",
+            hasQuestionToken: true,
             type: "InputElementType | undefined",
+            docs: toDocs({
+              description: "`type` is the type of the input element.",
+              see:
+                "https://developer.mozilla.org/docs/Web/HTML/Element/input#type",
+            }),
           },
           {
             name: "value",

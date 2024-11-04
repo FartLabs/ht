@@ -6,6 +6,10 @@
 import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
+/**
+ * InputElementType is the type of the input element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#type>
+ */
 export type InputElementType =
   | "button"
   | "checkbox"
@@ -189,7 +193,11 @@ export interface InputElementProps extends GlobalAttributes {
    * @deprecated
    */
   "x-moz-errormessage"?: string | undefined;
-  type: InputElementType | undefined;
+  /**
+   * `type` is the type of the input element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#type>
+   */
+  type?: InputElementType | undefined;
   /**
    * `value` is the value of the input element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#value>
