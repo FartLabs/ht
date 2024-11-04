@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dialog>
  */
 export interface DialogElementProps extends GlobalAttributes {
-  /** `open` is an attribute of the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) element. */
+  /**
+   * `open` is an attribute of the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dialog#open>
+   */
   open?: string | undefined;
 }
 

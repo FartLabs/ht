@@ -13,26 +13,31 @@ import { renderElement } from "./lib/mod.ts";
 export interface TfootElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot#align>
    * @deprecated
    */
   align?: string | undefined;
   /**
    * `bgcolor` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot#bgcolor>
    * @deprecated
    */
   bgcolor?: string | undefined;
   /**
    * `char` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot#char>
    * @deprecated
    */
   char?: string | undefined;
   /**
    * `charoff` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot#charoff>
    * @deprecated
    */
   charoff?: string | undefined;
   /**
    * `valign` is an attribute of the [`tfoot`](https://developer.mozilla.org/docs/Web/HTML/Element/tfoot) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tfoot#valign>
    * @deprecated
    */
   valign?: string | undefined;

@@ -11,9 +11,15 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup>
  */
 export interface OptgroupElementProps extends GlobalAttributes {
-  /** `disabled` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element. */
+  /**
+   * `disabled` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup#disabled>
+   */
   disabled?: string | undefined;
-  /** `label` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element. */
+  /**
+   * `label` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Element/optgroup) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/optgroup#label>
+   */
   label?: string | undefined;
 }
 

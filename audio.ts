@@ -11,23 +11,50 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio>
  */
 export interface AudioElementProps extends GlobalAttributes {
-  /** `autoplay` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `autoplay` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#autoplay>
+   */
   autoplay?: string | undefined;
-  /** `controls` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `controls` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#controls>
+   */
   controls?: string | undefined;
-  /** `controlslist` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `controlslist` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#controlslist>
+   */
   controlslist?: string | undefined;
-  /** `crossorigin` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `crossorigin` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#crossorigin>
+   */
   crossorigin?: string | undefined;
-  /** `disableremoteplayback` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `disableremoteplayback` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#disableremoteplayback>
+   */
   disableremoteplayback?: string | undefined;
-  /** `loop` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `loop` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#loop>
+   */
   loop?: string | undefined;
-  /** `muted` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `muted` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#muted>
+   */
   muted?: string | undefined;
-  /** `preload` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `preload` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#preload>
+   */
   preload?: string | undefined;
-  /** `src` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element. */
+  /**
+   * `src` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Element/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/audio#src>
+   */
   src?: string | undefined;
 }
 

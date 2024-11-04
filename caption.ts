@@ -13,6 +13,7 @@ import { renderElement } from "./lib/mod.ts";
 export interface CaptionElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`caption`](https://developer.mozilla.org/docs/Web/HTML/Element/caption) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/caption#align>
    * @deprecated
    */
   align?: string | undefined;

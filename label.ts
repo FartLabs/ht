@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label>
  */
 export interface LabelElementProps extends GlobalAttributes {
-  /** `for` is an attribute of the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element. */
+  /**
+   * `for` is an attribute of the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label#for>
+   */
   for?: string | undefined;
 }
 

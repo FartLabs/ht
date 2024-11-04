@@ -13,16 +13,19 @@ import { renderElement } from "./lib/mod.ts";
 export interface PreElementProps extends GlobalAttributes {
   /**
    * `cols` is an attribute of the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre#cols>
    * @deprecated
    */
   cols?: string | undefined;
   /**
    * `width` is an attribute of the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre#width>
    * @deprecated
    */
   width?: string | undefined;
   /**
    * `wrap` is an attribute of the [`pre`](https://developer.mozilla.org/docs/Web/HTML/Element/pre) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/pre#wrap>
    * @deprecated
    */
   wrap?: string | undefined;

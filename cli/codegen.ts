@@ -15,6 +15,8 @@
  * └── ./mod.ts
  */
 
+import { toPascalCase } from "@std/text/to-pascal-case";
+import type { SourceFile } from "ts-morph";
 import { Project } from "ts-morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
@@ -106,102 +108,7 @@ if (import.meta.main) {
   // Create a file for each element.
   const descriptors = getDescriptors();
   for (const descriptor of descriptors) {
-    const sourceFile = project.createSourceFile(
-      `${descriptor.tag}.ts`,
-      undefined,
-      { overwrite: true },
-    );
-
-    // Add file prelude.
-    sourceFile.addStatements(`/**
- * @fileoverview
- *
- * This file was generated. Do not modify this file directly.
- */`);
-
-    // Add the type imports.
-    sourceFile.addImportDeclaration({
-      isTypeOnly: true,
-      moduleSpecifier: "./lib/mod.ts",
-      namedImports: ["AnyProps", "GlobalAttributes"],
-    });
-
-    // Add the variable imports.
-    sourceFile.addImportDeclaration({
-      moduleSpecifier: "./lib/mod.ts",
-      namedImports: ["renderElement"],
-    });
-
-    // Add an interface for the props.
-    type InterfaceProperties = Parameters<
-      typeof sourceFile.addInterface
-    >[0]["properties"];
-    const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
-      name: attr.includes("-") ? `'${attr}'` : attr,
-      hasQuestionToken: true,
-      type: "string | undefined",
-      docs: toDocs({
-        description:
-          `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
-          ?.status?.experimental,
-        isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
-          ?.status?.deprecated,
-      }),
-    }));
-    if (descriptor.tag === "input") {
-      // TODO(https://github.com/FartLabs/htx/issues/5): Resolve.
-      properties.unshift({
-        name: "type",
-        hasQuestionToken: true,
-        type: getInputTypes().map((type) => `'${type}'`).join(" | "),
-      });
-    }
-
-    sourceFile.addInterface({
-      name: descriptor.propsInterfaceName,
-      isExported: true,
-      extends: ["GlobalAttributes"],
-      properties,
-      docs: toDocs({
-        description:
-          `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        see: descriptor.see,
-        isDeprecated: descriptor.isDeprecated,
-        isExperimental: descriptor.isExperimental,
-      }),
-    });
-
-    // Add the element render function.
-    sourceFile.addFunction({
-      name: descriptor.functionName,
-      isExported: true,
-      parameters: [
-        {
-          name: "props",
-          type: descriptor.propsInterfaceName,
-          hasQuestionToken: true,
-        },
-        ...(!descriptor.isVoid
-          ? [{
-            name: "children",
-            type: "string[]",
-            isRestParameter: true,
-          }]
-          : []),
-      ],
-      returnType: "string",
-      docs: toDocs({
-        description:
-          `${descriptor.functionName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-        isDeprecated: descriptor.isDeprecated,
-        isExperimental: descriptor.isExperimental,
-        see: descriptor.see,
-      }),
-      statements: descriptor.isVoid
-        ? `return renderElement("${descriptor.tag}", props as AnyProps, true);`
-        : `return renderElement("${descriptor.tag}", props as AnyProps, false, children);`,
-    });
+    addElementFile(project, descriptor);
   }
 
   // Create the mod file.
@@ -242,6 +149,193 @@ if (import.meta.main) {
 }
 
 /**
+ * addElementFile adds a TypeScript file for the given HTML element descriptor.
+ */
+export function addElementFile(
+  project: Project,
+  descriptor: Descriptor,
+): void {
+  const sourceFile = project.createSourceFile(
+    `${descriptor.tag}.ts`,
+    undefined,
+    { overwrite: true },
+  );
+
+  // Add file prelude.
+  sourceFile.addStatements(`/**
+* @fileoverview
+*
+* This file was generated. Do not modify this file directly.
+*/`);
+
+  // Add the type imports.
+  sourceFile.addImportDeclaration({
+    isTypeOnly: true,
+    moduleSpecifier: "./lib/mod.ts",
+    namedImports: ["AnyProps", "GlobalAttributes"],
+  });
+
+  // Add the variable imports.
+  sourceFile.addImportDeclaration({
+    moduleSpecifier: "./lib/mod.ts",
+    namedImports: ["renderElement"],
+  });
+
+  // Add the props interface.
+  addPropsInterfaces(sourceFile, descriptor);
+
+  // Add the element render function.
+  const propsRenderTypeCast = descriptor.tag !== "input"
+    ? " as AnyProps"
+    : " as unknown as AnyProps";
+  sourceFile.addFunction({
+    name: descriptor.functionName,
+    isExported: true,
+    parameters: [
+      {
+        name: "props",
+        type: descriptor.propsInterfaceName,
+        hasQuestionToken: true,
+      },
+      ...(!descriptor.isVoid
+        ? [{
+          name: "children",
+          type: "string[]",
+          isRestParameter: true,
+        }]
+        : []),
+    ],
+    returnType: "string",
+    docs: toDocs({
+      description:
+        `${descriptor.functionName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+      isDeprecated: descriptor.isDeprecated,
+      isExperimental: descriptor.isExperimental,
+      see: descriptor.see,
+    }),
+    statements: descriptor.isVoid
+      ? `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, true);`
+      : `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, false, children);`,
+  });
+}
+
+/**
+ * addPropsInterfaces adds the interfaces to the given source file.
+ */
+export function addPropsInterfaces(
+  sourceFile: SourceFile,
+  descriptor: Descriptor,
+): void {
+  const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
+    name: attr.includes("-") ? `'${attr}'` : attr,
+    hasQuestionToken: true,
+    type: "string | undefined",
+    docs: toDocs({
+      see: `${descriptor.see}#${attr}`,
+      description:
+        `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+      isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
+        ?.status?.experimental,
+      isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
+        ?.status?.deprecated,
+    }),
+  }));
+
+  switch (descriptor.tag) {
+    case "input": {
+      sourceFile.addTypeAlias({
+        name: "InputElementType",
+        isExported: true,
+        type: getInputTypes().map((type) => `"${type}"`).join(" | "),
+        docs: toDocs({
+          description: "InputElementType is the type of the input element.",
+          see: "https://developer.mozilla.org/docs/Web/HTML/Element/input#type",
+        }),
+      });
+
+      sourceFile.addInterface({
+        name: descriptor.propsInterfaceName,
+        isExported: true,
+        extends: ["GlobalAttributes"],
+        properties: [
+          ...properties,
+          {
+            name: "type",
+            hasQuestionToken: true,
+            type: "InputElementType | undefined",
+            docs: toDocs({
+              description: "`type` is the type of the input element.",
+              see:
+                "https://developer.mozilla.org/docs/Web/HTML/Element/input#type",
+            }),
+          },
+          {
+            name: "value",
+            type: "string | undefined",
+            hasQuestionToken: true,
+            docs: toDocs({
+              description: "`value` is the value of the input element.",
+              see:
+                "https://developer.mozilla.org/docs/Web/HTML/Element/input#value",
+            }),
+          },
+        ],
+        docs: toDocs({
+          description:
+            `${descriptor.propsInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
+        }),
+      });
+      break;
+    }
+
+    default: {
+      sourceFile.addInterface({
+        name: descriptor.propsInterfaceName,
+        isExported: true,
+        extends: ["GlobalAttributes"],
+        properties,
+        docs: toDocs({
+          description:
+            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
+          see: descriptor.see,
+          isDeprecated: descriptor.isDeprecated,
+          isExperimental: descriptor.isExperimental,
+        }),
+      });
+    }
+  }
+}
+
+type InterfaceProperties = Parameters<
+  SourceFile["addInterface"]
+>[number]["properties"];
+
+/**
+ * getDescriptors returns the descriptors for each HTML element.
+ */
+export function getDescriptors(): Descriptor[] {
+  const descriptors: Descriptor[] = [];
+  for (const tag in bcd.html.elements) {
+    const attrs = getAttrs(tag);
+    descriptors.push({
+      tag,
+      functionName: toFunctionName(tag),
+      propsInterfaceName: `${toPascalCase(tag)}ElementProps`,
+      isVoid: isVoid(tag),
+      attrs,
+      see: bcd.html.elements[tag].__compat?.mdn_url,
+      isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
+      isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
+    });
+  }
+
+  return descriptors;
+}
+
+/**
  * Descriptor represents the data for an HTML element.
  *
  * From this data, we can generate a TypeScript file for each element.
@@ -256,28 +350,6 @@ export interface Descriptor {
   see?: string;
   isDeprecated?: boolean;
   isExperimental?: boolean;
-}
-
-/**
- * getDescriptors returns the descriptors for each HTML element.
- */
-export function getDescriptors(): Descriptor[] {
-  const descriptors: Descriptor[] = [];
-  for (const tag in bcd.html.elements) {
-    const attrs = getAttrs(tag);
-    descriptors.push({
-      tag,
-      functionName: toFunctionName(tag),
-      propsInterfaceName: `${capitalize(tag)}ElementProps`,
-      isVoid: isVoid(tag),
-      attrs,
-      see: bcd.html.elements[tag].__compat?.mdn_url,
-      isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
-      isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
-    });
-  }
-
-  return descriptors;
 }
 
 /**
@@ -297,13 +369,6 @@ export function getInputTypes(): string[] {
   return Object.keys(bcd.html.elements.input)
     .filter((attr) => re.test(attr))
     .map((attr) => attr.replace(re, ""));
-}
-
-/**
- * capitalize capitalizes the first letter of the given string.
- */
-export function capitalize(s: string): string {
-  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 /**

@@ -13,6 +13,7 @@ import { renderElement } from "./lib/mod.ts";
 export interface DivElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`div`](https://developer.mozilla.org/docs/Web/HTML/Element/div) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/div#align>
    * @deprecated
    */
   align?: string | undefined;

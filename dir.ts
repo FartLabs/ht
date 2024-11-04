@@ -14,6 +14,7 @@ import { renderElement } from "./lib/mod.ts";
 export interface DirElementProps extends GlobalAttributes {
   /**
    * `compact` is an attribute of the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Element/dir) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dir#compact>
    * @deprecated
    */
   compact?: string | undefined;

@@ -13,21 +13,35 @@ import { renderElement } from "./lib/mod.ts";
 export interface EmbedElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed#align>
    * @deprecated
    */
   align?: string | undefined;
-  /** `height` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
+  /**
+   * `height` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed#height>
+   */
   height?: string | undefined;
   /**
    * `name` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed#name>
    * @deprecated
    */
   name?: string | undefined;
-  /** `src` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
+  /**
+   * `src` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed#src>
+   */
   src?: string | undefined;
-  /** `type` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
+  /**
+   * `type` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed#type>
+   */
   type?: string | undefined;
-  /** `width` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element. */
+  /**
+   * `width` is an attribute of the [`embed`](https://developer.mozilla.org/docs/Web/HTML/Element/embed) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/embed#width>
+   */
   width?: string | undefined;
 }
 

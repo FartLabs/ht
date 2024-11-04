@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/data>
  */
 export interface DataElementProps extends GlobalAttributes {
-  /** `value` is an attribute of the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element. */
+  /**
+   * `value` is an attribute of the [`data`](https://developer.mozilla.org/docs/Web/HTML/Element/data) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/data#value>
+   */
   value?: string | undefined;
 }
 

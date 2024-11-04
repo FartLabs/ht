@@ -11,7 +11,10 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/q>
  */
 export interface QElementProps extends GlobalAttributes {
-  /** `cite` is an attribute of the [`q`](https://developer.mozilla.org/docs/Web/HTML/Element/q) element. */
+  /**
+   * `cite` is an attribute of the [`q`](https://developer.mozilla.org/docs/Web/HTML/Element/q) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/q#cite>
+   */
   cite?: string | undefined;
 }
 

@@ -13,10 +13,14 @@ import { renderElement } from "./lib/mod.ts";
 export interface LiElementProps extends GlobalAttributes {
   /**
    * `type` is an attribute of the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/li#type>
    * @deprecated
    */
   type?: string | undefined;
-  /** `value` is an attribute of the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element. */
+  /**
+   * `value` is an attribute of the [`li`](https://developer.mozilla.org/docs/Web/HTML/Element/li) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/li#value>
+   */
   value?: string | undefined;
 }
 

@@ -11,15 +11,30 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track>
  */
 export interface TrackElementProps extends GlobalAttributes {
-  /** `default` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element. */
+  /**
+   * `default` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track#default>
+   */
   default?: string | undefined;
-  /** `kind` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element. */
+  /**
+   * `kind` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track#kind>
+   */
   kind?: string | undefined;
-  /** `label` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element. */
+  /**
+   * `label` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track#label>
+   */
   label?: string | undefined;
-  /** `src` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element. */
+  /**
+   * `src` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track#src>
+   */
   src?: string | undefined;
-  /** `srclang` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element. */
+  /**
+   * `srclang` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Element/track) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/track#srclang>
+   */
   srclang?: string | undefined;
 }
 

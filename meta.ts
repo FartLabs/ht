@@ -11,16 +11,29 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta>
  */
 export interface MetaElementProps extends GlobalAttributes {
-  /** `charset` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element. */
+  /**
+   * `charset` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta#charset>
+   */
   charset?: string | undefined;
-  /** `content` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element. */
+  /**
+   * `content` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta#content>
+   */
   content?: string | undefined;
-  /** `http-equiv` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element. */
+  /**
+   * `http-equiv` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta#http-equiv>
+   */
   "http-equiv"?: string | undefined;
-  /** `name` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element. */
+  /**
+   * `name` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta#name>
+   */
   name?: string | undefined;
   /**
    * `scheme` is an attribute of the [`meta`](https://developer.mozilla.org/docs/Web/HTML/Element/meta) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meta#scheme>
    * @deprecated
    */
   scheme?: string | undefined;

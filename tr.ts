@@ -13,26 +13,31 @@ import { renderElement } from "./lib/mod.ts";
 export interface TrElementProps extends GlobalAttributes {
   /**
    * `align` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr#align>
    * @deprecated
    */
   align?: string | undefined;
   /**
    * `bgcolor` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr#bgcolor>
    * @deprecated
    */
   bgcolor?: string | undefined;
   /**
    * `char` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr#char>
    * @deprecated
    */
   char?: string | undefined;
   /**
    * `charoff` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr#charoff>
    * @deprecated
    */
   charoff?: string | undefined;
   /**
    * `valign` is an attribute of the [`tr`](https://developer.mozilla.org/docs/Web/HTML/Element/tr) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/tr#valign>
    * @deprecated
    */
   valign?: string | undefined;

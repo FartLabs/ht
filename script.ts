@@ -11,33 +11,62 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script>
  */
 export interface ScriptElementProps extends GlobalAttributes {
-  /** `async` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `async` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#async>
+   */
   async?: string | undefined;
   /**
    * `attributionsrc` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#attributionsrc>
    * @experimental
    */
   attributionsrc?: string | undefined;
   /**
    * `blocking` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#blocking>
    * @experimental
    */
   blocking?: string | undefined;
-  /** `crossorigin` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `crossorigin` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#crossorigin>
+   */
   crossorigin?: string | undefined;
-  /** `defer` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `defer` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#defer>
+   */
   defer?: string | undefined;
-  /** `fetchpriority` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `fetchpriority` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#fetchpriority>
+   */
   fetchpriority?: string | undefined;
-  /** `integrity` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `integrity` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#integrity>
+   */
   integrity?: string | undefined;
-  /** `nomodule` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `nomodule` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#nomodule>
+   */
   nomodule?: string | undefined;
-  /** `referrerpolicy` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `referrerpolicy` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#referrerpolicy>
+   */
   referrerpolicy?: string | undefined;
-  /** `src` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `src` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#src>
+   */
   src?: string | undefined;
-  /** `type` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element. */
+  /**
+   * `type` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#type>
+   */
   type?: string | undefined;
 }
 

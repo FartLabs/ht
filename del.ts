@@ -11,9 +11,15 @@ import { renderElement } from "./lib/mod.ts";
  * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del>
  */
 export interface DelElementProps extends GlobalAttributes {
-  /** `cite` is an attribute of the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element. */
+  /**
+   * `cite` is an attribute of the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del#cite>
+   */
   cite?: string | undefined;
-  /** `datetime` is an attribute of the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element. */
+  /**
+   * `datetime` is an attribute of the [`del`](https://developer.mozilla.org/docs/Web/HTML/Element/del) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/del#datetime>
+   */
   datetime?: string | undefined;
 }
 

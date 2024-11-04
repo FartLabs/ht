@@ -13,13 +13,18 @@ import { renderElement } from "./lib/mod.ts";
 export interface StyleElementProps extends GlobalAttributes {
   /**
    * `blocking` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style#blocking>
    * @experimental
    */
   blocking?: string | undefined;
-  /** `media` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element. */
+  /**
+   * `media` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style#media>
+   */
   media?: string | undefined;
   /**
    * `type` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style#type>
    * @deprecated
    */
   type?: string | undefined;

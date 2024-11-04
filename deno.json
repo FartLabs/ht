@@ -4,6 +4,7 @@
   "version": "0.0.5",
   "imports": {
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^5.5.19",
+    "@std/text": "jsr:@std/text@^1.0.8",
     "ts-morph": "npm:ts-morph@^22.0.0"
   },
   "tasks": {
