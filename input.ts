@@ -83,6 +83,11 @@ export interface InputElementPropsBase extends GlobalAttributes {
    * @deprecated
    */
   "x-moz-errormessage"?: string | undefined;
+  /**
+   * `value` is the value of the input element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/input#value>
+   */
+  value: string | undefined;
 }
 
 /**

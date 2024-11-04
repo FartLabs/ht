@@ -248,7 +248,18 @@ export function addPropsInterfaces(
         name: baseInterfaceName,
         isExported: true,
         extends: ["GlobalAttributes"],
-        properties,
+        properties: [
+          ...properties,
+          {
+            name: "value",
+            type: "string | undefined",
+            docs: toDocs({
+              description: "`value` is the value of the input element.",
+              see:
+                "https://developer.mozilla.org/docs/Web/HTML/Element/input#value",
+            }),
+          },
+        ],
         docs: toDocs({
           description:
             `${baseInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
