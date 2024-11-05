@@ -21,6 +21,14 @@ import { Project } from "ts-morph";
 import bcd from "@mdn/browser-compat-data" with { type: "json" };
 
 /**
+ * bcdElementEventNames is a list of all element event names in BCD.
+ */
+export const bcdElementEventNames = Object.keys(bcd.api.Element)
+  .filter((key) => key.endsWith("_event"))
+  .map((key) => key.toLowerCase().replace(/_event$/, ""))
+  .toSorted();
+
+/**
  * voidElements is a list of all void elements in HTML.
  * @see https://developer.mozilla.org/en-US/docs/Glossary/Void_element
  */
@@ -101,6 +109,20 @@ if (import.meta.main) {
           ?.experimental,
         isDeprecated: bcd.html.global_attributes[attr].__compat?.status
           ?.deprecated,
+      }),
+    });
+  }
+
+  for (const elementEventName of bcdElementEventNames) {
+    globalAttrsInterface.addProperty({
+      name: `on${elementEventName}`,
+      hasQuestionToken: true,
+      type: `string | undefined`,
+      docs: toDocs({
+        description:
+          `The \`on${elementEventName}\` event handler occurs when the user interacts with the element.`,
+        see:
+          `https://developer.mozilla.org/docs/Web/Events/${elementEventName}`,
       }),
     });
   }
