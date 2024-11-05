@@ -23,7 +23,7 @@ import bcd from "@mdn/browser-compat-data" with { type: "json" };
 /**
  * bcdElementEventNames is a list of all element event names in BCD.
  */
-export const bcdElementEventNames = Object.keys(bcd.api.Element)
+export const bcdElementEventNames: string[] = Object.keys(bcd.api.Element)
   .filter((key) => key.endsWith("_event"))
   .map((key) => key.toLowerCase().replace(/_event$/, ""))
   .toSorted();
