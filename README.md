@@ -18,7 +18,7 @@ deno init
 3\. Add html as a project dependency.
 
 ```sh
-deno add @fartlabs/ht
+deno add jsr:@fartlabs/ht
 ```
 
 4\. Add a file ending in `.[j|t]s` to your project. For example, `main.ts`.
