@@ -19,7 +19,6 @@ export interface LinkElementProps extends GlobalAttributes {
   /**
    * `blocking` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#blocking>
-   * @experimental
    */
   blocking?: string | undefined;
   /**

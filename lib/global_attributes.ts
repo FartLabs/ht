@@ -12,7 +12,10 @@ export interface GlobalAttributes extends DataAttributes {
   anchor?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autocapitalize> */
   autocapitalize?: string | undefined;
-  /** @experimental */
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autocorrect>
+   * @experimental
+   */
   autocorrect?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autofocus> */
   autofocus?: string | undefined;

@@ -25,7 +25,6 @@ export interface ScriptElementProps extends GlobalAttributes {
   /**
    * `blocking` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Element/script) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/script#blocking>
-   * @experimental
    */
   blocking?: string | undefined;
   /**

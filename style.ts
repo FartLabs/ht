@@ -14,7 +14,6 @@ export interface StyleElementProps extends GlobalAttributes {
   /**
    * `blocking` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Element/style) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/style#blocking>
-   * @experimental
    */
   blocking?: string | undefined;
   /**

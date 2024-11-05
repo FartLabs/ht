@@ -12,6 +12,18 @@ import { renderElement } from "./lib/mod.ts";
  */
 export interface ButtonElementProps extends GlobalAttributes {
   /**
+   * `command` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/button#command>
+   * @experimental
+   */
+  command?: string | undefined;
+  /**
+   * `commandfor` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/button#commandfor>
+   * @experimental
+   */
+  commandfor?: string | undefined;
+  /**
    * `disabled` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Element/button) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Element/button#disabled>
    */
