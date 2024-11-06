@@ -1,4 +1,9 @@
 /**
+ * @fileoverview
+ *
+ * This file was generated. Do not modify this file directly.
+ */
+/**
  * GlobalAttributes are the global attributes for HTML elements.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Global_attributes>
  */

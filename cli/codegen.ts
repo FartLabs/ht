@@ -55,6 +55,15 @@ export const voidElements = [
 const voidElementSet = new Set<string>(voidElements);
 
 /**
+ * generatedFilePreludeString is the comment at the top of generated files.
+ */
+const generatedFilePreludeString = `/**
+* @fileoverview
+*
+* This file was generated. Do not modify this file directly.
+*/`;
+
+/**
  * isVoid returns true if the given tag is a void element.
  */
 export function isVoid(tag: string): boolean {
@@ -71,6 +80,7 @@ if (import.meta.main) {
     undefined,
     { overwrite: true },
   );
+  globalAttrsFile.addStatements(generatedFilePreludeString);
   const globalAttrsInterface = globalAttrsFile.addInterface({
     isExported: true,
     name: "GlobalAttributes",
@@ -149,9 +159,9 @@ if (import.meta.main) {
   // Update the deno.json exports.
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
-    "./cli/codegen.ts": "./cli/codegen.ts",
-    "./lib/global_attributes.ts": "./lib/global_attributes.ts",
-    "./lib/render.ts": "./lib/render.ts",
+    "./cli/codegen": "./cli/codegen.ts",
+    "./lib/global-attributes": "./lib/global_attributes.ts",
+    "./lib/render": "./lib/render.ts",
     ".": "./mod.ts",
     ...Object.fromEntries(descriptors.map((descriptor) => [
       `./${descriptor.tag}`,
@@ -184,11 +194,7 @@ export function addElementFile(
   );
 
   // Add file prelude.
-  sourceFile.addStatements(`/**
-* @fileoverview
-*
-* This file was generated. Do not modify this file directly.
-*/`);
+  sourceFile.addStatements(generatedFilePreludeString);
 
   // Add the type imports.
   sourceFile.addImportDeclaration({

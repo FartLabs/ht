@@ -1,7 +1,7 @@
 {
   "lock": false,
   "name": "@fartlabs/ht",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "imports": {
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^5.5.19",
     "@std/text": "jsr:@std/text@^1.0.8",
@@ -12,9 +12,9 @@
     "molt": "deno run -A jsr:@molt/cli -w"
   },
   "exports": {
-    "./cli/codegen.ts": "./cli/codegen.ts",
-    "./lib/global_attributes.ts": "./lib/global_attributes.ts",
-    "./lib/render.ts": "./lib/render.ts",
+    "./cli/codegen": "./cli/codegen.ts",
+    "./lib/global-attributes": "./lib/global_attributes.ts",
+    "./lib/render": "./lib/render.ts",
     ".": "./mod.ts",
     "./a": "./a.ts",
     "./abbr": "./abbr.ts",
