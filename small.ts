@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * SmallElementProps are the props for the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/small>
+ * SmallElementProps are the props for the [`small`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small>
  */
 export interface SmallElementProps extends GlobalAttributes {
 }
 
 /**
- * small renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Element/small) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/small>
+ * small renders the [`small`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/small>
  */
 export function small(
   props?: SmallElementProps,

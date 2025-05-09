@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * MarkElementProps are the props for the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Element/mark) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/mark>
+ * MarkElementProps are the props for the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark>
  */
 export interface MarkElementProps extends GlobalAttributes {
 }
 
 /**
- * mark renders the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Element/mark) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/mark>
+ * mark renders the [`mark`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/mark>
  */
 export function mark(props?: MarkElementProps, ...children: string[]): string {
   return renderElement("mark", props as AnyProps, false, children);

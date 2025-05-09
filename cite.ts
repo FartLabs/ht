@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * CiteElementProps are the props for the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Element/cite) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/cite>
+ * CiteElementProps are the props for the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite>
  */
 export interface CiteElementProps extends GlobalAttributes {
 }
 
 /**
- * cite renders the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Element/cite) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/cite>
+ * cite renders the [`cite`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/cite>
  */
 export function cite(props?: CiteElementProps, ...children: string[]): string {
   return renderElement("cite", props as AnyProps, false, children);

@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * AsideElementProps are the props for the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/aside>
+ * AsideElementProps are the props for the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside>
  */
 export interface AsideElementProps extends GlobalAttributes {
 }
 
 /**
- * aside renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Element/aside) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/aside>
+ * aside renders the [`aside`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/aside>
  */
 export function aside(
   props?: AsideElementProps,

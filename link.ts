@@ -7,108 +7,108 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * LinkElementProps are the props for the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
+ * LinkElementProps are the props for the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link>
  */
 export interface LinkElementProps extends GlobalAttributes {
   /**
-   * `as` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#as>
+   * `as` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#as>
    */
   as?: string | undefined;
   /**
-   * `blocking` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#blocking>
+   * `blocking` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#blocking>
    */
   blocking?: string | undefined;
   /**
-   * `charset` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#charset>
+   * `charset` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#charset>
    * @deprecated
    */
   charset?: string | undefined;
   /**
-   * `crossorigin` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#crossorigin>
+   * `crossorigin` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#crossorigin>
    */
   crossorigin?: string | undefined;
   /**
-   * `disabled` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#disabled>
+   * `disabled` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#disabled>
    */
   disabled?: string | undefined;
   /**
-   * `fetchpriority` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#fetchpriority>
+   * `fetchpriority` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#fetchpriority>
    */
   fetchpriority?: string | undefined;
   /**
-   * `href` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#href>
+   * `href` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#href>
    */
   href?: string | undefined;
   /**
-   * `hreflang` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#hreflang>
+   * `hreflang` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#hreflang>
    */
   hreflang?: string | undefined;
   /**
-   * `imagesizes` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#imagesizes>
+   * `imagesizes` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#imagesizes>
    */
   imagesizes?: string | undefined;
   /**
-   * `imagesrcset` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#imagesrcset>
+   * `imagesrcset` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#imagesrcset>
    */
   imagesrcset?: string | undefined;
   /**
-   * `integrity` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#integrity>
+   * `integrity` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#integrity>
    */
   integrity?: string | undefined;
   /**
-   * `media` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#media>
+   * `media` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#media>
    */
   media?: string | undefined;
   /**
-   * `referrerpolicy` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#referrerpolicy>
+   * `referrerpolicy` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#referrerpolicy>
    */
   referrerpolicy?: string | undefined;
   /**
-   * `rel` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#rel>
+   * `rel` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#rel>
    */
   rel?: string | undefined;
   /**
-   * `rev` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#rev>
+   * `rev` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#rev>
    * @deprecated
    */
   rev?: string | undefined;
   /**
-   * `sizes` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#sizes>
+   * `sizes` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#sizes>
    */
   sizes?: string | undefined;
   /**
-   * `target` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#target>
+   * `target` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#target>
    * @deprecated
    */
   target?: string | undefined;
   /**
-   * `type` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link#type>
+   * `type` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#type>
    */
   type?: string | undefined;
 }
 
 /**
- * link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Element/link) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/link>
+ * link renders the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link>
  */
 export function link(props?: LinkElementProps): string {
   return renderElement("link", props as AnyProps, true);

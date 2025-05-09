@@ -7,103 +7,103 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * AElementProps are the props for the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
+ * AElementProps are the props for the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a>
  */
 export interface AElementProps extends GlobalAttributes {
   /**
-   * `attributionsourceid` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#attributionsourceid>
+   * `attributionsourceid` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#attributionsourceid>
    * @experimental
    */
   attributionsourceid?: string | undefined;
   /**
-   * `attributionsrc` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#attributionsrc>
+   * `attributionsrc` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#attributionsrc>
    * @experimental
    */
   attributionsrc?: string | undefined;
   /**
-   * `charset` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#charset>
+   * `charset` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#charset>
    * @deprecated
    */
   charset?: string | undefined;
   /**
-   * `coords` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#coords>
+   * `coords` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#coords>
    * @deprecated
    */
   coords?: string | undefined;
   /**
-   * `download` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#download>
+   * `download` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#download>
    */
   download?: string | undefined;
   /**
-   * `href` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#href>
+   * `href` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#href>
    */
   href?: string | undefined;
   /**
-   * `hreflang` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#hreflang>
+   * `hreflang` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#hreflang>
    */
   hreflang?: string | undefined;
   /**
-   * `hreftranslate` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#hreftranslate>
+   * `hreftranslate` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#hreftranslate>
    * @experimental
    */
   hreftranslate?: string | undefined;
   /**
-   * `name` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#name>
+   * `name` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#name>
    * @deprecated
    */
   name?: string | undefined;
   /**
-   * `ping` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#ping>
+   * `ping` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#ping>
    */
   ping?: string | undefined;
   /**
-   * `referrerpolicy` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#referrerpolicy>
+   * `referrerpolicy` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#referrerpolicy>
    */
   referrerpolicy?: string | undefined;
   /**
-   * `rel` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#rel>
+   * `rel` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#rel>
    */
   rel?: string | undefined;
   /**
-   * `rev` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#rev>
+   * `rev` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#rev>
    * @deprecated
    */
   rev?: string | undefined;
   /**
-   * `shape` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#shape>
+   * `shape` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#shape>
    * @deprecated
    */
   shape?: string | undefined;
   /**
-   * `target` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#target>
+   * `target` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#target>
    */
   target?: string | undefined;
   /**
-   * `type` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a#type>
+   * `type` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#type>
    */
   type?: string | undefined;
 }
 
 /**
- * a renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Element/a) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/a>
+ * a renders the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a>
  */
 export function a(props?: AElementProps, ...children: string[]): string {
   return renderElement("a", props as AnyProps, false, children);

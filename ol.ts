@@ -7,36 +7,36 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * OlElementProps are the props for the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol>
+ * OlElementProps are the props for the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol>
  */
 export interface OlElementProps extends GlobalAttributes {
   /**
-   * `compact` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#compact>
+   * `compact` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol#compact>
    * @deprecated
    */
   compact?: string | undefined;
   /**
-   * `reversed` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#reversed>
+   * `reversed` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol#reversed>
    */
   reversed?: string | undefined;
   /**
-   * `start` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#start>
+   * `start` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol#start>
    */
   start?: string | undefined;
   /**
-   * `type` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol#type>
+   * `type` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol#type>
    */
   type?: string | undefined;
 }
 
 /**
- * ol renders the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Element/ol) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/ol>
+ * ol renders the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol>
  */
 export function ol(props?: OlElementProps, ...children: string[]): string {
   return renderElement("ol", props as AnyProps, false, children);

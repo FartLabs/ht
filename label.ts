@@ -7,20 +7,20 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * LabelElementProps are the props for the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label>
+ * LabelElementProps are the props for the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
  */
 export interface LabelElementProps extends GlobalAttributes {
   /**
-   * `for` is an attribute of the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label#for>
+   * `for` is an attribute of the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label#for>
    */
   for?: string | undefined;
 }
 
 /**
- * label renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Element/label) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/label>
+ * label renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
  */
 export function label(
   props?: LabelElementProps,

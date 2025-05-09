@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * NoscriptElementProps are the props for the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Element/noscript) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noscript>
+ * NoscriptElementProps are the props for the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noscript) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noscript>
  */
 export interface NoscriptElementProps extends GlobalAttributes {
 }
 
 /**
- * noscript renders the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Element/noscript) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/noscript>
+ * noscript renders the [`noscript`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noscript) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noscript>
  */
 export function noscript(
   props?: NoscriptElementProps,

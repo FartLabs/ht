@@ -7,16 +7,16 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * StrikeElementProps are the props for the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strike>
+ * StrikeElementProps are the props for the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike>
  * @deprecated
  */
 export interface StrikeElementProps extends GlobalAttributes {
 }
 
 /**
- * strike renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Element/strike) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/strike>
+ * strike renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike>
  * @deprecated
  */
 export function strike(

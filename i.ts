@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * IElementProps are the props for the [`i`](https://developer.mozilla.org/docs/Web/HTML/Element/i) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/i>
+ * IElementProps are the props for the [`i`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/i) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/i>
  */
 export interface IElementProps extends GlobalAttributes {
 }
 
 /**
- * i renders the [`i`](https://developer.mozilla.org/docs/Web/HTML/Element/i) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/i>
+ * i renders the [`i`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/i) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/i>
  */
 export function i(props?: IElementProps, ...children: string[]): string {
   return renderElement("i", props as AnyProps, false, children);

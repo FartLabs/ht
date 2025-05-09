@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * DdElementProps are the props for the [`dd`](https://developer.mozilla.org/docs/Web/HTML/Element/dd) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dd>
+ * DdElementProps are the props for the [`dd`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dd) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dd>
  */
 export interface DdElementProps extends GlobalAttributes {
 }
 
 /**
- * dd renders the [`dd`](https://developer.mozilla.org/docs/Web/HTML/Element/dd) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/dd>
+ * dd renders the [`dd`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dd) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dd>
  */
 export function dd(props?: DdElementProps, ...children: string[]): string {
   return renderElement("dd", props as AnyProps, false, children);

@@ -7,26 +7,26 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * HtmlElementProps are the props for the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
+ * HtmlElementProps are the props for the [`html`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html>
  */
 export interface HtmlElementProps extends GlobalAttributes {
   /**
-   * `version` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html#version>
+   * `version` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html#version>
    * @deprecated
    */
   version?: string | undefined;
   /**
-   * `xmlns` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html#xmlns>
+   * `xmlns` is an attribute of the [`html`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html#xmlns>
    */
   xmlns?: string | undefined;
 }
 
 /**
- * html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Element/html) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/html>
+ * html renders the [`html`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/html>
  */
 export function html(props?: HtmlElementProps, ...children: string[]): string {
   return renderElement("html", props as AnyProps, false, children);

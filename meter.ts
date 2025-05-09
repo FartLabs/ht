@@ -7,45 +7,45 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * MeterElementProps are the props for the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter>
+ * MeterElementProps are the props for the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter>
  */
 export interface MeterElementProps extends GlobalAttributes {
   /**
-   * `high` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter#high>
+   * `high` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter#high>
    */
   high?: string | undefined;
   /**
-   * `low` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter#low>
+   * `low` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter#low>
    */
   low?: string | undefined;
   /**
-   * `max` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter#max>
+   * `max` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter#max>
    */
   max?: string | undefined;
   /**
-   * `min` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter#min>
+   * `min` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter#min>
    */
   min?: string | undefined;
   /**
-   * `optimum` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter#optimum>
+   * `optimum` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter#optimum>
    */
   optimum?: string | undefined;
   /**
-   * `value` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter#value>
+   * `value` is an attribute of the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter#value>
    */
   value?: string | undefined;
 }
 
 /**
- * meter renders the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Element/meter) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/meter>
+ * meter renders the [`meter`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/meter>
  */
 export function meter(
   props?: MeterElementProps,

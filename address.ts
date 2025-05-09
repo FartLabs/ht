@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * AddressElementProps are the props for the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/address>
+ * AddressElementProps are the props for the [`address`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address>
  */
 export interface AddressElementProps extends GlobalAttributes {
 }
 
 /**
- * address renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Element/address) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/address>
+ * address renders the [`address`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/address>
  */
 export function address(
   props?: AddressElementProps,

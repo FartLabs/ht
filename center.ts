@@ -7,16 +7,16 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * CenterElementProps are the props for the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/center>
+ * CenterElementProps are the props for the [`center`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center>
  * @deprecated
  */
 export interface CenterElementProps extends GlobalAttributes {
 }
 
 /**
- * center renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Element/center) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/center>
+ * center renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center>
  * @deprecated
  */
 export function center(

@@ -7,16 +7,16 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * XmpElementProps are the props for the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Element/xmp) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/xmp>
+ * XmpElementProps are the props for the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp>
  * @deprecated
  */
 export interface XmpElementProps extends GlobalAttributes {
 }
 
 /**
- * xmp renders the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Element/xmp) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/xmp>
+ * xmp renders the [`xmp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/xmp>
  * @deprecated
  */
 export function xmp(props?: XmpElementProps, ...children: string[]): string {

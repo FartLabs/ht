@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * CodeElementProps are the props for the [`code`](https://developer.mozilla.org/docs/Web/HTML/Element/code) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/code>
+ * CodeElementProps are the props for the [`code`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code>
  */
 export interface CodeElementProps extends GlobalAttributes {
 }
 
 /**
- * code renders the [`code`](https://developer.mozilla.org/docs/Web/HTML/Element/code) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/code>
+ * code renders the [`code`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/code>
  */
 export function code(props?: CodeElementProps, ...children: string[]): string {
   return renderElement("code", props as AnyProps, false, children);

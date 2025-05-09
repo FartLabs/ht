@@ -7,31 +7,31 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * CanvasElementProps are the props for the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas>
+ * CanvasElementProps are the props for the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas>
  */
 export interface CanvasElementProps extends GlobalAttributes {
   /**
-   * `height` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas#height>
+   * `height` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas#height>
    */
   height?: string | undefined;
   /**
-   * `moz-opaque` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas#moz-opaque>
+   * `moz-opaque` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas#moz-opaque>
    * @deprecated
    */
   "moz-opaque"?: string | undefined;
   /**
-   * `width` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas#width>
+   * `width` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas#width>
    */
   width?: string | undefined;
 }
 
 /**
- * canvas renders the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/canvas>
+ * canvas renders the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas>
  */
 export function canvas(
   props?: CanvasElementProps,

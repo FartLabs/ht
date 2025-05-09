@@ -7,36 +7,36 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * TemplateElementProps are the props for the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
+ * TemplateElementProps are the props for the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template>
  */
 export interface TemplateElementProps extends GlobalAttributes {
   /**
-   * `shadowrootclonable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template#shadowrootclonable>
+   * `shadowrootclonable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootclonable>
    */
   shadowrootclonable?: string | undefined;
   /**
-   * `shadowrootdelegatesfocus` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template#shadowrootdelegatesfocus>
+   * `shadowrootdelegatesfocus` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus>
    */
   shadowrootdelegatesfocus?: string | undefined;
   /**
-   * `shadowrootmode` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template#shadowrootmode>
+   * `shadowrootmode` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootmode>
    */
   shadowrootmode?: string | undefined;
   /**
-   * `shadowrootserializable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template#shadowrootserializable>
+   * `shadowrootserializable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootserializable>
    * @experimental
    */
   shadowrootserializable?: string | undefined;
 }
 
 /**
- * template renders the [`template`](https://developer.mozilla.org/docs/Web/HTML/Element/template) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/template>
+ * template renders the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template>
  */
 export function template(
   props?: TemplateElementProps,

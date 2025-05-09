@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * ArticleElementProps are the props for the [`article`](https://developer.mozilla.org/docs/Web/HTML/Element/article) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/article>
+ * ArticleElementProps are the props for the [`article`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article>
  */
 export interface ArticleElementProps extends GlobalAttributes {
 }
 
 /**
- * article renders the [`article`](https://developer.mozilla.org/docs/Web/HTML/Element/article) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/article>
+ * article renders the [`article`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article>
  */
 export function article(
   props?: ArticleElementProps,

@@ -7,82 +7,82 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * MarqueeElementProps are the props for the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
+ * MarqueeElementProps are the props for the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee>
  * @deprecated
  */
 export interface MarqueeElementProps extends GlobalAttributes {
   /**
-   * `behavior` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#behavior>
+   * `behavior` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#behavior>
    * @deprecated
    */
   behavior?: string | undefined;
   /**
-   * `bgcolor` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#bgcolor>
+   * `bgcolor` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#bgcolor>
    * @deprecated
    */
   bgcolor?: string | undefined;
   /**
-   * `direction` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#direction>
+   * `direction` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#direction>
    * @deprecated
    */
   direction?: string | undefined;
   /**
-   * `height` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#height>
+   * `height` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#height>
    * @deprecated
    */
   height?: string | undefined;
   /**
-   * `hspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#hspace>
+   * `hspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#hspace>
    * @deprecated
    */
   hspace?: string | undefined;
   /**
-   * `loop` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#loop>
+   * `loop` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#loop>
    * @deprecated
    */
   loop?: string | undefined;
   /**
-   * `scrollamount` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#scrollamount>
+   * `scrollamount` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#scrollamount>
    * @deprecated
    */
   scrollamount?: string | undefined;
   /**
-   * `scrolldelay` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#scrolldelay>
+   * `scrolldelay` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#scrolldelay>
    * @deprecated
    */
   scrolldelay?: string | undefined;
   /**
-   * `truespeed` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#truespeed>
+   * `truespeed` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#truespeed>
    * @deprecated
    */
   truespeed?: string | undefined;
   /**
-   * `vspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#vspace>
+   * `vspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#vspace>
    * @deprecated
    */
   vspace?: string | undefined;
   /**
-   * `width` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee#width>
+   * `width` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#width>
    * @deprecated
    */
   width?: string | undefined;
 }
 
 /**
- * marquee renders the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Element/marquee) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/marquee>
+ * marquee renders the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee>
  * @deprecated
  */
 export function marquee(

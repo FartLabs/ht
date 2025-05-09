@@ -7,85 +7,85 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * VideoElementProps are the props for the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video>
+ * VideoElementProps are the props for the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video>
  */
 export interface VideoElementProps extends GlobalAttributes {
   /**
-   * `autoplay` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#autoplay>
+   * `autoplay` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#autoplay>
    */
   autoplay?: string | undefined;
   /**
-   * `controls` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#controls>
+   * `controls` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#controls>
    */
   controls?: string | undefined;
   /**
-   * `controlslist` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#controlslist>
+   * `controlslist` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#controlslist>
    */
   controlslist?: string | undefined;
   /**
-   * `crossorigin` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#crossorigin>
+   * `crossorigin` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#crossorigin>
    */
   crossorigin?: string | undefined;
   /**
-   * `disablepictureinpicture` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#disablepictureinpicture>
+   * `disablepictureinpicture` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#disablepictureinpicture>
    */
   disablepictureinpicture?: string | undefined;
   /**
-   * `disableremoteplayback` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#disableremoteplayback>
+   * `disableremoteplayback` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#disableremoteplayback>
    */
   disableremoteplayback?: string | undefined;
   /**
-   * `height` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#height>
+   * `height` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#height>
    */
   height?: string | undefined;
   /**
-   * `loop` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#loop>
+   * `loop` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#loop>
    */
   loop?: string | undefined;
   /**
-   * `muted` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#muted>
+   * `muted` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#muted>
    */
   muted?: string | undefined;
   /**
-   * `playsinline` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#playsinline>
+   * `playsinline` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#playsinline>
    */
   playsinline?: string | undefined;
   /**
-   * `poster` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#poster>
+   * `poster` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#poster>
    */
   poster?: string | undefined;
   /**
-   * `preload` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#preload>
+   * `preload` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#preload>
    */
   preload?: string | undefined;
   /**
-   * `src` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#src>
+   * `src` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#src>
    */
   src?: string | undefined;
   /**
-   * `width` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video#width>
+   * `width` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#width>
    */
   width?: string | undefined;
 }
 
 /**
- * video renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Element/video) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/video>
+ * video renders the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video>
  */
 export function video(
   props?: VideoElementProps,

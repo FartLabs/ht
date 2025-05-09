@@ -7,16 +7,16 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * AcronymElementProps are the props for the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/acronym>
+ * AcronymElementProps are the props for the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym>
  * @deprecated
  */
 export interface AcronymElementProps extends GlobalAttributes {
 }
 
 /**
- * acronym renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Element/acronym) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/acronym>
+ * acronym renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym>
  * @deprecated
  */
 export function acronym(

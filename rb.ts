@@ -7,16 +7,16 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * RbElementProps are the props for the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Element/rb) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rb>
+ * RbElementProps are the props for the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rb) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rb>
  * @deprecated
  */
 export interface RbElementProps extends GlobalAttributes {
 }
 
 /**
- * rb renders the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Element/rb) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/rb>
+ * rb renders the [`rb`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rb) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rb>
  * @deprecated
  */
 export function rb(props?: RbElementProps, ...children: string[]): string {

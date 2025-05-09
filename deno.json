@@ -1,15 +1,15 @@
 {
   "lock": false,
   "name": "@fartlabs/ht",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "imports": {
-    "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^5.5.19",
+    "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^6.0.12",
     "@std/text": "jsr:@std/text@^1.0.8",
-    "ts-morph": "npm:ts-morph@^24.0.0"
+    "ts-morph": "npm:ts-morph@^25.0.1"
   },
   "tasks": {
     "generate": "deno run -A cli/codegen.ts",
-    "molt": "deno run -A jsr:@molt/cli -w"
+    "outdated": "deno outdated --update --latest"
   },
   "exports": {
     "./cli/codegen": "./cli/codegen.ts",
@@ -104,7 +104,6 @@
     "./param": "./param.ts",
     "./picture": "./picture.ts",
     "./plaintext": "./plaintext.ts",
-    "./portal": "./portal.ts",
     "./pre": "./pre.ts",
     "./progress": "./progress.ts",
     "./q": "./q.ts",
@@ -119,6 +118,7 @@
     "./search": "./search.ts",
     "./section": "./section.ts",
     "./select": "./select.ts",
+    "./selectedcontent": "./selectedcontent.ts",
     "./slot": "./slot.ts",
     "./small": "./small.ts",
     "./source": "./source.ts",

@@ -7,16 +7,16 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * PlaintextElementProps are the props for the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/plaintext>
+ * PlaintextElementProps are the props for the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext>
  * @deprecated
  */
 export interface PlaintextElementProps extends GlobalAttributes {
 }
 
 /**
- * plaintext renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Element/plaintext) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/plaintext>
+ * plaintext renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext>
  * @deprecated
  */
 export function plaintext(

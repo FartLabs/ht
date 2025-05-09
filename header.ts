@@ -7,15 +7,15 @@ import type { AnyProps, GlobalAttributes } from "./lib/mod.ts";
 import { renderElement } from "./lib/mod.ts";
 
 /**
- * HeaderElementProps are the props for the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/header>
+ * HeaderElementProps are the props for the [`header`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header>
  */
 export interface HeaderElementProps extends GlobalAttributes {
 }
 
 /**
- * header renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Element/header) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Element/header>
+ * header renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header) element.
+ * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header>
  */
 export function header(
   props?: HeaderElementProps,
