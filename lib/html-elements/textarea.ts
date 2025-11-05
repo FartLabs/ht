@@ -72,11 +72,6 @@ export interface TextareaElementProps extends GlobalAttributes {
    */
   rows?: string | undefined;
   /**
-   * `spellcheck` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#spellcheck>
-   */
-  spellcheck?: string | undefined;
-  /**
    * `wrap` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#wrap>
    */

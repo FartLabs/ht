@@ -1,11 +1,11 @@
 {
   "lock": false,
   "name": "@fartlabs/ht",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "imports": {
-    "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^6.0.12",
-    "@std/text": "jsr:@std/text@^1.0.8",
-    "ts-morph": "npm:ts-morph@^25.0.1"
+    "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^7.1.18",
+    "@std/text": "jsr:@std/text@^1.0.16",
+    "ts-morph": "npm:ts-morph@^27.0.2"
   },
   "tasks": {
     "generate": "deno run -A cli/codegen.ts",

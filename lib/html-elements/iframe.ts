@@ -46,6 +46,11 @@ export interface IframeElementProps extends GlobalAttributes {
    */
   credentialless?: string | undefined;
   /**
+   * `cross-origin-top-navigation-by-user-activation` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#cross-origin-top-navigation-by-user-activation>
+   */
+  "cross-origin-top-navigation-by-user-activation"?: string | undefined;
+  /**
    * `csp` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#csp>
    * @experimental

@@ -148,12 +148,6 @@ export interface InputElementProps extends GlobalAttributes {
    */
   minlength?: string | undefined;
   /**
-   * `mozactionhint` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#mozactionhint>
-   * @deprecated
-   */
-  mozactionhint?: string | undefined;
-  /**
    * `multiple` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#multiple>
    */

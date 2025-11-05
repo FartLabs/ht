@@ -29,7 +29,6 @@ export interface TemplateElementProps extends GlobalAttributes {
   /**
    * `shadowrootserializable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootserializable>
-   * @experimental
    */
   shadowrootserializable?: string | undefined;
 }
