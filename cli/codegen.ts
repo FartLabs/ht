@@ -150,7 +150,9 @@ if (import.meta.main) {
     { overwrite: true },
   );
   for (const descriptor of descriptors) {
-    modFile.addStatements(`export * from "./${descriptor.tag}.ts";`);
+    modFile.addStatements(
+      `export * from "./lib/html-elements/${descriptor.tag}.ts";`,
+    );
   }
 
   // Save all the files.
@@ -165,7 +167,7 @@ if (import.meta.main) {
     ".": "./mod.ts",
     ...Object.fromEntries(descriptors.map((descriptor) => [
       `./${descriptor.tag}`,
-      `./${descriptor.tag}.ts`,
+      `./lib/html-elements/${descriptor.tag}.ts`,
     ])),
   };
   await Deno.writeTextFile("./deno.json", JSON.stringify(denoConfig, null, 2));
@@ -188,7 +190,7 @@ export function addElementFile(
   descriptor: Descriptor,
 ): void {
   const sourceFile = project.createSourceFile(
-    `${descriptor.tag}.ts`,
+    `./lib/html-elements/${descriptor.tag}.ts`,
     undefined,
     { overwrite: true },
   );
@@ -199,13 +201,13 @@ export function addElementFile(
   // Add the type imports.
   sourceFile.addImportDeclaration({
     isTypeOnly: true,
-    moduleSpecifier: "./lib/mod.ts",
+    moduleSpecifier: "../mod.ts",
     namedImports: ["AnyProps", "GlobalAttributes"],
   });
 
   // Add the variable imports.
   sourceFile.addImportDeclaration({
-    moduleSpecifier: "./lib/mod.ts",
+    moduleSpecifier: "../mod.ts",
     namedImports: ["renderElement"],
   });
 
