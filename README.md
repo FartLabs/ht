@@ -1,9 +1,14 @@
 # [@fartlabs/ht](https://jsr.io/@fartlabs/ht)
 
+[![JSR version](https://jsr.io/badges/@fartlabs/ht)](https://jsr.io/@fartlabs/ht)
 [![JSR score](https://jsr.io/badges/@fartlabs/ht/score)](https://jsr.io/@fartlabs/ht)
 [![GitHub Actions](https://github.com/FartLabs/ht/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/ht/actions/workflows/check.yaml)
 
-An HTML rendering library.
+Type-safe HTML string rendering library for JavaScript and TypeScript.
+
+## API documentation
+
+Generated API documentation is available at <https://jsr.io/@fartlabs/ht>.
 
 ## Getting started
 
@@ -43,6 +48,91 @@ Resulting `index.html`:
 <a href="https://jsr.io/@fartlabs/ht">@fartlabs/ht</a>
 ```
 
+## Examples
+
+### Multiple attributes
+
+```ts
+import { a } from "@fartlabs/ht";
+
+const link = a(
+  {
+    href: "https://example.com",
+    rel: "noopener noreferrer",
+    target: "_blank",
+    class: "btn",
+  },
+  "Visit example.com",
+);
+// <a href="https://example.com" rel="noopener noreferrer" target="_blank" class="btn">Visit example.com</a>
+```
+
+### Nested elements
+
+```ts
+import { a, div, h1, p } from "@fartlabs/ht";
+
+const content = div(
+  { id: "app" },
+  h1({}, "Hello"),
+  p(
+    {},
+    "Made with ",
+    a({ href: "https://jsr.io/@fartlabs/ht" }, "@fartlabs/ht"),
+  ),
+);
+// <div id="app"><h1>Hello</h1><p>Made with <a href="https://jsr.io/@fartlabs/ht">@fartlabs/ht</a></p></div>
+```
+
+### Void elements
+
+```ts
+import { br, img, input } from "@fartlabs/ht";
+
+const markup = [
+  img({ src: "/logo.png", alt: "Logo" }),
+  br(),
+  input({ type: "text", name: "q", placeholder: "Search" }),
+].join("");
+// <img src="/logo.png" alt="Logo"><br><input type="text" name="q" placeholder="Search">
+```
+
+### Full document
+
+```ts
+import {
+  a,
+  body,
+  footer,
+  head,
+  header,
+  html,
+  main,
+  meta,
+  p,
+  title,
+} from "@fartlabs/ht";
+
+const page = html(
+  { lang: "en" },
+  head(
+    {},
+    meta({ charset: "utf-8" }),
+    meta({ name: "viewport", content: "width=device-width, initial-scale=1" }),
+    title({}, "My Page"),
+  ),
+  body(
+    {},
+    header({}, p({}, "Welcome!")),
+    main({}, p({}, "See ", a({ href: "https://jsr.io/@fartlabs/ht" }, "docs"))),
+    footer({}, p({}, "© 2025")),
+  ),
+);
+
+// Write to a file
+// Deno.writeTextFileSync("index.html", page);
+```
+
 ## Contribute
 
 We appreciate your help!
@@ -53,7 +143,26 @@ Run `deno fmt` to format the code.
 
 Run `deno lint` to lint the code.
 
-Run `deno task generate` to generate code.
+Run `deno task generate` to regenerate the typed HTML element functions from MDN
+data. This updates element/attribute typings and (re)creates files in
+`lib/html-elements/`.
+
+Other helpful tasks:
+
+- `deno task outdated`: Review available dependency updates.
+
+### Development
+
+- The library has no runtime dependencies.
+- The element functions are generated from `@mdn/browser-compat-data` and `MDN`
+  references.
+- If you add or adjust generation logic, run `deno task generate` and commit the
+  resulting edits.
+
+## License
+
+This project is licensed under the terms of the MIT License. See `LICENSE` for
+details.
 
 ---
 
