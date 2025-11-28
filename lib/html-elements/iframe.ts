@@ -96,6 +96,12 @@ export interface IframeElementProps extends GlobalAttributes {
    */
   name?: string | undefined;
   /**
+   * `privateToken` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#privateToken>
+   * @experimental
+   */
+  privateToken?: string | undefined;
+  /**
    * `referrerpolicy` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy>
    */

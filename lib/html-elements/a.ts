@@ -57,6 +57,12 @@ export interface AElementProps extends GlobalAttributes {
    */
   hreftranslate?: string | undefined;
   /**
+   * `interestfor` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#interestfor>
+   * @experimental
+   */
+  interestfor?: string | undefined;
+  /**
    * `name` is an attribute of the [`a`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/a#name>
    * @deprecated

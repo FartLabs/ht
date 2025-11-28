@@ -38,6 +38,12 @@ export interface AreaElementProps extends GlobalAttributes {
    */
   href?: string | undefined;
   /**
+   * `interestfor` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#interestfor>
+   * @experimental
+   */
+  interestfor?: string | undefined;
+  /**
    * `nohref` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#nohref>
    * @deprecated

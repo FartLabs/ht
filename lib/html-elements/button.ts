@@ -57,6 +57,12 @@ export interface ButtonElementProps extends GlobalAttributes {
    */
   formtarget?: string | undefined;
   /**
+   * `interestfor` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button#interestfor>
+   * @experimental
+   */
+  interestfor?: string | undefined;
+  /**
    * `name` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button#name>
    */
