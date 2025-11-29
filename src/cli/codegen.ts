@@ -135,6 +135,11 @@ if (import.meta.main) {
     addElementFile(project, descriptor);
   }
 
+  // Create an HTX-friendly file for each element.
+  for (const descriptor of descriptors) {
+    addHtxElementFile(project, descriptor);
+  }
+
   // Create the mod file.
   const modFile = project.createSourceFile(
     "./src/mod.ts",
@@ -147,6 +152,18 @@ if (import.meta.main) {
     );
   }
 
+  // Create the HTX mod file that exports HTX JSX helpers and the JSX runtime.
+  project.createSourceFile(
+    "./src/htx/mod.ts",
+    [
+      generatedFilePreludeString,
+      ...descriptors.map((descriptor) =>
+        `export * from "./elements/${descriptor.tag}.ts";`
+      ),
+    ].join("\n"),
+    { overwrite: true },
+  );
+
   // Save all the files.
   await project.save();
 
@@ -154,12 +171,22 @@ if (import.meta.main) {
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
     ".": "./src/mod.ts",
-    "./global-attributes": "./src/global_attributes.ts",
     "./render": "./src/render.ts",
-    ...Object.fromEntries(descriptors.map((descriptor) => [
-      `./elements/${descriptor.tag}`,
-      `./src/elements/${descriptor.tag}.ts`,
-    ])),
+    "./global-attributes": "./src/global_attributes.ts",
+    "./htx": "./src/htx/mod.ts",
+    "./htx/jsx-runtime": "./src/htx/jsx_runtime.ts",
+    ...Object.fromEntries(
+      descriptors.map((descriptor) => [
+        `./elements/${descriptor.tag}`,
+        `./src/elements/${descriptor.tag}.ts`,
+      ]),
+    ),
+    ...Object.fromEntries(
+      descriptors.map((descriptor) => [
+        `./htx/elements/${descriptor.tag}`,
+        `./src/htx/elements/${descriptor.tag}.ts`,
+      ]),
+    ),
   };
   await Deno.writeTextFile("./deno.json", JSON.stringify(denoConfig, null, 2));
 
@@ -243,6 +270,105 @@ export function addElementFile(
     statements: descriptor.isVoid
       ? `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, true);`
       : `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, false, children);`,
+  });
+}
+
+/**
+ * toHtxComponentName converts a tag name to an HTX component name.
+ *
+ * HTX components are typically UPPERCASE tag names, with a small special-case
+ * for `var` to avoid conflicts.
+ */
+export function toHtxComponentName(tag: string): string {
+  const name = tag.toUpperCase();
+  if (name === "VAR") {
+    return "VAR_";
+  }
+  return name;
+}
+
+/**
+ * addHtxElementFile adds a JSX-friendly HTX wrapper for the given element.
+ *
+ * These wrappers live under `src/htx/elements` and are designed to be
+ * imported from the HTX submodule (e.g., `A`, `BODY`, `H1`, `P`).
+ */
+export function addHtxElementFile(
+  project: Project,
+  descriptor: Descriptor,
+): void {
+  const sourceFile = project.createSourceFile(
+    `./src/htx/elements/${descriptor.tag}.ts`,
+    undefined,
+    { overwrite: true },
+  );
+
+  // Add file prelude.
+  sourceFile.addStatements(generatedFilePreludeString);
+
+  const componentName = toHtxComponentName(descriptor.tag);
+  const componentPropsName = `${componentName}Props`;
+
+  // Import the base element props and render function from the `ht` helpers.
+  sourceFile.addImportDeclaration({
+    isTypeOnly: true,
+    moduleSpecifier: `../../elements/${descriptor.tag}.ts`,
+    namedImports: [descriptor.propsInterfaceName],
+  });
+
+  sourceFile.addImportDeclaration({
+    moduleSpecifier: `../../elements/${descriptor.tag}.ts`,
+    namedImports: [descriptor.functionName],
+  });
+
+  // Add the HTX props type, which extends the generated element props with a
+  // JSX-style `children` prop.
+  sourceFile.addTypeAlias({
+    name: componentPropsName,
+    isExported: true,
+    type: `${descriptor.propsInterfaceName} & { children?: string | string[] }`,
+    docs: toDocs({
+      description:
+        `${componentPropsName} are the JSX props for the [\`${descriptor.tag}\`](${descriptor.see}) element in HTX.`,
+      see: descriptor.see,
+      isDeprecated: descriptor.isDeprecated,
+      isExperimental: descriptor.isExperimental,
+    }),
+  });
+
+  const statements = descriptor.isVoid
+    ? `
+const { children: _children, ...rest } = props ?? {};
+return ${descriptor.functionName}(rest);
+`
+    : `
+const { children, ...rest } = props ?? {};
+const childArray = children === undefined || children === null
+  ? []
+  : Array.isArray(children)
+  ? children
+  : [children];
+return ${descriptor.functionName}(rest, ...childArray);
+`;
+
+  // Add the HTX component wrapper.
+  sourceFile.addFunction({
+    name: componentName,
+    isExported: true,
+    parameters: [{
+      name: "props",
+      type: componentPropsName,
+      hasQuestionToken: true,
+    }],
+    returnType: "string",
+    docs: toDocs({
+      description:
+        `${componentName} renders the [\`${descriptor.tag}\`](${descriptor.see}) element for use with JSX in HTX.`,
+      isDeprecated: descriptor.isDeprecated,
+      isExperimental: descriptor.isExperimental,
+      see: descriptor.see,
+    }),
+    statements,
   });
 }
 

@@ -133,6 +133,60 @@ const page = html(
 // Deno.writeTextFileSync("index.html", page);
 ```
 
+## HTX (JSX) submodule
+
+This repository also hosts the HTX JSX rendering API that was originally
+published as `@fartlabs/htx` (see
+[`@fartlabs/htx` on GitHub](https://github.com/FartLabs/htx) and
+`https://jsr.io/@fartlabs/htx`).
+
+HTX lets you write JSX components that render directly to HTML strings using the
+helpers from `@fartlabs/ht`.
+
+### HTX quick start
+
+1. Add the dependency:
+
+   ```sh
+   deno add jsr:@fartlabs/ht
+   ```
+
+2. Configure JSX for Deno:
+
+   ```jsonc
+   {
+     "compilerOptions": {
+       "jsx": "react-jsx",
+       "jsxImportSource": "@fartlabs/ht/htx"
+     }
+   }
+   ```
+
+3. Create a `main.tsx`:
+
+   ```tsx
+   import { A, BODY, H1, P } from "@fartlabs/ht/htx";
+
+   const html = (
+     <BODY>
+       <H1>Hello</H1>
+       <P>
+         See <A href="https://jsr.io/@fartlabs/htx">@fartlabs/htx</A>
+       </P>
+     </BODY>
+   );
+   // html is a string
+   ```
+
+4. Run:
+
+   ```sh
+   deno run -A main.tsx
+   ```
+
+For more detail on HTX in this repo, see `src/htx/README.md` and the HTX
+concepts guide at `https://jsonx.fart.tools/concepts/htx`.
+
 ## Contribute
 
 We appreciate your help!
