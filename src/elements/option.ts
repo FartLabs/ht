@@ -16,7 +16,7 @@ export interface OptionElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `label` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#label>
@@ -26,7 +26,7 @@ export interface OptionElementProps extends GlobalAttributes {
    * `selected` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#selected>
    */
-  selected?: string | undefined;
+  selected?: string | boolean | undefined;
   /**
    * `value` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#value>

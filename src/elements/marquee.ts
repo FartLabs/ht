@@ -48,7 +48,7 @@ export interface MarqueeElementProps extends GlobalAttributes {
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#loop>
    * @deprecated
    */
-  loop?: string | undefined;
+  loop?: string | boolean | undefined;
   /**
    * `scrollamount` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#scrollamount>
@@ -66,7 +66,7 @@ export interface MarqueeElementProps extends GlobalAttributes {
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#truespeed>
    * @deprecated
    */
-  truespeed?: string | undefined;
+  truespeed?: string | boolean | undefined;
   /**
    * `vspace` is an attribute of the [`marquee`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/marquee#vspace>

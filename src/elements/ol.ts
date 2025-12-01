@@ -22,7 +22,7 @@ export interface OlElementProps extends GlobalAttributes {
    * `reversed` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol#reversed>
    */
-  reversed?: string | undefined;
+  reversed?: string | boolean | undefined;
   /**
    * `start` is an attribute of the [`ol`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/ol#start>

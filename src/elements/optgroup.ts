@@ -16,7 +16,7 @@ export interface OptgroupElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `label` is an attribute of the [`optgroup`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/optgroup#label>

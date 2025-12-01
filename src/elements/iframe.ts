@@ -27,7 +27,7 @@ export interface IframeElementProps extends GlobalAttributes {
    * `allowfullscreen` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen>
    */
-  allowfullscreen?: string | undefined;
+  allowfullscreen?: string | boolean | undefined;
   /**
    * `allowpaymentrequest` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#allowpaymentrequest>

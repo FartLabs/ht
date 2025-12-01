@@ -16,7 +16,7 @@ export interface TrackElementProps extends GlobalAttributes {
    * `default` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track#default>
    */
-  default?: string | undefined;
+  default?: string | boolean | undefined;
   /**
    * `kind` is an attribute of the [`track`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/track#kind>

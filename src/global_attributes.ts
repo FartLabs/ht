@@ -20,7 +20,7 @@ export interface GlobalAttributes extends DataAttributes {
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/autocorrect> */
   autocorrect?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/autofocus> */
-  autofocus?: string | undefined;
+  autofocus?: string | boolean | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/class> */
   class?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/contenteditable> */
@@ -34,11 +34,11 @@ export interface GlobalAttributes extends DataAttributes {
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/exportparts> */
   exportparts?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/hidden> */
-  hidden?: string | undefined;
+  hidden?: string | boolean | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/id> */
   id?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/inert> */
-  inert?: string | undefined;
+  inert?: string | boolean | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/inputmode> */
   inputmode?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/is> */
@@ -70,6 +70,142 @@ export interface GlobalAttributes extends DataAttributes {
   virtualkeyboardpolicy?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/writingsuggestions> */
   writingsuggestions?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/alignment-baseline> */
+  "alignment-baseline"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/baseline-shift> */
+  "baseline-shift"?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/clip>
+   * @deprecated
+   */
+  clip?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/clip-path> */
+  "clip-path"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/clip-rule> */
+  "clip-rule"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/color> */
+  color?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/color-interpolation> */
+  "color-interpolation"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/color-interpolation-filters> */
+  "color-interpolation-filters"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/cursor> */
+  cursor?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/direction> */
+  direction?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/display> */
+  display?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/dominant-baseline> */
+  "dominant-baseline"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/fill-opacity> */
+  "fill-opacity"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/fill-rule> */
+  "fill-rule"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/filter> */
+  filter?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/flood-color> */
+  "flood-color"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/flood-opacity> */
+  "flood-opacity"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-family> */
+  "font-family"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-size> */
+  "font-size"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-size-adjust> */
+  "font-size-adjust"?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-stretch>
+   * @deprecated
+   */
+  "font-stretch"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-style> */
+  "font-style"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-variant> */
+  "font-variant"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-weight> */
+  "font-weight"?: string | undefined;
+  /** @experimental */
+  "font-width"?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/glyph-orientation-horizontal>
+   * @deprecated
+   */
+  "glyph-orientation-horizontal"?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/glyph-orientation-vertical>
+   * @deprecated
+   */
+  "glyph-orientation-vertical"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/image-rendering> */
+  "image-rendering"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/letter-spacing> */
+  "letter-spacing"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/lighting-color> */
+  "lighting-color"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/marker-end> */
+  "marker-end"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/marker-mid> */
+  "marker-mid"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/marker-start> */
+  "marker-start"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/mask> */
+  mask?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/opacity> */
+  opacity?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/overflow> */
+  overflow?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/paint-order> */
+  "paint-order"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/pointer-events> */
+  "pointer-events"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/requiredExtensions> */
+  requiredExtensions?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/shape-rendering> */
+  "shape-rendering"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stop-color> */
+  "stop-color"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stop-opacity> */
+  "stop-opacity"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke> */
+  stroke?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-dasharray> */
+  "stroke-dasharray"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-dashoffset> */
+  "stroke-dashoffset"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-linecap> */
+  "stroke-linecap"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-linejoin> */
+  "stroke-linejoin"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-miterlimit> */
+  "stroke-miterlimit"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-opacity> */
+  "stroke-opacity"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/stroke-width> */
+  "stroke-width"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/text-anchor> */
+  "text-anchor"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/text-decoration> */
+  "text-decoration"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/text-overflow> */
+  "text-overflow"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/text-rendering> */
+  "text-rendering"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/transform> */
+  transform?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/transform-origin> */
+  "transform-origin"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/unicode-bidi> */
+  "unicode-bidi"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/vector-effect> */
+  "vector-effect"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/visibility> */
+  visibility?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/white-space> */
+  "white-space"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/word-spacing> */
+  "word-spacing"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/writing-mode> */
+  "writing-mode"?: string | undefined;
   /**
    * The `onafterscriptexecute` event handler occurs when the user interacts with the element.
    * @see <https://developer.mozilla.org/docs/Web/Events/afterscriptexecute>

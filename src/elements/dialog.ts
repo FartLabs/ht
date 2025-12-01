@@ -21,7 +21,7 @@ export interface DialogElementProps extends GlobalAttributes {
    * `open` is an attribute of the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog#open>
    */
-  open?: string | undefined;
+  open?: string | boolean | undefined;
 }
 
 /**

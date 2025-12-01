@@ -21,7 +21,7 @@ export interface SelectElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `form` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select#form>
@@ -31,7 +31,7 @@ export interface SelectElementProps extends GlobalAttributes {
    * `multiple` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select#multiple>
    */
-  multiple?: string | undefined;
+  multiple?: string | boolean | undefined;
   /**
    * `name` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select#name>
@@ -41,7 +41,7 @@ export interface SelectElementProps extends GlobalAttributes {
    * `required` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select#required>
    */
-  required?: string | undefined;
+  required?: string | boolean | undefined;
   /**
    * `size` is an attribute of the [`select`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select#size>

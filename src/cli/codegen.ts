@@ -47,6 +47,39 @@ export const voidElements = [
 const voidElementSet = new Set<string>(voidElements);
 
 /**
+ * booleanAttributes is a set of all boolean attributes in HTML.
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#boolean_attributes
+ */
+const booleanAttributes = new Set([
+  "allowfullscreen",
+  "async",
+  "autofocus",
+  "autoplay",
+  "checked",
+  "controls",
+  "default",
+  "defer",
+  "disabled",
+  "formnovalidate",
+  "hidden",
+  "inert",
+  "ismap",
+  "itemscope",
+  "loop",
+  "multiple",
+  "muted",
+  "nomodule",
+  "novalidate",
+  "open",
+  "playsinline",
+  "readonly",
+  "required",
+  "reversed",
+  "selected",
+  "truespeed",
+]);
+
+/**
  * generatedFilePreludeString is the comment at the top of generated files.
  */
 const generatedFilePreludeString = `/**
@@ -102,14 +135,37 @@ if (import.meta.main) {
     }
 
     globalAttrsInterface.addProperty({
-      name: attr,
+      name: attr.includes("-") || attr.includes(":") ? `'${attr}'` : attr,
       hasQuestionToken: true,
-      type: "string | undefined",
+      type: booleanAttributes.has(attr)
+        ? "string | boolean | undefined"
+        : "string | undefined",
       docs: toDocs({
         see: bcd.html.global_attributes[attr].__compat?.mdn_url,
         isExperimental: bcd.html.global_attributes[attr].__compat?.status
           ?.experimental,
         isDeprecated: bcd.html.global_attributes[attr].__compat?.status
+          ?.deprecated,
+      }),
+    });
+  }
+
+  for (const attr in bcd.svg.global_attributes) {
+    if (attr.includes("_") || bcd.html.global_attributes[attr]) {
+      continue;
+    }
+
+    globalAttrsInterface.addProperty({
+      name: attr.includes("-") || attr.includes(":") ? `'${attr}'` : attr,
+      hasQuestionToken: true,
+      type: booleanAttributes.has(attr)
+        ? "string | boolean | undefined"
+        : "string | undefined",
+      docs: toDocs({
+        see: bcd.svg.global_attributes[attr].__compat?.mdn_url,
+        isExperimental: bcd.svg.global_attributes[attr].__compat?.status
+          ?.experimental,
+        isDeprecated: bcd.svg.global_attributes[attr].__compat?.status
           ?.deprecated,
       }),
     });
@@ -258,15 +314,20 @@ export function addPropsInterfaces(
   const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
     name: attr.includes("-") ? `'${attr}'` : attr,
     hasQuestionToken: true,
-    type: "string | undefined",
+    type: booleanAttributes.has(attr)
+      ? "string | boolean | undefined"
+      : "string | undefined",
     docs: toDocs({
       see: `${descriptor.see}#${attr}`,
       description:
         `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-      isExperimental: bcd.html.elements[descriptor.tag][attr].__compat
-        ?.status?.experimental,
-      isDeprecated: bcd.html.elements[descriptor.tag][attr].__compat
-        ?.status?.deprecated,
+      isExperimental: bcd.html.elements[descriptor.tag]?.[attr]?.__compat
+        ?.status?.experimental ??
+        bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status
+          ?.experimental,
+      isDeprecated: bcd.html.elements[descriptor.tag]?.[attr]?.__compat
+        ?.status?.deprecated ??
+        bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status?.deprecated,
     }),
   }));
 
@@ -361,6 +422,20 @@ export function getDescriptors(): Descriptor[] {
     });
   }
 
+  for (const tag in bcd.svg.elements) {
+    const attrs = getSvgAttrs(tag);
+    descriptors.push({
+      tag,
+      functionName: toFunctionName(tag),
+      propsInterfaceName: `${toPascalCase(tag)}ElementProps`,
+      isVoid: isVoid(tag),
+      attrs,
+      see: bcd.svg.elements[tag].__compat?.mdn_url,
+      isDeprecated: bcd.svg.elements[tag].__compat?.status?.deprecated,
+      isExperimental: bcd.svg.elements[tag].__compat?.status?.experimental,
+    });
+  }
+
   return descriptors;
 }
 
@@ -390,6 +465,14 @@ export function getAttrs(tag: string): string[] {
 }
 
 /**
+ * getSvgAttrs returns the attributes for the given SVG element tag.
+ */
+export function getSvgAttrs(tag: string): string[] {
+  return Object.keys(bcd.svg.elements[tag])
+    .filter((attr) => !attr.includes("_"));
+}
+
+/**
  * getInputTypes returns the types of input elements.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
  */
@@ -407,6 +490,9 @@ export function toFunctionName(s: string): string {
   // Handle special cases to avoid conflicts.
   if (s === "var") {
     return "var_";
+  }
+  if (s === "switch") {
+    return "switch_";
   }
 
   return s;

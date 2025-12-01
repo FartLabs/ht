@@ -16,7 +16,7 @@ export interface FieldsetElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `form` is an attribute of the [`fieldset`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fieldset#form>

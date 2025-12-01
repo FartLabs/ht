@@ -8,31 +8,31 @@ import type { AnyProps } from "../render.ts";
 import { renderElement } from "../render.ts";
 
 /**
- * StyleElementProps are the props for the [`style`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style>
+ * StyleElementProps are the props for the [`style`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style) element.
+ * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style>
  */
 export interface StyleElementProps extends GlobalAttributes {
   /**
-   * `blocking` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style#blocking>
-   */
-  blocking?: string | undefined;
-  /**
-   * `media` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style#media>
+   * `media` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style#media>
    */
   media?: string | undefined;
   /**
-   * `type` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style#type>
+   * `title` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style#title>
+   */
+  title?: string | undefined;
+  /**
+   * `type` is an attribute of the [`style`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style#type>
    * @deprecated
    */
   type?: string | undefined;
 }
 
 /**
- * style renders the [`style`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/style>
+ * style renders the [`style`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style) element.
+ * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/style>
  */
 export function style(
   props?: StyleElementProps,

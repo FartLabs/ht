@@ -8,71 +8,40 @@ import type { AnyProps } from "../render.ts";
 import { renderElement } from "../render.ts";
 
 /**
- * ScriptElementProps are the props for the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script>
+ * ScriptElementProps are the props for the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+ * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script>
  */
 export interface ScriptElementProps extends GlobalAttributes {
   /**
-   * `async` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#async>
+   * `async` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script#async>
    */
-  async?: string | undefined;
+  async?: string | boolean | undefined;
   /**
-   * `attributionsrc` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#attributionsrc>
-   * @experimental
+   * `defer` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script#defer>
    */
-  attributionsrc?: string | undefined;
+  defer?: string | boolean | undefined;
   /**
-   * `blocking` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#blocking>
-   */
-  blocking?: string | undefined;
-  /**
-   * `crossorigin` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#crossorigin>
-   */
-  crossorigin?: string | undefined;
-  /**
-   * `defer` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#defer>
-   */
-  defer?: string | undefined;
-  /**
-   * `fetchpriority` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#fetchpriority>
+   * `fetchpriority` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script#fetchpriority>
    */
   fetchpriority?: string | undefined;
   /**
-   * `integrity` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#integrity>
+   * `href` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script#href>
    */
-  integrity?: string | undefined;
+  href?: string | undefined;
   /**
-   * `nomodule` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#nomodule>
-   */
-  nomodule?: string | undefined;
-  /**
-   * `referrerpolicy` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#referrerpolicy>
-   */
-  referrerpolicy?: string | undefined;
-  /**
-   * `src` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#src>
-   */
-  src?: string | undefined;
-  /**
-   * `type` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#type>
+   * `type` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script#type>
    */
   type?: string | undefined;
 }
 
 /**
- * script renders the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script>
+ * script renders the [`script`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script) element.
+ * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/script>
  */
 export function script(
   props?: ScriptElementProps,

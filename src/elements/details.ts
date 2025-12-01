@@ -21,7 +21,7 @@ export interface DetailsElementProps extends GlobalAttributes {
    * `open` is an attribute of the [`details`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/details) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/details#open>
    */
-  open?: string | undefined;
+  open?: string | boolean | undefined;
 }
 
 /**

@@ -16,7 +16,7 @@ export interface AudioElementProps extends GlobalAttributes {
    * `controls` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#controls>
    */
-  controls?: string | undefined;
+  controls?: string | boolean | undefined;
   /**
    * `controlslist` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#controlslist>
@@ -36,12 +36,12 @@ export interface AudioElementProps extends GlobalAttributes {
    * `loop` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#loop>
    */
-  loop?: string | undefined;
+  loop?: string | boolean | undefined;
   /**
    * `muted` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#muted>
    */
-  muted?: string | undefined;
+  muted?: string | boolean | undefined;
   /**
    * `preload` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#preload>

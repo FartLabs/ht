@@ -16,12 +16,12 @@ export interface VideoElementProps extends GlobalAttributes {
    * `autoplay` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#autoplay>
    */
-  autoplay?: string | undefined;
+  autoplay?: string | boolean | undefined;
   /**
    * `controls` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#controls>
    */
-  controls?: string | undefined;
+  controls?: string | boolean | undefined;
   /**
    * `controlslist` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#controlslist>
@@ -51,17 +51,17 @@ export interface VideoElementProps extends GlobalAttributes {
    * `loop` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#loop>
    */
-  loop?: string | undefined;
+  loop?: string | boolean | undefined;
   /**
    * `muted` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#muted>
    */
-  muted?: string | undefined;
+  muted?: string | boolean | undefined;
   /**
    * `playsinline` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#playsinline>
    */
-  playsinline?: string | undefined;
+  playsinline?: string | boolean | undefined;
   /**
    * `poster` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#poster>

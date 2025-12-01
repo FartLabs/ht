@@ -65,7 +65,7 @@ export interface ImgElementProps extends GlobalAttributes {
    * `ismap` is an attribute of the [`img`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img#ismap>
    */
-  ismap?: string | undefined;
+  ismap?: string | boolean | undefined;
   /**
    * `loading` is an attribute of the [`img`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img#loading>

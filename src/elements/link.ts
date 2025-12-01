@@ -37,7 +37,7 @@ export interface LinkElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `fetchpriority` is an attribute of the [`link`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/link#fetchpriority>

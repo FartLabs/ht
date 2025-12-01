@@ -31,7 +31,7 @@ export interface TextareaElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `form` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#form>
@@ -61,12 +61,12 @@ export interface TextareaElementProps extends GlobalAttributes {
    * `readonly` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#readonly>
    */
-  readonly?: string | undefined;
+  readonly?: string | boolean | undefined;
   /**
    * `required` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#required>
    */
-  required?: string | undefined;
+  required?: string | boolean | undefined;
   /**
    * `rows` is an attribute of the [`textarea`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/textarea#rows>

@@ -46,7 +46,7 @@ export interface FormElementProps extends GlobalAttributes {
    * `novalidate` is an attribute of the [`form`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/form) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/form#novalidate>
    */
-  novalidate?: string | undefined;
+  novalidate?: string | boolean | undefined;
   /**
    * `rel` is an attribute of the [`form`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/form) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/form#rel>

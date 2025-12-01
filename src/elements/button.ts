@@ -26,7 +26,7 @@ export interface ButtonElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `form` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button#form>
@@ -51,7 +51,7 @@ export interface ButtonElementProps extends GlobalAttributes {
    * `formnovalidate` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button#formnovalidate>
    */
-  formnovalidate?: string | undefined;
+  formnovalidate?: string | boolean | undefined;
   /**
    * `formtarget` is an attribute of the [`button`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/button#formtarget>

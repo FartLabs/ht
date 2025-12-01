@@ -76,7 +76,7 @@ export interface InputElementProps extends GlobalAttributes {
    * `checked` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#checked>
    */
-  checked?: string | undefined;
+  checked?: string | boolean | undefined;
   /**
    * `colorspace` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#colorspace>
@@ -92,7 +92,7 @@ export interface InputElementProps extends GlobalAttributes {
    * `disabled` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#disabled>
    */
-  disabled?: string | undefined;
+  disabled?: string | boolean | undefined;
   /**
    * `form` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#form>
@@ -117,7 +117,7 @@ export interface InputElementProps extends GlobalAttributes {
    * `formnovalidate` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#formnovalidate>
    */
-  formnovalidate?: string | undefined;
+  formnovalidate?: string | boolean | undefined;
   /**
    * `formtarget` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#formtarget>
@@ -152,7 +152,7 @@ export interface InputElementProps extends GlobalAttributes {
    * `multiple` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#multiple>
    */
-  multiple?: string | undefined;
+  multiple?: string | boolean | undefined;
   /**
    * `name` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#name>
@@ -182,12 +182,12 @@ export interface InputElementProps extends GlobalAttributes {
    * `readonly` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#readonly>
    */
-  readonly?: string | undefined;
+  readonly?: string | boolean | undefined;
   /**
    * `required` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#required>
    */
-  required?: string | undefined;
+  required?: string | boolean | undefined;
   /**
    * `size` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#size>
