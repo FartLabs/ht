@@ -1,7 +1,7 @@
 /**
  * AnyProps are the props for any HTML element.
  */
-export type AnyProps = Record<string, string | undefined>;
+export type AnyProps = Record<string, string | boolean | undefined>;
 
 /**
  * renderElement renders an HTML element to a string.
@@ -38,7 +38,13 @@ export function renderAttrs(
       attrs += " ";
     }
 
-    attrs += `${key}="${value}"`;
+    if (value === true) {
+      attrs += `${key}`;
+    } else if (value === false) {
+      // do nothing
+    } else {
+      attrs += `${key}="${value}"`;
+    }
   }
 
   return attrs;

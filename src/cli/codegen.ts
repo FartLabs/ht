@@ -7,6 +7,7 @@
  * all the element files.
  */
 
+import { toCamelCase } from "@std/text/to-camel-case";
 import { toPascalCase } from "@std/text/to-pascal-case";
 import type { SourceFile } from "ts-morph";
 import { Project } from "ts-morph";
@@ -50,7 +51,7 @@ const voidElementSet = new Set<string>(voidElements);
  * booleanAttributes is a set of all boolean attributes in HTML.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#boolean_attributes
  */
-const booleanAttributes = new Set([
+export const booleanAttributes = new Set([
   "allowfullscreen",
   "async",
   "autofocus",
@@ -166,6 +167,30 @@ if (import.meta.main) {
         isExperimental: bcd.svg.global_attributes[attr].__compat?.status
           ?.experimental,
         isDeprecated: bcd.svg.global_attributes[attr].__compat?.status
+          ?.deprecated,
+      }),
+    });
+  }
+
+  for (const attr in bcd.mathml.global_attributes) {
+    if (
+      attr.includes("_") || bcd.html.global_attributes[attr] ||
+      bcd.svg.global_attributes[attr]
+    ) {
+      continue;
+    }
+
+    globalAttrsInterface.addProperty({
+      name: attr.includes("-") || attr.includes(":") ? `'${attr}'` : attr,
+      hasQuestionToken: true,
+      type: booleanAttributes.has(attr)
+        ? "string | boolean | undefined"
+        : "string | undefined",
+      docs: toDocs({
+        see: bcd.mathml.global_attributes[attr].__compat?.mdn_url,
+        isExperimental: bcd.mathml.global_attributes[attr].__compat?.status
+          ?.experimental,
+        isDeprecated: bcd.mathml.global_attributes[attr].__compat?.status
           ?.deprecated,
       }),
     });
@@ -324,10 +349,15 @@ export function addPropsInterfaces(
       isExperimental: bcd.html.elements[descriptor.tag]?.[attr]?.__compat
         ?.status?.experimental ??
         bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status
+          ?.experimental ??
+        bcd.mathml.elements[descriptor.tag]?.[attr]?.__compat?.status
           ?.experimental,
       isDeprecated: bcd.html.elements[descriptor.tag]?.[attr]?.__compat
         ?.status?.deprecated ??
-        bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status?.deprecated,
+        bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status
+          ?.deprecated ??
+        bcd.mathml.elements[descriptor.tag]?.[attr]?.__compat?.status
+          ?.deprecated,
     }),
   }));
 
@@ -436,6 +466,20 @@ export function getDescriptors(): Descriptor[] {
     });
   }
 
+  for (const tag in bcd.mathml.elements) {
+    const attrs = getMathmlAttrs(tag);
+    descriptors.push({
+      tag,
+      functionName: toFunctionName(tag),
+      propsInterfaceName: `${toPascalCase(tag)}ElementProps`,
+      isVoid: isVoid(tag),
+      attrs,
+      see: bcd.mathml.elements[tag].__compat?.mdn_url,
+      isDeprecated: bcd.mathml.elements[tag].__compat?.status?.deprecated,
+      isExperimental: bcd.mathml.elements[tag].__compat?.status?.experimental,
+    });
+  }
+
   return descriptors;
 }
 
@@ -473,6 +517,14 @@ export function getSvgAttrs(tag: string): string[] {
 }
 
 /**
+ * getMathmlAttrs returns the attributes for the given MathML element tag.
+ */
+export function getMathmlAttrs(tag: string): string[] {
+  return Object.keys(bcd.mathml.elements[tag])
+    .filter((attr) => !attr.includes("_"));
+}
+
+/**
  * getInputTypes returns the types of input elements.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
  */
@@ -493,6 +545,10 @@ export function toFunctionName(s: string): string {
   }
   if (s === "switch") {
     return "switch_";
+  }
+
+  if (s.includes("-")) {
+    return toCamelCase(s);
   }
 
   return s;

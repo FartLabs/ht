@@ -8,8 +8,8 @@ Deno.test("input renders valid html", () => {
     `<input type="button" name="test">`,
   );
   assertEquals(
-    input({ type: "checkbox", name: "test" }),
-    `<input type="checkbox" name="test">`,
+    input({ type: "checkbox", name: "test", checked: true }),
+    `<input type="checkbox" name="test" checked>`,
   );
   assertEquals(
     input({ type: "color", name: "test" }),

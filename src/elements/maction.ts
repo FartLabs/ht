@@ -1,0 +1,40 @@
+/**
+ * @fileoverview
+ *
+ * This file was generated. Do not modify this file directly.
+ */
+import type { GlobalAttributes } from "../global_attributes.ts";
+import type { AnyProps } from "../render.ts";
+import { renderElement } from "../render.ts";
+
+/**
+ * MactionElementProps are the props for the [`maction`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction) element.
+ * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction>
+ * @deprecated
+ */
+export interface MactionElementProps extends GlobalAttributes {
+  /**
+   * `actiontype` is an attribute of the [`maction`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction) element.
+   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction#actiontype>
+   * @deprecated
+   */
+  actiontype?: string | undefined;
+  /**
+   * `selection` is an attribute of the [`maction`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction) element.
+   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction#selection>
+   * @deprecated
+   */
+  selection?: string | undefined;
+}
+
+/**
+ * maction renders the [`maction`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction) element.
+ * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/maction>
+ * @deprecated
+ */
+export function maction(
+  props?: MactionElementProps,
+  ...children: string[]
+): string {
+  return renderElement("maction", props as AnyProps, false, children);
+}

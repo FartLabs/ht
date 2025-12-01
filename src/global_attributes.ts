@@ -206,6 +206,27 @@ export interface GlobalAttributes extends DataAttributes {
   "word-spacing"?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/writing-mode> */
   "writing-mode"?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/displaystyle> */
+  displaystyle?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/href> */
+  href?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/mathbackground>
+   * @deprecated
+   */
+  mathbackground?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/mathcolor>
+   * @deprecated
+   */
+  mathcolor?: string | undefined;
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/mathsize>
+   * @deprecated
+   */
+  mathsize?: string | undefined;
+  /** @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/scriptlevel> */
+  scriptlevel?: string | undefined;
   /**
    * The `onafterscriptexecute` event handler occurs when the user interacts with the element.
    * @see <https://developer.mozilla.org/docs/Web/Events/afterscriptexecute>
