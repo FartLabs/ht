@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { circle, svg } from "./mod.ts";
+import { circle, svg } from "./svg.ts";
 
 Deno.test("svg renders valid html", () => {
   assertEquals(

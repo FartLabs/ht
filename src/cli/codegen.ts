@@ -216,17 +216,55 @@ if (import.meta.main) {
     addElementFile(project, descriptor);
   }
 
+  // Create the html file.
+  const htmlFile = project.createSourceFile(
+    "./src/html.ts",
+    undefined,
+    { overwrite: true },
+  );
+  for (const descriptor of descriptors) {
+    if (descriptor.category === "html") {
+      htmlFile.addStatements(
+        `export * from "./elements/${descriptor.category}/${descriptor.tag}.ts";`,
+      );
+    }
+  }
+
+  // Create the svg file.
+  const svgFile = project.createSourceFile(
+    "./src/svg.ts",
+    undefined,
+    { overwrite: true },
+  );
+  for (const descriptor of descriptors) {
+    if (descriptor.category === "svg") {
+      svgFile.addStatements(
+        `export * from "./elements/${descriptor.category}/${descriptor.tag}.ts";`,
+      );
+    }
+  }
+
+  // Create the mathml file.
+  const mathmlFile = project.createSourceFile(
+    "./src/mathml.ts",
+    undefined,
+    { overwrite: true },
+  );
+  for (const descriptor of descriptors) {
+    if (descriptor.category === "mathml") {
+      mathmlFile.addStatements(
+        `export * from "./elements/${descriptor.category}/${descriptor.tag}.ts";`,
+      );
+    }
+  }
+
   // Create the mod file.
   const modFile = project.createSourceFile(
     "./src/mod.ts",
     undefined,
     { overwrite: true },
   );
-  for (const descriptor of descriptors) {
-    modFile.addStatements(
-      `export * from "./elements/${descriptor.tag}.ts";`,
-    );
-  }
+  modFile.addStatements(`export * from "./html.ts";`);
 
   // Save all the files.
   await project.save();
@@ -235,13 +273,16 @@ if (import.meta.main) {
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
     ".": "./src/mod.ts",
+    "./html": "./src/html.ts",
+    "./svg": "./src/svg.ts",
+    "./mathml": "./src/mathml.ts",
     "./codegen": "./src/cli/codegen.ts",
     "./render": "./src/render.ts",
     "./global-attributes": "./src/global_attributes.ts",
     ...Object.fromEntries(
       descriptors.map((descriptor) => [
-        `./elements/${descriptor.tag}`,
-        `./src/elements/${descriptor.tag}.ts`,
+        `./elements/${descriptor.category}/${descriptor.tag}`,
+        `./src/elements/${descriptor.category}/${descriptor.tag}.ts`,
       ]),
     ),
   };
@@ -265,7 +306,7 @@ export function addElementFile(
   descriptor: Descriptor,
 ): void {
   const sourceFile = project.createSourceFile(
-    `./src/elements/${descriptor.tag}.ts`,
+    `./src/elements/${descriptor.category}/${descriptor.tag}.ts`,
     undefined,
     { overwrite: true },
   );
@@ -276,19 +317,19 @@ export function addElementFile(
   // Add the type imports.
   sourceFile.addImportDeclaration({
     isTypeOnly: true,
-    moduleSpecifier: "../global_attributes.ts",
+    moduleSpecifier: "../../global_attributes.ts",
     namedImports: ["GlobalAttributes"],
   });
 
   // Add the variable imports.
   sourceFile.addImportDeclaration({
     isTypeOnly: true,
-    moduleSpecifier: "../render.ts",
+    moduleSpecifier: "../../render.ts",
     namedImports: ["AnyProps"],
   });
 
   sourceFile.addImportDeclaration({
-    moduleSpecifier: "../render.ts",
+    moduleSpecifier: "../../render.ts",
     namedImports: ["renderElement"],
   });
 
@@ -450,6 +491,7 @@ export function getDescriptors(): Descriptor[] {
       see: bcd.html.elements[tag].__compat?.mdn_url,
       isDeprecated: bcd.html.elements[tag].__compat?.status?.deprecated,
       isExperimental: bcd.html.elements[tag].__compat?.status?.experimental,
+      category: "html",
     });
   }
 
@@ -464,6 +506,7 @@ export function getDescriptors(): Descriptor[] {
       see: bcd.svg.elements[tag].__compat?.mdn_url,
       isDeprecated: bcd.svg.elements[tag].__compat?.status?.deprecated,
       isExperimental: bcd.svg.elements[tag].__compat?.status?.experimental,
+      category: "svg",
     });
   }
 
@@ -478,6 +521,7 @@ export function getDescriptors(): Descriptor[] {
       see: bcd.mathml.elements[tag].__compat?.mdn_url,
       isDeprecated: bcd.mathml.elements[tag].__compat?.status?.deprecated,
       isExperimental: bcd.mathml.elements[tag].__compat?.status?.experimental,
+      category: "mathml",
     });
   }
 
@@ -499,6 +543,7 @@ export interface Descriptor {
   see?: string;
   isDeprecated?: boolean;
   isExperimental?: boolean;
+  category: "html" | "svg" | "mathml";
 }
 
 /**

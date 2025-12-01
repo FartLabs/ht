@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { math, mi, mo, msup } from "./mod.ts";
+import { math, mi, mo, msup } from "./mathml.ts";
 
 Deno.test("mathml renders valid html", () => {
   assertEquals(
