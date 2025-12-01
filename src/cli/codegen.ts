@@ -235,6 +235,7 @@ if (import.meta.main) {
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
     ".": "./src/mod.ts",
+    "./codegen": "./src/cli/codegen.ts",
     "./render": "./src/render.ts",
     "./global-attributes": "./src/global_attributes.ts",
     ...Object.fromEntries(

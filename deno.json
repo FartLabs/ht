@@ -1,7 +1,7 @@
 {
   "lock": false,
   "name": "@fartlabs/ht",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "imports": {
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11",
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^7.1.23",
@@ -15,6 +15,7 @@
   },
   "exports": {
     ".": "./src/mod.ts",
+    "./codegen": "./src/cli/codegen.ts",
     "./render": "./src/render.ts",
     "./global-attributes": "./src/global_attributes.ts",
     "./elements/a": "./src/elements/a.ts",
