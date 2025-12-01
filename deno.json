@@ -1,7 +1,7 @@
 {
   "lock": false,
   "name": "@fartlabs/ht",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "imports": {
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11",
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^7.1.23",
