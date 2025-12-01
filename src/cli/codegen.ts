@@ -51,7 +51,7 @@ const voidElementSet = new Set<string>(voidElements);
  * booleanAttributes is a set of all boolean attributes in HTML.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#boolean_attributes
  */
-export const booleanAttributes = new Set([
+export const booleanAttributes: Set<string> = new Set([
   "allowfullscreen",
   "async",
   "autofocus",
@@ -235,6 +235,7 @@ if (import.meta.main) {
   const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
   denoConfig.exports = {
     ".": "./src/mod.ts",
+    "./codegen": "./src/cli/codegen.ts",
     "./render": "./src/render.ts",
     "./global-attributes": "./src/global_attributes.ts",
     ...Object.fromEntries(
