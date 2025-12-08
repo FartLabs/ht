@@ -102,7 +102,7 @@ if (import.meta.main) {
 
   // Create a file that exports a global attributes interface.
   const globalAttrsFile = project.createSourceFile(
-    "./src/global_attributes.ts",
+    "./packages/ht/global_attributes.ts",
     undefined,
     { overwrite: true },
   );
@@ -218,7 +218,7 @@ if (import.meta.main) {
 
   // Create the html file.
   const htmlFile = project.createSourceFile(
-    "./src/html.ts",
+    "./packages/ht/html.ts",
     undefined,
     { overwrite: true },
   );
@@ -232,7 +232,7 @@ if (import.meta.main) {
 
   // Create the svg file.
   const svgFile = project.createSourceFile(
-    "./src/svg.ts",
+    "./packages/ht/svg.ts",
     undefined,
     { overwrite: true },
   );
@@ -246,7 +246,7 @@ if (import.meta.main) {
 
   // Create the mathml file.
   const mathmlFile = project.createSourceFile(
-    "./src/mathml.ts",
+    "./packages/ht/mathml.ts",
     undefined,
     { overwrite: true },
   );
@@ -260,7 +260,7 @@ if (import.meta.main) {
 
   // Create the mod file.
   const modFile = project.createSourceFile(
-    "./src/mod.ts",
+    "./packages/ht/mod.ts",
     undefined,
     { overwrite: true },
   );
@@ -270,27 +270,31 @@ if (import.meta.main) {
   await project.save();
 
   // Update the deno.json exports.
-  const denoConfig = JSON.parse(await Deno.readTextFile("./deno.json"));
+  const denoConfig = JSON.parse(
+    await Deno.readTextFile("./packages/ht/deno.json"),
+  );
   denoConfig.exports = {
-    ".": "./src/mod.ts",
-    "./html": "./src/html.ts",
-    "./svg": "./src/svg.ts",
-    "./mathml": "./src/mathml.ts",
-    "./codegen": "./src/cli/codegen.ts",
-    "./render": "./src/render.ts",
-    "./global-attributes": "./src/global_attributes.ts",
+    ".": "./mod.ts",
+    "./html": "./html.ts",
+    "./svg": "./svg.ts",
+    "./mathml": "./mathml.ts",
+    "./render": "./render.ts",
+    "./global-attributes": "./global_attributes.ts",
     ...Object.fromEntries(
       descriptors.map((descriptor) => [
         `./elements/${descriptor.category}/${descriptor.tag}`,
-        `./src/elements/${descriptor.category}/${descriptor.tag}.ts`,
+        `./elements/${descriptor.category}/${descriptor.tag}.ts`,
       ]),
     ),
   };
-  await Deno.writeTextFile("./deno.json", JSON.stringify(denoConfig, null, 2));
+  await Deno.writeTextFile(
+    "./packages/ht/deno.json",
+    JSON.stringify(denoConfig, null, 2),
+  );
 
   // Run `deno fmt` on the generated files.
   const command = new Deno.Command(Deno.execPath(), {
-    args: ["fmt", "./src"],
+    args: ["fmt", "./packages/ht"],
   });
   const output = await command.output();
   if (!output.success) {
@@ -306,7 +310,7 @@ export function addElementFile(
   descriptor: Descriptor,
 ): void {
   const sourceFile = project.createSourceFile(
-    `./src/elements/${descriptor.category}/${descriptor.tag}.ts`,
+    `./packages/ht/elements/${descriptor.category}/${descriptor.tag}.ts`,
     undefined,
     { overwrite: true },
   );
