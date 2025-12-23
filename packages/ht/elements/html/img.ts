@@ -26,7 +26,7 @@ export interface ImgElementProps extends GlobalAttributes {
   /**
    * `attributionsrc` is an attribute of the [`img`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img#attributionsrc>
-   * @experimental
+   * @deprecated
    */
   attributionsrc?: string | undefined;
   /**

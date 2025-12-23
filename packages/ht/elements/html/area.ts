@@ -20,7 +20,7 @@ export interface AreaElementProps extends GlobalAttributes {
   /**
    * `attributionsrc` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#attributionsrc>
-   * @experimental
+   * @deprecated
    */
   attributionsrc?: string | undefined;
   /**

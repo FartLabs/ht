@@ -37,7 +37,7 @@ export interface IframeElementProps extends GlobalAttributes {
   /**
    * `browsingtopics` is an attribute of the [`iframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/iframe#browsingtopics>
-   * @experimental
+   * @deprecated
    */
   browsingtopics?: string | undefined;
   /**

@@ -20,7 +20,7 @@ export interface ScriptElementProps extends GlobalAttributes {
   /**
    * `attributionsrc` is an attribute of the [`script`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/script#attributionsrc>
-   * @experimental
+   * @deprecated
    */
   attributionsrc?: string | undefined;
   /**
