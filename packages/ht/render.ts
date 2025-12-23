@@ -18,7 +18,7 @@ export function renderElement(
     return openingTag;
   }
 
-  return `${openingTag}${children?.join("")}</${tag}>`;
+  return `${openingTag}${children?.join("") ?? ""}</${tag}>`;
 }
 
 /**
@@ -38,12 +38,10 @@ export function renderAttrs(
       attrs += " ";
     }
 
-    if (value === true) {
+    if (typeof value === "string") {
+      attrs += `${key}="${escape(value)}"`;
+    } else if (value) {
       attrs += `${key}`;
-    } else if (value === false) {
-      // do nothing
-    } else {
-      attrs += `${key}="${value}"`;
     }
   }
 
