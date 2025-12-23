@@ -1,0 +1,51 @@
+name: Daily
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Update Dependencies
+        id: update_deps
+        run: |
+          OLD_VERSION=$(jq -r '.imports["@mdn/browser-compat-data"]' deno.json)
+          echo "Old version: $OLD_VERSION"
+
+          deno update --latest
+
+          NEW_VERSION=$(jq -r '.imports["@mdn/browser-compat-data"]' deno.json)
+          echo "New version: $NEW_VERSION"
+
+          if [ "$OLD_VERSION" != "$NEW_VERSION" ]; then
+            echo "MDN data updated. Running generation task..."
+            deno task generate
+            deno test
+          else
+            echo "MDN data not updated."
+          fi
+
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and Push
+        if: steps.update_deps.outputs.changes == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: daily deno update"
+          branch: main
