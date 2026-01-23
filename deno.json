@@ -1,5 +1,5 @@
 {
-  "workspace": ["./packages/ht"],
+  "workspace": ["./packages/ht", "./packages/htx"],
   "imports": {
     "@mdn/browser-compat-data": "npm:@mdn/browser-compat-data@^7.2.4",
     "@std/assert": "jsr:@std/assert@^1.0.17",
@@ -9,7 +9,7 @@
   "tasks": {
     "generate": {
       "description": "Generate packages.",
-      "command": "deno run -A main.ts"
+      "command": "deno run -A generate.ts"
     }
   }
 }

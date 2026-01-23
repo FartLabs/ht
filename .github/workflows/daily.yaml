@@ -34,7 +34,23 @@ jobs:
           if [ "$OLD_VERSION" != "$NEW_VERSION" ]; then
             echo "MDN data updated. Running generation task..."
             deno task generate
+            deno fmt
             deno test
+
+            # Bump patch version for both packages
+            echo "Bumping patch versions..."
+            bump_version() {
+              local config_file=$1
+              local package_name=$2
+              local current=$(jq -r '.version' "$config_file")
+              jq '.version |= (split(".") | (.[2] |= (tonumber + 1 | tostring)) | join("."))' "$config_file" > "$config_file.tmp"
+              mv "$config_file.tmp" "$config_file"
+              local new=$(jq -r '.version' "$config_file")
+              echo "$package_name: $current -> $new"
+            }
+
+            bump_version "packages/ht/deno.json" "ht"
+            bump_version "packages/htx/deno.json" "htx"
           else
             echo "MDN data not updated."
           fi

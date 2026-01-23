@@ -1,14 +1,24 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@cross/deepmerge@1": "1.0.0",
+    "jsr:@fartlabs/jsonx@^0.0.11": "0.0.11",
     "jsr:@std/assert@^1.0.17": "1.0.17",
     "jsr:@std/internal@^1.0.12": "1.0.12",
-    "jsr:@std/regexp@^1.0.1": "1.0.1",
     "jsr:@std/text@^1.0.17": "1.0.17",
     "npm:@mdn/browser-compat-data@^7.2.4": "7.2.4",
     "npm:ts-morph@^27.0.2": "27.0.2"
   },
   "jsr": {
+    "@cross/deepmerge@1.0.0": {
+      "integrity": "1e1318a74e31ba1959b9aa0acae8bd417b806f74ffd25ac07c90e12f83ad6b1d"
+    },
+    "@fartlabs/jsonx@0.0.11": {
+      "integrity": "25e70bc64e680c90f0b91d2e639a04d3e8a7811809282a4b82a27e2862218438",
+      "dependencies": [
+        "jsr:@cross/deepmerge"
+      ]
+    },
     "@std/assert@1.0.17": {
       "integrity": "df5ebfffe77c03b3fa1401e11c762cc8f603d51021c56c4d15a8c7ab45e90dbe",
       "dependencies": [
@@ -18,14 +28,8 @@
     "@std/internal@1.0.12": {
       "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
     },
-    "@std/regexp@1.0.1": {
-      "integrity": "5179d823465085c5480dafb44438466e83c424fadc61ba31f744050ecc0f596d"
-    },
     "@std/text@1.0.17": {
-      "integrity": "4b2c4ef67ae5b6c1dfd447c81c83a43718f52e3c7e748d8b33f694aba9895f95",
-      "dependencies": [
-        "jsr:@std/regexp"
-      ]
+      "integrity": "4b2c4ef67ae5b6c1dfd447c81c83a43718f52e3c7e748d8b33f694aba9895f95"
     }
   },
   "npm": {
@@ -94,6 +98,13 @@
       "jsr:@std/text@^1.0.17",
       "npm:@mdn/browser-compat-data@^7.2.4",
       "npm:ts-morph@^27.0.2"
-    ]
+    ],
+    "members": {
+      "packages/htx": {
+        "dependencies": [
+          "jsr:@fartlabs/jsonx@^0.0.11"
+        ]
+      }
+    }
   }
 }
