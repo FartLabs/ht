@@ -28,6 +28,12 @@ export interface TemplateElementProps extends GlobalAttributes {
    */
   shadowrootmode?: string | undefined;
   /**
+   * `shadowrootreferencetarget` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootreferencetarget>
+   * @experimental
+   */
+  shadowrootreferencetarget?: string | undefined;
+  /**
    * `shadowrootserializable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootserializable>
    */

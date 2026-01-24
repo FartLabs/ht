@@ -204,6 +204,12 @@ export interface InputElementProps extends GlobalAttributes {
    */
   step?: string | undefined;
   /**
+   * `switch` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#switch>
+   * @experimental
+   */
+  switch?: string | undefined;
+  /**
    * `usemap` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#usemap>
    * @deprecated
