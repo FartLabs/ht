@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { StrikeElementProps } from "@fartlabs/ht/html/strike";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * StrikeElementProps are the props for the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike>
- * @deprecated
- */
-export interface StrikeElementProps extends GlobalAttributes {
-}
+export type { StrikeElementProps };
 
 /**
  * STRIKE renders the [`strike`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/strike) element.
@@ -21,7 +14,7 @@ export interface StrikeElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function STRIKE(
-  props?: StrikeElementProps,
+  props?: StrikeElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

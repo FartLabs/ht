@@ -3,28 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { LabelElementProps } from "@fartlabs/ht/html/label";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * LabelElementProps are the props for the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
- */
-export interface LabelElementProps extends GlobalAttributes {
-  /**
-   * `for` is an attribute of the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label#for>
-   */
-  for?: string | undefined;
-}
+export type { LabelElementProps };
 
 /**
  * LABEL renders the [`label`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/label>
  */
 export function LABEL(
-  props?: LabelElementProps,
+  props?: LabelElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

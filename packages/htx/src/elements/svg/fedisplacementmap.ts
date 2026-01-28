@@ -3,48 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeDisplacementMapElementProps } from "@fartlabs/ht/svg/feDisplacementMap";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeDisplacementMapElementProps are the props for the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap>
- */
-export interface FeDisplacementMapElementProps extends GlobalAttributes {
-  /**
-   * `in` is an attribute of the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap#in>
-   */
-  in?: string | undefined;
-  /**
-   * `in2` is an attribute of the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap#in2>
-   */
-  in2?: string | undefined;
-  /**
-   * `scale` is an attribute of the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap#scale>
-   */
-  scale?: string | undefined;
-  /**
-   * `xChannelSelector` is an attribute of the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap#xChannelSelector>
-   */
-  xChannelSelector?: string | undefined;
-  /**
-   * `yChannelSelector` is an attribute of the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap#yChannelSelector>
-   */
-  yChannelSelector?: string | undefined;
-}
+export type { FeDisplacementMapElementProps };
 
 /**
  * FEDISPLACEMENTMAP renders the [`feDisplacementMap`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feDisplacementMap>
  */
 export function FEDISPLACEMENTMAP(
-  props?: FeDisplacementMapElementProps,
+  props?: FeDisplacementMapElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

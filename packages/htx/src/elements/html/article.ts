@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { ArticleElementProps } from "@fartlabs/ht/html/article";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * ArticleElementProps are the props for the [`article`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article>
- */
-export interface ArticleElementProps extends GlobalAttributes {
-}
+export type { ArticleElementProps };
 
 /**
  * ARTICLE renders the [`article`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/article>
  */
 export function ARTICLE(
-  props?: ArticleElementProps,
+  props?: ArticleElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

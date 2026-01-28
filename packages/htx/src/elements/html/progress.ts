@@ -3,33 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { ProgressElementProps } from "@fartlabs/ht/html/progress";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * ProgressElementProps are the props for the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress>
- */
-export interface ProgressElementProps extends GlobalAttributes {
-  /**
-   * `max` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress#max>
-   */
-  max?: string | undefined;
-  /**
-   * `value` is an attribute of the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress#value>
-   */
-  value?: string | undefined;
-}
+export type { ProgressElementProps };
 
 /**
  * PROGRESS renders the [`progress`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/progress>
  */
 export function PROGRESS(
-  props?: ProgressElementProps,
+  props?: ProgressElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

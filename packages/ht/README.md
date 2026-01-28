@@ -1,5 +1,7 @@
 # [@fartlabs/ht](https://jsr.io/@fartlabs/ht)
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/FartLabs/ht)
+
 [![JSR version](https://jsr.io/badges/@fartlabs/ht)](https://jsr.io/@fartlabs/ht)
 [![JSR score](https://jsr.io/badges/@fartlabs/ht/score)](https://jsr.io/@fartlabs/ht)
 [![GitHub Actions](https://github.com/FartLabs/ht/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/ht/actions/workflows/check.yaml)

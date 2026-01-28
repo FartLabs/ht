@@ -3,29 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { LegendElementProps } from "@fartlabs/ht/html/legend";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * LegendElementProps are the props for the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend>
- */
-export interface LegendElementProps extends GlobalAttributes {
-  /**
-   * `align` is an attribute of the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend#align>
-   * @deprecated
-   */
-  align?: string | undefined;
-}
+export type { LegendElementProps };
 
 /**
  * LEGEND renders the [`legend`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/legend>
  */
 export function LEGEND(
-  props?: LegendElementProps,
+  props?: LegendElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

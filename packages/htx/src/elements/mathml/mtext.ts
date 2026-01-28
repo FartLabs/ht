@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { MtextElementProps } from "@fartlabs/ht/mathml/mtext";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * MtextElementProps are the props for the [`mtext`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mtext) element.
- * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mtext>
- */
-export interface MtextElementProps extends GlobalAttributes {
-}
+export type { MtextElementProps };
 
 /**
  * MTEXT renders the [`mtext`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mtext) element.
  * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mtext>
  */
 export function MTEXT(
-  props?: MtextElementProps,
+  props?: MtextElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

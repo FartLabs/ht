@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeMergeElementProps } from "@fartlabs/ht/svg/feMerge";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeMergeElementProps are the props for the [`feMerge`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feMerge) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feMerge>
- */
-export interface FeMergeElementProps extends GlobalAttributes {
-}
+export type { FeMergeElementProps };
 
 /**
  * FEMERGE renders the [`feMerge`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feMerge) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feMerge>
  */
 export function FEMERGE(
-  props?: FeMergeElementProps,
+  props?: FeMergeElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

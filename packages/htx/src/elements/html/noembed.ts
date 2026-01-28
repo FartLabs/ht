@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { NoembedElementProps } from "@fartlabs/ht/html/noembed";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * NoembedElementProps are the props for the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noembed) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noembed>
- * @deprecated
- */
-export interface NoembedElementProps extends GlobalAttributes {
-}
+export type { NoembedElementProps };
 
 /**
  * NOEMBED renders the [`noembed`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noembed) element.
@@ -21,7 +14,7 @@ export interface NoembedElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function NOEMBED(
-  props?: NoembedElementProps,
+  props?: NoembedElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

@@ -3,28 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { MunderElementProps } from "@fartlabs/ht/mathml/munder";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * MunderElementProps are the props for the [`munder`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/munder) element.
- * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/munder>
- */
-export interface MunderElementProps extends GlobalAttributes {
-  /**
-   * `accentunder` is an attribute of the [`munder`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/munder) element.
-   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/munder#accentunder>
-   */
-  accentunder?: string | undefined;
-}
+export type { MunderElementProps };
 
 /**
  * MUNDER renders the [`munder`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/munder) element.
  * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/munder>
  */
 export function MUNDER(
-  props?: MunderElementProps,
+  props?: MunderElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

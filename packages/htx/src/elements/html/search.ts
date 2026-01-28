@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { SearchElementProps } from "@fartlabs/ht/html/search";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * SearchElementProps are the props for the [`search`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search>
- */
-export interface SearchElementProps extends GlobalAttributes {
-}
+export type { SearchElementProps };
 
 /**
  * SEARCH renders the [`search`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/search>
  */
 export function SEARCH(
-  props?: SearchElementProps,
+  props?: SearchElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

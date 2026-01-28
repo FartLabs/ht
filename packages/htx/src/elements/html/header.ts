@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { HeaderElementProps } from "@fartlabs/ht/html/header";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * HeaderElementProps are the props for the [`header`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header>
- */
-export interface HeaderElementProps extends GlobalAttributes {
-}
+export type { HeaderElementProps };
 
 /**
  * HEADER renders the [`header`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/header>
  */
 export function HEADER(
-  props?: HeaderElementProps,
+  props?: HeaderElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { PlaintextElementProps } from "@fartlabs/ht/html/plaintext";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * PlaintextElementProps are the props for the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext>
- * @deprecated
- */
-export interface PlaintextElementProps extends GlobalAttributes {
-}
+export type { PlaintextElementProps };
 
 /**
  * PLAINTEXT renders the [`plaintext`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/plaintext) element.
@@ -21,7 +14,7 @@ export interface PlaintextElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function PLAINTEXT(
-  props?: PlaintextElementProps,
+  props?: PlaintextElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

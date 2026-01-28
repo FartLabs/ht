@@ -3,58 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeCompositeElementProps } from "@fartlabs/ht/svg/feComposite";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeCompositeElementProps are the props for the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite>
- */
-export interface FeCompositeElementProps extends GlobalAttributes {
-  /**
-   * `in` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#in>
-   */
-  in?: string | undefined;
-  /**
-   * `in2` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#in2>
-   */
-  in2?: string | undefined;
-  /**
-   * `k1` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#k1>
-   */
-  k1?: string | undefined;
-  /**
-   * `k2` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#k2>
-   */
-  k2?: string | undefined;
-  /**
-   * `k3` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#k3>
-   */
-  k3?: string | undefined;
-  /**
-   * `k4` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#k4>
-   */
-  k4?: string | undefined;
-  /**
-   * `operator` is an attribute of the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite#operator>
-   */
-  operator?: string | undefined;
-}
+export type { FeCompositeElementProps };
 
 /**
  * FECOMPOSITE renders the [`feComposite`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComposite>
  */
 export function FECOMPOSITE(
-  props?: FeCompositeElementProps,
+  props?: FeCompositeElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { MerrorElementProps } from "@fartlabs/ht/mathml/merror";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * MerrorElementProps are the props for the [`merror`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/merror) element.
- * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/merror>
- */
-export interface MerrorElementProps extends GlobalAttributes {
-}
+export type { MerrorElementProps };
 
 /**
  * MERROR renders the [`merror`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/merror) element.
  * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/merror>
  */
 export function MERROR(
-  props?: MerrorElementProps,
+  props?: MerrorElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

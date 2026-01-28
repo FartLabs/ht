@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { CenterElementProps } from "@fartlabs/ht/html/center";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * CenterElementProps are the props for the [`center`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center>
- * @deprecated
- */
-export interface CenterElementProps extends GlobalAttributes {
-}
+export type { CenterElementProps };
 
 /**
  * CENTER renders the [`center`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/center) element.
@@ -21,7 +14,7 @@ export interface CenterElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function CENTER(
-  props?: CenterElementProps,
+  props?: CenterElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

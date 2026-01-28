@@ -1,5 +1,7 @@
 # [@fartlabs/htx](https://jsr.io/@fartlabs/htx)
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/FartLabs/ht)
+
 [![JSR](https://jsr.io/badges/@fartlabs/htx)](https://jsr.io/@fartlabs/htx)
 [![JSR score](https://jsr.io/badges/@fartlabs/htx/score)](https://jsr.io/@fartlabs/htx/score)
 [![GitHub Actions](https://github.com/FartLabs/htx/actions/workflows/check.yaml/badge.svg)](https://github.com/FartLabs/htx/actions/workflows/check.yaml)

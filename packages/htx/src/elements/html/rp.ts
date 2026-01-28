@@ -3,22 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { RpElementProps } from "@fartlabs/ht/html/rp";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * RpElementProps are the props for the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rp) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rp>
- */
-export interface RpElementProps extends GlobalAttributes {
-}
+export type { RpElementProps };
 
 /**
  * RP renders the [`rp`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rp) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/rp>
  */
-export function RP(props?: RpElementProps, ...children: string[]): string {
+export function RP(
+  props?: RpElementProps & { children?: string | string[] | undefined },
+  ...children: string[]
+): string {
   const { children: propsChildren, ...rest } = props ?? {};
   const childrenArray = Array.isArray(propsChildren)
     ? propsChildren

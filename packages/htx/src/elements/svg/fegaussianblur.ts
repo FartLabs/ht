@@ -3,38 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeGaussianBlurElementProps } from "@fartlabs/ht/svg/feGaussianBlur";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeGaussianBlurElementProps are the props for the [`feGaussianBlur`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur>
- */
-export interface FeGaussianBlurElementProps extends GlobalAttributes {
-  /**
-   * `edgeMode` is an attribute of the [`feGaussianBlur`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur#edgeMode>
-   */
-  edgeMode?: string | undefined;
-  /**
-   * `in` is an attribute of the [`feGaussianBlur`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur#in>
-   */
-  in?: string | undefined;
-  /**
-   * `stdDeviation` is an attribute of the [`feGaussianBlur`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur#stdDeviation>
-   */
-  stdDeviation?: string | undefined;
-}
+export type { FeGaussianBlurElementProps };
 
 /**
  * FEGAUSSIANBLUR renders the [`feGaussianBlur`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feGaussianBlur>
  */
 export function FEGAUSSIANBLUR(
-  props?: FeGaussianBlurElementProps,
+  props?: FeGaussianBlurElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

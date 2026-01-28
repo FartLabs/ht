@@ -3,28 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { BlockquoteElementProps } from "@fartlabs/ht/html/blockquote";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * BlockquoteElementProps are the props for the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote>
- */
-export interface BlockquoteElementProps extends GlobalAttributes {
-  /**
-   * `cite` is an attribute of the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote#cite>
-   */
-  cite?: string | undefined;
-}
+export type { BlockquoteElementProps };
 
 /**
  * BLOCKQUOTE renders the [`blockquote`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/blockquote>
  */
 export function BLOCKQUOTE(
-  props?: BlockquoteElementProps,
+  props?: BlockquoteElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

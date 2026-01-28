@@ -13,12 +13,14 @@ export function renderElement(
   children?: string[],
 ): string {
   const attrs = renderAttrs(props);
-  const openingTag = `<${tag}${attrs ? ` ${attrs}` : ""}>`;
+  const openingTag = `<${encodeURIComponent(tag)}${attrs ? ` ${attrs}` : ""}>`;
   if (isVoid) {
     return openingTag;
   }
 
-  return `${openingTag}${children?.join("") ?? ""}</${tag}>`;
+  return `${openingTag}${children?.join("") ?? ""}</${
+    encodeURIComponent(tag)
+  }>`;
 }
 
 /**
@@ -39,7 +41,7 @@ export function renderAttrs(
     }
 
     if (typeof value === "string") {
-      attrs += `${key}="${escape(value)}"`;
+      attrs += `${key}="${value}"`;
     } else if (value) {
       attrs += `${key}`;
     }

@@ -3,28 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeTileElementProps } from "@fartlabs/ht/svg/feTile";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeTileElementProps are the props for the [`feTile`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feTile) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feTile>
- */
-export interface FeTileElementProps extends GlobalAttributes {
-  /**
-   * `in` is an attribute of the [`feTile`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feTile) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feTile#in>
-   */
-  in?: string | undefined;
-}
+export type { FeTileElementProps };
 
 /**
  * FETILE renders the [`feTile`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feTile) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feTile>
  */
 export function FETILE(
-  props?: FeTileElementProps,
+  props?: FeTileElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

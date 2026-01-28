@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { DatalistElementProps } from "@fartlabs/ht/html/datalist";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * DatalistElementProps are the props for the [`datalist`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/datalist) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/datalist>
- */
-export interface DatalistElementProps extends GlobalAttributes {
-}
+export type { DatalistElementProps };
 
 /**
  * DATALIST renders the [`datalist`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/datalist) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/datalist>
  */
 export function DATALIST(
-  props?: DatalistElementProps,
+  props?: DatalistElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

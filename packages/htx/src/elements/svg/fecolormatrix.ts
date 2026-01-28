@@ -3,38 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeColorMatrixElementProps } from "@fartlabs/ht/svg/feColorMatrix";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeColorMatrixElementProps are the props for the [`feColorMatrix`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix>
- */
-export interface FeColorMatrixElementProps extends GlobalAttributes {
-  /**
-   * `in` is an attribute of the [`feColorMatrix`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix#in>
-   */
-  in?: string | undefined;
-  /**
-   * `type` is an attribute of the [`feColorMatrix`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix#type>
-   */
-  type?: string | undefined;
-  /**
-   * `values` is an attribute of the [`feColorMatrix`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix#values>
-   */
-  values?: string | undefined;
-}
+export type { FeColorMatrixElementProps };
 
 /**
  * FECOLORMATRIX renders the [`feColorMatrix`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feColorMatrix>
  */
 export function FECOLORMATRIX(
-  props?: FeColorMatrixElementProps,
+  props?: FeColorMatrixElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

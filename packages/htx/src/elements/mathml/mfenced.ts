@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { MfencedElementProps } from "@fartlabs/ht/mathml/mfenced";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * MfencedElementProps are the props for the [`mfenced`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mfenced) element.
- * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mfenced>
- * @deprecated
- */
-export interface MfencedElementProps extends GlobalAttributes {
-}
+export type { MfencedElementProps };
 
 /**
  * MFENCED renders the [`mfenced`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mfenced) element.
@@ -21,7 +14,7 @@ export interface MfencedElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function MFENCED(
-  props?: MfencedElementProps,
+  props?: MfencedElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

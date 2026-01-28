@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeFuncAElementProps } from "@fartlabs/ht/svg/feFuncA";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeFuncAElementProps are the props for the [`feFuncA`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feFuncA) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feFuncA>
- */
-export interface FeFuncAElementProps extends GlobalAttributes {
-}
+export type { FeFuncAElementProps };
 
 /**
  * FEFUNCA renders the [`feFuncA`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feFuncA) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feFuncA>
  */
 export function FEFUNCA(
-  props?: FeFuncAElementProps,
+  props?: FeFuncAElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

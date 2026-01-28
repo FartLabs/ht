@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { MsqrtElementProps } from "@fartlabs/ht/mathml/msqrt";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * MsqrtElementProps are the props for the [`msqrt`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/msqrt) element.
- * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/msqrt>
- */
-export interface MsqrtElementProps extends GlobalAttributes {
-}
+export type { MsqrtElementProps };
 
 /**
  * MSQRT renders the [`msqrt`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/msqrt) element.
  * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/msqrt>
  */
 export function MSQRT(
-  props?: MsqrtElementProps,
+  props?: MsqrtElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

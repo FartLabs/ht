@@ -951,11 +951,11 @@ function addHtxElementFile(
   // Add file prelude.
   sourceFile.addStatements(generatedFilePreludeString);
 
-  // Add the type imports.
+  // Add the type imports for the props.
   sourceFile.addImportDeclaration({
     isTypeOnly: true,
-    moduleSpecifier: "../../global_attributes.ts",
-    namedImports: ["GlobalAttributes"],
+    moduleSpecifier: `@fartlabs/ht/${descriptor.category}/${descriptor.tag}`,
+    namedImports: [descriptor.propsInterfaceName],
   });
 
   // Add the variable imports.
@@ -970,8 +970,7 @@ function addHtxElementFile(
     namedImports: ["renderElement"],
   });
 
-  // Add the props interface.
-  addHtxPropsInterfaces(sourceFile, descriptor);
+  sourceFile.addStatements(`export type { ${descriptor.propsInterfaceName} };`);
 
   // Add the element render function.
   const propsRenderTypeCast = descriptor.tag !== "input"
@@ -983,7 +982,8 @@ function addHtxElementFile(
     parameters: [
       {
         name: "props",
-        type: descriptor.propsInterfaceName,
+        type:
+          `${descriptor.propsInterfaceName} & { children?: string | string[] | undefined }`,
         hasQuestionToken: true,
       },
       ...(!descriptor.isVoid
@@ -1003,7 +1003,8 @@ function addHtxElementFile(
       see: descriptor.see,
     }),
     statements: descriptor.isVoid
-      ? `return renderElement("${descriptor.tag}", props${propsRenderTypeCast}, true);`
+      ? `const { children: _propsChildren, ...rest } = props ?? {};
+        return renderElement("${descriptor.tag}", rest${propsRenderTypeCast}, true);`
       : `const { children: propsChildren, ...rest } = props ?? {};
         const childrenArray = Array.isArray(propsChildren) ? propsChildren : (propsChildren ? [propsChildren] : []);
         return renderElement(
@@ -1013,106 +1014,6 @@ function addHtxElementFile(
           [...childrenArray, ...children],
         );`,
   });
-}
-
-/**
- * Adds the props interfaces to the given source file (htx package).
- */
-function addHtxPropsInterfaces(
-  sourceFile: SourceFile,
-  descriptor: Descriptor,
-): void {
-  const properties: InterfaceProperties = descriptor.attrs.map((attr) => ({
-    name: attr.includes("-") ? `'${attr}'` : attr,
-    hasQuestionToken: true,
-    type: booleanAttributes.has(attr)
-      ? "string | boolean | undefined"
-      : "string | undefined",
-    docs: toDocs({
-      see: `${descriptor.see}#${attr}`,
-      description:
-        `\`${attr}\` is an attribute of the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-      isExperimental: bcd.html.elements[descriptor.tag]?.[attr]?.__compat
-        ?.status?.experimental ??
-        bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status
-          ?.experimental ??
-        bcd.mathml.elements[descriptor.tag]?.[attr]?.__compat?.status
-          ?.experimental,
-      isDeprecated: bcd.html.elements[descriptor.tag]?.[attr]?.__compat
-        ?.status?.deprecated ??
-        bcd.svg.elements[descriptor.tag]?.[attr]?.__compat?.status
-          ?.deprecated ??
-        bcd.mathml.elements[descriptor.tag]?.[attr]?.__compat?.status
-          ?.deprecated,
-    }),
-  }));
-
-  switch (descriptor.tag) {
-    case "input": {
-      sourceFile.addTypeAlias({
-        name: "InputElementType",
-        isExported: true,
-        type: getInputTypes().map((type) => `"${type}"`).join(" | "),
-        docs: toDocs({
-          description: "InputElementType is the type of the input element.",
-          see: "https://developer.mozilla.org/docs/Web/HTML/Element/input#type",
-        }),
-      });
-
-      sourceFile.addInterface({
-        name: descriptor.propsInterfaceName,
-        isExported: true,
-        extends: ["GlobalAttributes"],
-        properties: [
-          ...properties,
-          {
-            name: "type",
-            hasQuestionToken: true,
-            type: "InputElementType | undefined",
-            docs: toDocs({
-              description: "`type` is the type of the input element.",
-              see:
-                "https://developer.mozilla.org/docs/Web/HTML/Element/input#type",
-            }),
-          },
-          {
-            name: "value",
-            type: "string | undefined",
-            hasQuestionToken: true,
-            docs: toDocs({
-              description: "`value` is the value of the input element.",
-              see:
-                "https://developer.mozilla.org/docs/Web/HTML/Element/input#value",
-            }),
-          },
-        ],
-        docs: toDocs({
-          description:
-            `${descriptor.propsInterfaceName} are the base props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-          see: descriptor.see,
-          isDeprecated: descriptor.isDeprecated,
-          isExperimental: descriptor.isExperimental,
-        }),
-      });
-      break;
-    }
-
-    default: {
-      sourceFile.addInterface({
-        name: descriptor.propsInterfaceName,
-        isExported: true,
-        extends: ["GlobalAttributes"],
-        properties,
-        docs: toDocs({
-          description:
-            `${descriptor.propsInterfaceName} are the props for the [\`${descriptor.tag}\`](${descriptor.see}) element.`,
-          see: descriptor.see,
-          isDeprecated: descriptor.isDeprecated,
-          isExperimental: descriptor.isExperimental,
-        }),
-      });
-    }
-  }
 }
 
 // Main execution

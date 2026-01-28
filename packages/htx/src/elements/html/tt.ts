@@ -3,24 +3,20 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { TtElementProps } from "@fartlabs/ht/html/tt";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * TtElementProps are the props for the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt>
- * @deprecated
- */
-export interface TtElementProps extends GlobalAttributes {
-}
+export type { TtElementProps };
 
 /**
  * TT renders the [`tt`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/tt>
  * @deprecated
  */
-export function TT(props?: TtElementProps, ...children: string[]): string {
+export function TT(
+  props?: TtElementProps & { children?: string | string[] | undefined },
+  ...children: string[]
+): string {
   const { children: propsChildren, ...rest } = props ?? {};
   const childrenArray = Array.isArray(propsChildren)
     ? propsChildren

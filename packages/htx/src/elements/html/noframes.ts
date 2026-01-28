@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { NoframesElementProps } from "@fartlabs/ht/html/noframes";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * NoframesElementProps are the props for the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noframes) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noframes>
- * @deprecated
- */
-export interface NoframesElementProps extends GlobalAttributes {
-}
+export type { NoframesElementProps };
 
 /**
  * NOFRAMES renders the [`noframes`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/noframes) element.
@@ -21,7 +14,7 @@ export interface NoframesElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function NOFRAMES(
-  props?: NoframesElementProps,
+  props?: NoframesElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

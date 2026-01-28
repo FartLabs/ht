@@ -3,43 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { OptionElementProps } from "@fartlabs/ht/html/option";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * OptionElementProps are the props for the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option>
- */
-export interface OptionElementProps extends GlobalAttributes {
-  /**
-   * `disabled` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#disabled>
-   */
-  disabled?: string | boolean | undefined;
-  /**
-   * `label` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#label>
-   */
-  label?: string | undefined;
-  /**
-   * `selected` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#selected>
-   */
-  selected?: string | boolean | undefined;
-  /**
-   * `value` is an attribute of the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option#value>
-   */
-  value?: string | undefined;
-}
+export type { OptionElementProps };
 
 /**
  * OPTION renders the [`option`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/option>
  */
 export function OPTION(
-  props?: OptionElementProps,
+  props?: OptionElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

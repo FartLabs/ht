@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { AcronymElementProps } from "@fartlabs/ht/html/acronym";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * AcronymElementProps are the props for the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym>
- * @deprecated
- */
-export interface AcronymElementProps extends GlobalAttributes {
-}
+export type { AcronymElementProps };
 
 /**
  * ACRONYM renders the [`acronym`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/acronym) element.
@@ -21,7 +14,7 @@ export interface AcronymElementProps extends GlobalAttributes {
  * @deprecated
  */
 export function ACRONYM(
-  props?: AcronymElementProps,
+  props?: AcronymElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

@@ -3,23 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { SectionElementProps } from "@fartlabs/ht/html/section";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * SectionElementProps are the props for the [`section`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/section) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/section>
- */
-export interface SectionElementProps extends GlobalAttributes {
-}
+export type { SectionElementProps };
 
 /**
  * SECTION renders the [`section`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/section) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/section>
  */
 export function SECTION(
-  props?: SectionElementProps,
+  props?: SectionElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

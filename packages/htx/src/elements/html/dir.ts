@@ -3,30 +3,20 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { DirElementProps } from "@fartlabs/ht/html/dir";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * DirElementProps are the props for the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir>
- * @deprecated
- */
-export interface DirElementProps extends GlobalAttributes {
-  /**
-   * `compact` is an attribute of the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir#compact>
-   * @deprecated
-   */
-  compact?: string | undefined;
-}
+export type { DirElementProps };
 
 /**
  * DIR renders the [`dir`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dir>
  * @deprecated
  */
-export function DIR(props?: DirElementProps, ...children: string[]): string {
+export function DIR(
+  props?: DirElementProps & { children?: string | string[] | undefined },
+  ...children: string[]
+): string {
   const { children: propsChildren, ...rest } = props ?? {};
   const childrenArray = Array.isArray(propsChildren)
     ? propsChildren

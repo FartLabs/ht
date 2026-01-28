@@ -3,35 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FencedframeElementProps } from "@fartlabs/ht/html/fencedframe";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FencedframeElementProps are the props for the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe>
- * @experimental
- */
-export interface FencedframeElementProps extends GlobalAttributes {
-  /**
-   * `allow` is an attribute of the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe#allow>
-   * @experimental
-   */
-  allow?: string | undefined;
-  /**
-   * `height` is an attribute of the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe#height>
-   * @experimental
-   */
-  height?: string | undefined;
-  /**
-   * `width` is an attribute of the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe#width>
-   * @experimental
-   */
-  width?: string | undefined;
-}
+export type { FencedframeElementProps };
 
 /**
  * FENCEDFRAME renders the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
@@ -39,7 +14,9 @@ export interface FencedframeElementProps extends GlobalAttributes {
  * @experimental
  */
 export function FENCEDFRAME(
-  props?: FencedframeElementProps,
+  props?: FencedframeElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

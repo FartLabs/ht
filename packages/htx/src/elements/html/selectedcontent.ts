@@ -3,17 +3,10 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { SelectedcontentElementProps } from "@fartlabs/ht/html/selectedcontent";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * SelectedcontentElementProps are the props for the [`selectedcontent`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent>
- * @experimental
- */
-export interface SelectedcontentElementProps extends GlobalAttributes {
-}
+export type { SelectedcontentElementProps };
 
 /**
  * SELECTEDCONTENT renders the [`selectedcontent`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent) element.
@@ -21,7 +14,9 @@ export interface SelectedcontentElementProps extends GlobalAttributes {
  * @experimental
  */
 export function SELECTEDCONTENT(
-  props?: SelectedcontentElementProps,
+  props?: SelectedcontentElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

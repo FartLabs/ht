@@ -3,23 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { MprescriptsElementProps } from "@fartlabs/ht/mathml/mprescripts";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * MprescriptsElementProps are the props for the [`mprescripts`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mprescripts) element.
- * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mprescripts>
- */
-export interface MprescriptsElementProps extends GlobalAttributes {
-}
+export type { MprescriptsElementProps };
 
 /**
  * MPRESCRIPTS renders the [`mprescripts`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mprescripts) element.
  * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/mprescripts>
  */
 export function MPRESCRIPTS(
-  props?: MprescriptsElementProps,
+  props?: MprescriptsElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

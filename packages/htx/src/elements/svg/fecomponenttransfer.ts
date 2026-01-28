@@ -3,28 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { FeComponentTransferElementProps } from "@fartlabs/ht/svg/feComponentTransfer";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * FeComponentTransferElementProps are the props for the [`feComponentTransfer`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComponentTransfer) element.
- * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComponentTransfer>
- */
-export interface FeComponentTransferElementProps extends GlobalAttributes {
-  /**
-   * `in` is an attribute of the [`feComponentTransfer`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComponentTransfer) element.
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComponentTransfer#in>
-   */
-  in?: string | undefined;
-}
+export type { FeComponentTransferElementProps };
 
 /**
  * FECOMPONENTTRANSFER renders the [`feComponentTransfer`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComponentTransfer) element.
  * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/feComponentTransfer>
  */
 export function FECOMPONENTTRANSFER(
-  props?: FeComponentTransferElementProps,
+  props?: FeComponentTransferElementProps & {
+    children?: string | string[] | undefined;
+  },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};

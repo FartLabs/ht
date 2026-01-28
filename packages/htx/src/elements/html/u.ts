@@ -3,22 +3,19 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { UElementProps } from "@fartlabs/ht/html/u";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * UElementProps are the props for the [`u`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/u) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/u>
- */
-export interface UElementProps extends GlobalAttributes {
-}
+export type { UElementProps };
 
 /**
  * U renders the [`u`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/u) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/u>
  */
-export function U(props?: UElementProps, ...children: string[]): string {
+export function U(
+  props?: UElementProps & { children?: string | string[] | undefined },
+  ...children: string[]
+): string {
   const { children: propsChildren, ...rest } = props ?? {};
   const childrenArray = Array.isArray(propsChildren)
     ? propsChildren

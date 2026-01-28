@@ -3,33 +3,17 @@
  *
  * This file was generated. Do not modify this file directly.
  */
-import type { GlobalAttributes } from "../../global_attributes.ts";
+import type { DialogElementProps } from "@fartlabs/ht/html/dialog";
 import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
-
-/**
- * DialogElementProps are the props for the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
- * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog>
- */
-export interface DialogElementProps extends GlobalAttributes {
-  /**
-   * `closedby` is an attribute of the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog#closedby>
-   */
-  closedby?: string | undefined;
-  /**
-   * `open` is an attribute of the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog#open>
-   */
-  open?: string | boolean | undefined;
-}
+export type { DialogElementProps };
 
 /**
  * DIALOG renders the [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/dialog>
  */
 export function DIALOG(
-  props?: DialogElementProps,
+  props?: DialogElementProps & { children?: string | string[] | undefined },
   ...children: string[]
 ): string {
   const { children: propsChildren, ...rest } = props ?? {};
