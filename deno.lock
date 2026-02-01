@@ -3,7 +3,7 @@
   "specifiers": {
     "jsr:@cross/deepmerge@1": "1.0.0",
     "jsr:@fartlabs/jsonx@^0.0.11": "0.0.11",
-    "jsr:@std/assert@^1.0.17": "1.0.17",
+    "jsr:@std/assert@^1.0.18": "1.0.18",
     "jsr:@std/assert@~0.220.1": "0.220.1",
     "jsr:@std/encoding@~0.220.1": "0.220.1",
     "jsr:@std/fs@~0.220.1": "0.220.1",
@@ -11,7 +11,7 @@
     "jsr:@std/path@~0.220.1": "0.220.1",
     "jsr:@std/regexp@^1.0.1": "1.0.1",
     "jsr:@std/text@^1.0.17": "1.0.17",
-    "npm:@mdn/browser-compat-data@^7.2.5": "7.2.5",
+    "npm:@mdn/browser-compat-data@^7.3.0": "7.3.0",
     "npm:ts-morph@^27.0.2": "27.0.2"
   },
   "jsr": {
@@ -30,8 +30,8 @@
     "@std/assert@0.220.1": {
       "integrity": "88710d54f3afdd7a5761e7805abba1f56cd14e4b212feffeb3e73a9f77482425"
     },
-    "@std/assert@1.0.17": {
-      "integrity": "df5ebfffe77c03b3fa1401e11c762cc8f603d51021c56c4d15a8c7ab45e90dbe",
+    "@std/assert@1.0.18": {
+      "integrity": "270245e9c2c13b446286de475131dc688ca9abcd94fc5db41d43a219b34d1c78",
       "dependencies": [
         "jsr:@std/internal"
       ]
@@ -75,8 +75,8 @@
         "@isaacs/balanced-match"
       ]
     },
-    "@mdn/browser-compat-data@7.2.5": {
-      "integrity": "sha512-BFOGnz+PaORgIgxGXZPgON0G8t9CDLvkRX/SCz70V7IEbWWfHFjiMwDzEBzfD/PbO6d2Vm4vN70egFkyxdnY1g=="
+    "@mdn/browser-compat-data@7.3.0": {
+      "integrity": "sha512-B7X53zLkrQOVNzsWg4d+iE5vbrreOYB9H/2Ikeit9LPb3tqRNRsEAxysQduFLODBJBSgFGr2FkJLq7tMQkqLZQ=="
     },
     "@ts-morph/common@0.28.1": {
       "integrity": "sha512-W74iWf7ILp1ZKNYXY5qbddNaml7e9Sedv5lvU1V8lftlitkc9Pq1A+jlH23ltDgWYeZFFEqGCD1Ies9hqu3O+g==",
@@ -127,9 +127,9 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/assert@^1.0.17",
+      "jsr:@std/assert@^1.0.18",
       "jsr:@std/text@^1.0.17",
-      "npm:@mdn/browser-compat-data@^7.2.5",
+      "npm:@mdn/browser-compat-data@^7.3.0",
       "npm:ts-morph@^27.0.2"
     ],
     "members": {
