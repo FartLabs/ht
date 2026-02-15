@@ -124,11 +124,6 @@ export interface InputElementProps extends GlobalAttributes {
    */
   formtarget?: string | undefined;
   /**
-   * `list` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
-   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#list>
-   */
-  list?: string | undefined;
-  /**
    * `max` is an attribute of the [`input`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/input#max>
    */

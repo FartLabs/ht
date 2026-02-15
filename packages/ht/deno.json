@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/ht",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "exports": {
     ".": "./src/mod.ts",
     "./html": "./src/html.ts",
@@ -54,6 +54,7 @@
     "./html/form": "./src/elements/html/form.ts",
     "./html/frame": "./src/elements/html/frame.ts",
     "./html/frameset": "./src/elements/html/frameset.ts",
+    "./html/geolocation": "./src/elements/html/geolocation.ts",
     "./html/h1": "./src/elements/html/h1.ts",
     "./html/h2": "./src/elements/html/h2.ts",
     "./html/h3": "./src/elements/html/h3.ts",

@@ -44,6 +44,7 @@ export * from "./elements/html/footer.ts";
 export * from "./elements/html/form.ts";
 export * from "./elements/html/frame.ts";
 export * from "./elements/html/frameset.ts";
+export * from "./elements/html/geolocation.ts";
 export * from "./elements/html/h1.ts";
 export * from "./elements/html/h2.ts";
 export * from "./elements/html/h3.ts";

@@ -11,7 +11,7 @@
     "jsr:@std/path@~0.220.1": "0.220.1",
     "jsr:@std/regexp@^1.0.1": "1.0.1",
     "jsr:@std/text@^1.0.17": "1.0.17",
-    "npm:@mdn/browser-compat-data@^7.3.1": "7.3.1",
+    "npm:@mdn/browser-compat-data@^7.3.2": "7.3.2",
     "npm:ts-morph@^27.0.2": "27.0.2"
   },
   "jsr": {
@@ -75,8 +75,8 @@
         "@isaacs/balanced-match"
       ]
     },
-    "@mdn/browser-compat-data@7.3.1": {
-      "integrity": "sha512-0jF+ew9iYTKo9ytycvi88IMHhM2XB/Mz4A40zYNgYrCjQqsFowZ1zAcNg85PPq50n08YpIHFXqseuBP4KOsDOg=="
+    "@mdn/browser-compat-data@7.3.2": {
+      "integrity": "sha512-vK2iWE/915Bg0PSb63NNDluX4iI7KOsqHCM/rTpBn4lNcjDocMLxuKzkse75K12lALZfQACsagD6aQYEmATB7Q=="
     },
     "@ts-morph/common@0.28.1": {
       "integrity": "sha512-W74iWf7ILp1ZKNYXY5qbddNaml7e9Sedv5lvU1V8lftlitkc9Pq1A+jlH23ltDgWYeZFFEqGCD1Ies9hqu3O+g==",
@@ -129,7 +129,7 @@
     "dependencies": [
       "jsr:@std/assert@^1.0.18",
       "jsr:@std/text@^1.0.17",
-      "npm:@mdn/browser-compat-data@^7.3.1",
+      "npm:@mdn/browser-compat-data@^7.3.2",
       "npm:ts-morph@^27.0.2"
     ],
     "members": {
