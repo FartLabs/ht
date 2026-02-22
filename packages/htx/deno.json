@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/htx",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "imports": {
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11"
   },
