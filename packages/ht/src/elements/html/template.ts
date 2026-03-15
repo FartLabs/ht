@@ -18,6 +18,11 @@ export interface TemplateElementProps extends GlobalAttributes {
    */
   shadowrootclonable?: string | undefined;
   /**
+   * `shadowrootcustomelementregistry` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry>
+   */
+  shadowrootcustomelementregistry?: string | undefined;
+  /**
    * `shadowrootdelegatesfocus` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus>
    */
