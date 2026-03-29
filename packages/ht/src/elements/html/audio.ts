@@ -33,6 +33,12 @@ export interface AudioElementProps extends GlobalAttributes {
    */
   disableremoteplayback?: string | undefined;
   /**
+   * `loading` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#loading>
+   * @experimental
+   */
+  loading?: string | undefined;
+  /**
    * `loop` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#loop>
    */

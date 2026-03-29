@@ -115,10 +115,7 @@ export interface GlobalAttributes extends DataAttributes {
   "font-size"?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-size-adjust> */
   "font-size-adjust"?: string | undefined;
-  /**
-   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-stretch>
-   * @deprecated
-   */
+  /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-stretch> */
   "font-stretch"?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-style> */
   "font-style"?: string | undefined;
