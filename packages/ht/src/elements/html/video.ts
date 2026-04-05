@@ -48,6 +48,12 @@ export interface VideoElementProps extends GlobalAttributes {
    */
   height?: string | undefined;
   /**
+   * `loading` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#loading>
+   * @experimental
+   */
+  loading?: string | undefined;
+  /**
    * `loop` is an attribute of the [`video`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/video#loop>
    */

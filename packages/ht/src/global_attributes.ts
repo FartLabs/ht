@@ -121,7 +121,10 @@ export interface GlobalAttributes extends DataAttributes {
   "font-variant"?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-weight> */
   "font-weight"?: string | undefined;
-  /** @experimental */
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/font-width>
+   * @experimental
+   */
   "font-width"?: string | undefined;
   /**
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Attribute/glyph-orientation-horizontal>
