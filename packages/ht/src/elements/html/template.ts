@@ -43,6 +43,12 @@ export interface TemplateElementProps extends GlobalAttributes {
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootserializable>
    */
   shadowrootserializable?: string | undefined;
+  /**
+   * `shadowrootslotassignment` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment>
+   * @experimental
+   */
+  shadowrootslotassignment?: string | undefined;
 }
 
 /**
