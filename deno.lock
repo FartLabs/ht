@@ -9,9 +9,9 @@
     "jsr:@std/fs@~0.220.1": "0.220.1",
     "jsr:@std/internal@^1.0.12": "1.0.12",
     "jsr:@std/path@~0.220.1": "0.220.1",
-    "jsr:@std/regexp@^1.0.1": "1.0.1",
-    "jsr:@std/text@^1.0.17": "1.0.17",
-    "npm:@mdn/browser-compat-data@^7.3.12": "7.3.12",
+    "jsr:@std/regexp@^1.0.2": "1.0.2",
+    "jsr:@std/text@^1.0.18": "1.0.18",
+    "npm:@mdn/browser-compat-data@^7.3.13": "7.3.13",
     "npm:ts-morph@28": "28.0.0"
   },
   "jsr": {
@@ -55,19 +55,19 @@
         "jsr:@std/assert@~0.220.1"
       ]
     },
-    "@std/regexp@1.0.1": {
-      "integrity": "5179d823465085c5480dafb44438466e83c424fadc61ba31f744050ecc0f596d"
+    "@std/regexp@1.0.2": {
+      "integrity": "7493d47c077cfdb023e41a0b44fd608d87fe5b36fc3dc614261afc0f1452aabf"
     },
-    "@std/text@1.0.17": {
-      "integrity": "4b2c4ef67ae5b6c1dfd447c81c83a43718f52e3c7e748d8b33f694aba9895f95",
+    "@std/text@1.0.18": {
+      "integrity": "d199e516f80599813c64fd4aee5b8f26f6f7d1e1434c88fd153aeea6fea6a9b9",
       "dependencies": [
         "jsr:@std/regexp"
       ]
     }
   },
   "npm": {
-    "@mdn/browser-compat-data@7.3.12": {
-      "integrity": "sha512-4fon9cdqC0LpvKyYnDsqaQT0tGUqz/NdZqEZ23NUEAl5FtwQlJvlAjIpfve5p0yzgZXEmH5YDsQMZheBG+2SVQ=="
+    "@mdn/browser-compat-data@7.3.13": {
+      "integrity": "sha512-EniCSTNBv/bpBja1/npmqAGCBeWZmh2EoopsgW4X/yFBB8puVvt9DhV5c+IRjvTVs9j5obvN424FJVPn7guuMA=="
     },
     "@ts-morph/common@0.29.0": {
       "integrity": "sha512-35oUmphHbJvQ/+UTwFNme/t2p3FoKiGJ5auTjjpNTop2dyREspirjMy82PLSC1pnDJ8ah1GU98hwpVt64YXQsg==",
@@ -128,8 +128,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@^1.0.19",
-      "jsr:@std/text@^1.0.17",
-      "npm:@mdn/browser-compat-data@^7.3.12",
+      "jsr:@std/text@^1.0.18",
+      "npm:@mdn/browser-compat-data@^7.3.13",
       "npm:ts-morph@28"
     ],
     "members": {
