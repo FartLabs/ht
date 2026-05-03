@@ -13,6 +13,11 @@ import { renderElement } from "../../render.ts";
  */
 export interface AudioElementProps extends GlobalAttributes {
   /**
+   * `autoplay` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#autoplay>
+   */
+  autoplay?: string | boolean | undefined;
+  /**
    * `controls` is an attribute of the [`audio`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/audio#controls>
    */
