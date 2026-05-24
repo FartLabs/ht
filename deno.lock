@@ -11,7 +11,7 @@
     "jsr:@std/path@~0.220.1": "0.220.1",
     "jsr:@std/regexp@^1.0.2": "1.0.2",
     "jsr:@std/text@^1.0.18": "1.0.18",
-    "npm:@mdn/browser-compat-data@^7.3.16": "7.3.16",
+    "npm:@mdn/browser-compat-data@8": "8.0.0",
     "npm:ts-morph@28": "28.0.0"
   },
   "jsr": {
@@ -66,8 +66,8 @@
     }
   },
   "npm": {
-    "@mdn/browser-compat-data@7.3.16": {
-      "integrity": "sha512-JQ6SGcHeyqSYGVwWe7NzOeXfp/vZgo2yz+fsEbMOyWLyNRVP4RoG8+dqaF/VTx1zPtF4J8XvxiWXH1l2cMZTwQ=="
+    "@mdn/browser-compat-data@8.0.0": {
+      "integrity": "sha512-VS5jxDp3MxneNPtrueJhktBn+iB5ZlSLYZyAVZPXDYjhTrD/o8cGtRiuEdQoNZidUiUBh6K87wRTbWe2164iag=="
     },
     "@ts-morph/common@0.29.0": {
       "integrity": "sha512-35oUmphHbJvQ/+UTwFNme/t2p3FoKiGJ5auTjjpNTop2dyREspirjMy82PLSC1pnDJ8ah1GU98hwpVt64YXQsg==",
@@ -129,7 +129,7 @@
     "dependencies": [
       "jsr:@std/assert@^1.0.19",
       "jsr:@std/text@^1.0.18",
-      "npm:@mdn/browser-compat-data@^7.3.16",
+      "npm:@mdn/browser-compat-data@8",
       "npm:ts-morph@28"
     ],
     "members": {

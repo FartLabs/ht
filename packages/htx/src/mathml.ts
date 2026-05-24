@@ -1,3 +1,4 @@
+export * from "./elements/mathml/a.ts";
 export * from "./elements/mathml/annotation.ts";
 export * from "./elements/mathml/annotation_xml.ts";
 export * from "./elements/mathml/maction.ts";

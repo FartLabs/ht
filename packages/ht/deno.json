@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/ht",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "exports": {
     ".": "./src/mod.ts",
     "./html": "./src/html.ts",
@@ -204,6 +204,7 @@
     "./svg/tspan": "./src/elements/svg/tspan.ts",
     "./svg/use": "./src/elements/svg/use.ts",
     "./svg/view": "./src/elements/svg/view.ts",
+    "./mathml/a": "./src/elements/mathml/a.ts",
     "./mathml/annotation": "./src/elements/mathml/annotation.ts",
     "./mathml/annotation-xml": "./src/elements/mathml/annotation-xml.ts",
     "./mathml/maction": "./src/elements/mathml/maction.ts",

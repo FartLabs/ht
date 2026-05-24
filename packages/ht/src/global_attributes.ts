@@ -208,7 +208,10 @@ export interface GlobalAttributes extends DataAttributes {
   "writing-mode"?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/displaystyle> */
   displaystyle?: string | undefined;
-  /** @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/href> */
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/href>
+   * @deprecated
+   */
   href?: string | undefined;
   /**
    * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Global_attributes/mathbackground>
