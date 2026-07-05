@@ -73,6 +73,7 @@ export * from "./elements/html/marquee.ts";
 export * from "./elements/html/menu.ts";
 export * from "./elements/html/meta.ts";
 export * from "./elements/html/meter.ts";
+export * from "./elements/html/model.ts";
 export * from "./elements/html/nav.ts";
 export * from "./elements/html/nobr.ts";
 export * from "./elements/html/noembed.ts";

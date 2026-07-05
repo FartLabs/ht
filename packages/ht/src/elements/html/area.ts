@@ -39,6 +39,12 @@ export interface AreaElementProps extends GlobalAttributes {
    */
   href?: string | undefined;
   /**
+   * `hreflang` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#hreflang>
+   * @experimental
+   */
+  hreflang?: string | undefined;
+  /**
    * `interestfor` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#interestfor>
    * @experimental
@@ -75,6 +81,12 @@ export interface AreaElementProps extends GlobalAttributes {
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#target>
    */
   target?: string | undefined;
+  /**
+   * `type` is an attribute of the [`area`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/area#type>
+   * @experimental
+   */
+  type?: string | undefined;
 }
 
 /**

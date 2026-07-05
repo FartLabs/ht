@@ -10,7 +10,6 @@ import { renderElement } from "../../render.ts";
 /**
  * SelectedcontentElementProps are the props for the [`selectedcontent`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent>
- * @experimental
  */
 export interface SelectedcontentElementProps extends GlobalAttributes {
 }
@@ -18,7 +17,6 @@ export interface SelectedcontentElementProps extends GlobalAttributes {
 /**
  * selectedcontent renders the [`selectedcontent`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent>
- * @experimental
  */
 export function selectedcontent(
   props?: SelectedcontentElementProps,

@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/htx",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "imports": {
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11"
   },
@@ -90,6 +90,7 @@
     "./html/menu": "./src/elements/html/menu.ts",
     "./html/meta": "./src/elements/html/meta.ts",
     "./html/meter": "./src/elements/html/meter.ts",
+    "./html/model": "./src/elements/html/model.ts",
     "./html/nav": "./src/elements/html/nav.ts",
     "./html/nobr": "./src/elements/html/nobr.ts",
     "./html/noembed": "./src/elements/html/noembed.ts",

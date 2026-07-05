@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/ht",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "exports": {
     ".": "./src/mod.ts",
     "./html": "./src/html.ts",
@@ -83,6 +83,7 @@
     "./html/menu": "./src/elements/html/menu.ts",
     "./html/meta": "./src/elements/html/meta.ts",
     "./html/meter": "./src/elements/html/meter.ts",
+    "./html/model": "./src/elements/html/model.ts",
     "./html/nav": "./src/elements/html/nav.ts",
     "./html/nobr": "./src/elements/html/nobr.ts",
     "./html/noembed": "./src/elements/html/noembed.ts",
