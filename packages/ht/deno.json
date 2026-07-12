@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/ht",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "exports": {
     ".": "./src/mod.ts",
     "./html": "./src/html.ts",
