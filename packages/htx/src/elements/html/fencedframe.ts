@@ -11,7 +11,7 @@ export type { FencedframeElementProps };
 /**
  * FENCEDFRAME renders the [`fencedframe`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe) element.
  * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/fencedframe>
- * @experimental
+ * @deprecated
  */
 export function FENCEDFRAME(
   props?: FencedframeElementProps & {
