@@ -23,12 +23,18 @@ export interface GlobalAttributes extends DataAttributes {
   autofocus?: string | boolean | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/class> */
   class?: string | undefined;
+  /** @experimental */
+  containertiming?: string | undefined;
+  /** @experimental */
+  containertimingignore?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/contenteditable> */
   contenteditable?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/dir> */
   dir?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/draggable> */
   draggable?: string | undefined;
+  /** @experimental */
+  elementtiming?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/enterkeyhint> */
   enterkeyhint?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/exportparts> */

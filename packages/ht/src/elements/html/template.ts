@@ -13,6 +13,12 @@ import { renderElement } from "../../render.ts";
  */
 export interface TemplateElementProps extends GlobalAttributes {
   /**
+   * `for` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#for>
+   * @experimental
+   */
+  for?: string | undefined;
+  /**
    * `shadowrootclonable` is an attribute of the [`template`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template#shadowrootclonable>
    */
