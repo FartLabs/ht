@@ -39,9 +39,15 @@ export interface GlobalAttributes extends DataAttributes {
   enterkeyhint?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/exportparts> */
   exportparts?: string | undefined;
-  /** @experimental */
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/headingoffset>
+   * @experimental
+   */
   headingoffset?: string | undefined;
-  /** @experimental */
+  /**
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/headingreset>
+   * @experimental
+   */
   headingreset?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/hidden> */
   hidden?: string | boolean | undefined;

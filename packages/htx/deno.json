@@ -1,6 +1,6 @@
 {
   "name": "@fartlabs/htx",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "imports": {
     "@fartlabs/jsonx": "jsr:@fartlabs/jsonx@^0.0.11"
   },
@@ -32,6 +32,7 @@
     "./html/body": "./src/elements/html/body.ts",
     "./html/br": "./src/elements/html/br.ts",
     "./html/button": "./src/elements/html/button.ts",
+    "./html/camera": "./src/elements/html/camera.ts",
     "./html/canvas": "./src/elements/html/canvas.ts",
     "./html/caption": "./src/elements/html/caption.ts",
     "./html/center": "./src/elements/html/center.ts",
@@ -78,6 +79,7 @@
     "./html/img": "./src/elements/html/img.ts",
     "./html/input": "./src/elements/html/input.ts",
     "./html/ins": "./src/elements/html/ins.ts",
+    "./html/install": "./src/elements/html/install.ts",
     "./html/kbd": "./src/elements/html/kbd.ts",
     "./html/label": "./src/elements/html/label.ts",
     "./html/legend": "./src/elements/html/legend.ts",
@@ -90,6 +92,7 @@
     "./html/menu": "./src/elements/html/menu.ts",
     "./html/meta": "./src/elements/html/meta.ts",
     "./html/meter": "./src/elements/html/meter.ts",
+    "./html/microphone": "./src/elements/html/microphone.ts",
     "./html/model": "./src/elements/html/model.ts",
     "./html/nav": "./src/elements/html/nav.ts",
     "./html/nobr": "./src/elements/html/nobr.ts",
@@ -145,6 +148,7 @@
     "./html/tt": "./src/elements/html/tt.ts",
     "./html/u": "./src/elements/html/u.ts",
     "./html/ul": "./src/elements/html/ul.ts",
+    "./html/usermedia": "./src/elements/html/usermedia.ts",
     "./html/var": "./src/elements/html/var.ts",
     "./html/video": "./src/elements/html/video.ts",
     "./html/wbr": "./src/elements/html/wbr.ts",
