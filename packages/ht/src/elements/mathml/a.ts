@@ -14,6 +14,21 @@ export interface AElementProps extends GlobalAttributes {
    * @see <undefined#href>
    */
   href?: string | undefined;
+  /**
+   * `hreflang` is an attribute of the [`a`](undefined) element.
+   * @see <undefined#hreflang>
+   */
+  hreflang?: string | undefined;
+  /**
+   * `target` is an attribute of the [`a`](undefined) element.
+   * @see <undefined#target>
+   */
+  target?: string | undefined;
+  /**
+   * `type` is an attribute of the [`a`](undefined) element.
+   * @see <undefined#type>
+   */
+  type?: string | undefined;
 }
 
 /** a renders the [`a`](undefined) element. */
