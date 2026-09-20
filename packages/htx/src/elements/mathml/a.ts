@@ -8,7 +8,10 @@ import type { AnyProps } from "../../render.ts";
 import { renderElement } from "../../render.ts";
 export type { AElementProps };
 
-/** A renders the [`a`](undefined) element. */
+/**
+ * A renders the [`a`](https://developer.mozilla.org/docs/Web/MathML/Reference/Element/a) element.
+ * @see <https://developer.mozilla.org/docs/Web/MathML/Reference/Element/a>
+ */
 export function A(
   props?: AElementProps & { children?: string | string[] | undefined },
   ...children: string[]
