@@ -23,6 +23,11 @@ export interface TextPathElementProps extends GlobalAttributes {
    */
   href?: string | undefined;
   /**
+   * `method` is an attribute of the [`textPath`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/textPath) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/textPath#method>
+   */
+  method?: string | undefined;
+  /**
    * `path` is an attribute of the [`textPath`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/textPath) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/textPath#path>
    * @experimental
