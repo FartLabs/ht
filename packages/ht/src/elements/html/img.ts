@@ -36,6 +36,12 @@ export interface ImgElementProps extends GlobalAttributes {
    */
   border?: string | undefined;
   /**
+   * `controls` is an attribute of the [`img`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img#controls>
+   * @experimental
+   */
+  controls?: string | boolean | undefined;
+  /**
    * `crossorigin` is an attribute of the [`img`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/img#crossorigin>
    */
