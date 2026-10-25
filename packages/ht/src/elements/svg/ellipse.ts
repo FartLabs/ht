@@ -28,6 +28,11 @@ export interface EllipseElementProps extends GlobalAttributes {
    */
   fill?: string | undefined;
   /**
+   * `pathLength` is an attribute of the [`ellipse`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/ellipse) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/ellipse#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `rx` is an attribute of the [`ellipse`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/ellipse) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/ellipse#rx>
    */

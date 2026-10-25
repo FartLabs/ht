@@ -18,6 +18,11 @@ export interface PolylineElementProps extends GlobalAttributes {
    */
   fill?: string | undefined;
   /**
+   * `pathLength` is an attribute of the [`polyline`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polyline) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polyline#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `points` is an attribute of the [`polyline`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polyline) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polyline#points>
    */

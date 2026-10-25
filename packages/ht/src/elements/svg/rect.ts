@@ -23,6 +23,11 @@ export interface RectElementProps extends GlobalAttributes {
    */
   height?: string | undefined;
   /**
+   * `pathLength` is an attribute of the [`rect`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/rect) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/rect#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `rx` is an attribute of the [`rect`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/rect) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/rect#rx>
    */

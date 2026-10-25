@@ -23,6 +23,11 @@ export interface PathElementProps extends GlobalAttributes {
    */
   fill?: string | undefined;
   /**
+   * `pathLength` is an attribute of the [`path`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/path) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/path#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `systemLanguage` is an attribute of the [`path`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/path) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/path#systemLanguage>
    */

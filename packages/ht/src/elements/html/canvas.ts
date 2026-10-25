@@ -13,6 +13,12 @@ import { renderElement } from "../../render.ts";
  */
 export interface CanvasElementProps extends GlobalAttributes {
   /**
+   * `content` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
+   * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas#content>
+   * @experimental
+   */
+  content?: string | undefined;
+  /**
    * `height` is an attribute of the [`canvas`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas) element.
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/canvas#height>
    */

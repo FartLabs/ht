@@ -28,6 +28,11 @@ export interface CircleElementProps extends GlobalAttributes {
    */
   fill?: string | undefined;
   /**
+   * `pathLength` is an attribute of the [`circle`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/circle) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/circle#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `r` is an attribute of the [`circle`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/circle) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/circle#r>
    */

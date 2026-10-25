@@ -18,6 +18,11 @@ export interface PolygonElementProps extends GlobalAttributes {
    */
   fill?: string | undefined;
   /**
+   * `pathLength` is an attribute of the [`polygon`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polygon) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polygon#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `points` is an attribute of the [`polygon`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polygon) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/polygon#points>
    */

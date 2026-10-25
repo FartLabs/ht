@@ -18,6 +18,11 @@ export interface ViewElementProps extends GlobalAttributes {
    */
   preserveAspectRatio?: string | undefined;
   /**
+   * `svgView` is an attribute of the [`view`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/view) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/view#svgView>
+   */
+  svgView?: string | undefined;
+  /**
    * `viewBox` is an attribute of the [`view`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/view) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/view#viewBox>
    */

@@ -34,11 +34,17 @@ export interface GlobalAttributes extends DataAttributes {
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/draggable> */
   draggable?: string | undefined;
   /** @experimental */
+  drawable?: string | undefined;
+  /** @experimental */
   elementtiming?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/enterkeyhint> */
   enterkeyhint?: string | undefined;
   /** @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/exportparts> */
   exportparts?: string | undefined;
+  /** @experimental */
+  focusgroup?: string | undefined;
+  /** @experimental */
+  focusgroupstart?: string | undefined;
   /**
    * @see <https://developer.mozilla.org/docs/Web/HTML/Reference/Global_attributes/headingoffset>
    * @experimental

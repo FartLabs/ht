@@ -13,6 +13,11 @@ import { renderElement } from "../../render.ts";
  */
 export interface LineElementProps extends GlobalAttributes {
   /**
+   * `pathLength` is an attribute of the [`line`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/line) element.
+   * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/line#pathLength>
+   */
+  pathLength?: string | undefined;
+  /**
    * `systemLanguage` is an attribute of the [`line`](https://developer.mozilla.org/docs/Web/SVG/Reference/Element/line) element.
    * @see <https://developer.mozilla.org/docs/Web/SVG/Reference/Element/line#systemLanguage>
    */
